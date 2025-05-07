@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build-css": "sass css/home.scss dist/output.css",
+    "watch-css": "sass --watch css/home.scss dist/output.css"
+  },
+  "dependencies": {
+    "sass": "^1.87.0"
+  }
+}

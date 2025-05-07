@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+body .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+body .container h1 {
+  color: #3498db;
+}
+
+/*# sourceMappingURL=output.css.map */
