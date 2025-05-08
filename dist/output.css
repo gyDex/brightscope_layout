@@ -1,14 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Inter;
 }
-body .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+
+html, body {
+  height: 100%;
+  width: 100%;
 }
-body .container h1 {
-  color: #3498db;
+
+.header__select {
+  color: rgba(255, 255, 255, 0.5019607843);
+  background-color: transparent;
+  background: url("../public/images/header_select_arrow.svg") no-repeat center;
+  background-position: 25px 10px;
+  appearance: none;
+  width: 40px;
+}
+.header__select:focus {
+  outline: none;
+  border: none;
+}
+.header__select:focus-within {
+  outline: none;
+  border: none;
 }
 
 /*# sourceMappingURL=output.css.map */

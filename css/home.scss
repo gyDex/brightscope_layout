@@ -1,16 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 $primary-color: #3498db;
 
+
 body {
-  font-family: Arial, sans-serif;
-  background-color: #ffffff;
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    
-    h1 {
-      color: $primary-color;
-    }
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Inter;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.header__select {
+  color: #FFFFFF80;
+  background-color: transparent;
+  background: url('../public/images/header_select_arrow.svg') no-repeat center;
+  background-position: 25px 10px;
+  appearance: none;
+  width: 40px;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  &:focus-within {
+    outline: none;
+    border: none;
   }
 }

@@ -2,11 +2,112 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tailwind in Vanilla HTML</title>
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Brightscope</title>
+
   <link href="./dist/output.css" rel="stylesheet" />
+
+  <!-- Connection Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-  <body >
+  <body>
+    <div class="w-full relative overflow-hidden h-[1200px]">
+      <div class="z-[-10] w-[200%] h-[100%] absolute right-[-100px] min-[720px]:top-[-800px] min-[360px]:top-[-1000px] min-[1200px]:top-[-600px] min-[1440px]:top-[-500px] min-[1920px]:top-[-100px] bg-[#212B5F] rotate-[-22.5deg]"></div>
+      
+      <div class="z-[100]  pointer-events-none header_menu w-[100%] h-[100%] fixed flex justify-end">  
+        <div id="header_menu_shadow" class=" absolute z-[1] h-[100%] w-[100%] bg-[#1d2f811f]"></div>
+        
+        <div id="header_menu_content"  class="z-[10] pointer-events-auto duration-500 translate-x-[500px] w-[100%] absolute max-w-[500px] bg-[#FFFFFF] h-[100%]  shadow-md shadow-[#212B5F]">
+          <button id="btn_header_menu_close" class=" absolute right-[30px] h-[30px] w-[30px] top-[30px]" >
+            <svg xmlns="http://www.w3.org/2000/svg" fill="#212B5F" viewBox="0 0 50 50" width="30px" height="30px"><path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"/></svg>
+          </button>
+          <ul class="flex flex-col gap-[30px] px-[10px] mt-[60px] py-[10px]">
+            <li class="border-b-[#212B5F] border-b-[1px] h-[30px] relative pb-[20px]">
+              <a href="/home"  class="font-bold text-[16px] leading-[0px] h-[100%] w-[100%] flex items-center text-[#212B5F]">Home</a>
+            </li> 
+            <li class="border-b-[#212B5F] border-b-[1px] h-[30px] relative pb-[20px]">
+              <a href="/home"  class="font-bold text-[16px] leading-[0px] h-[100%] w-[100%] flex items-center text-[#212B5F]">Lösungen</a>
+            </li>
+            <li class="border-b-[#212B5F] border-b-[1px] h-[30px] relative pb-[20px]">
+              <a href="/home"  class="font-bold text-[16px] leading-[0px] h-[100%] w-[100%] flex items-center text-[#212B5F]">Plattform</a>
+            </li>
+            <li class="border-b-[#212B5F] border-b-[1px] h-[30px] relative pb-[20px]">
+              <a href="/home"  class="font-bold text-[16px] leading-[0px] h-[100%] w-[100%] flex items-center text-[#212B5F]">Preise</a>
+            </li>
+            <li class="border-b-[#212B5F] border-b-[1px] h-[30px] relative pb-[20px]">
+              <a href="/home"  class="font-bold text-[16px] leading-[0px] h-[100%] w-[100%] flex items-center text-[#212B5F]">Unternehmen</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <header class="w-full justify-center flex">
+        <div class="px-[15px] max-w-[1200px] w-full flex justify-between items-center mt-[28.5px]">
+          <div class="flex gap-[31.3px] items-center">
+            <div>
+              <img src="./public/images/logo.svg" alt="">
+            </div>
+  
+            <nav class="flex items-center gap-[30px] max-[950px]:hidden">
+              <a href="/home"  class="font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Home</a>
+              <a href="/home" class="font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Lösungen </a>
+              <a href="/home" class="font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Plattform</a>
+              <a href="/home" class="font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Preise </a>
+              <a href="/home" class="font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Unternehmen</a>
+            </nav>
+          </div>
+
+          <div class="flex gap-[22px] items-center">
+            <select class="header__select" name="" id="">
+              <option value="DE">DE</option>
+            </select>
+
+            <button id="btn_header_menu_open" class="min-[950px]:hidden cursor-pointer p-[2px]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 50 50" width="30px" height="30px"><path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"/></svg>
+            </button>
+
+            <button class="max-[950px]:hidden font-bold text-[16px] text-[#FFFFFF] text-center cursor-pointer border-[1px] border-[#FFFFFF] rounded-[2px] p-[8px] px-[25px]">
+                Login / Register
+            </button>
+          </div>
+        </div>
+        
+      </header>
+
+      <main class="w-full flex items-center flex-col">
+        <div class="w-full max-w-[1200px] p-[15px]">
+            <section class="min-[900px]:mt-[90px] flex max-[900px]:flex-col  max-[900px]:gap-[20px]">
+                <div class="max-[1340px]:w-full">
+                  <h1 class="text-[82px] leading-[70px] font-bold max-w-[500px] max-[768px]:text-[32px] max-[768px]:leading-[32px]">
+                    DOOH MESSUNG
+                    <span  class="bg-[linear-gradient(90deg,#57A2F1_0.03%,#6061F5_20.03%,#DB64A1_40.03%,#EE7B3C_60.03%,#EFAE3D_80.03%,#ED7458_100.03%)]
+                    bg-clip-text text-transparent">& OPTIMIERUNG</span>
+                  </h1>
+
+                  <span class="max-[768px]:text-[18px] max-[768px]:leading-[18px]  max-[1340px]:w-full mt-[27px] block text-[20px] font-normal leading-[30px] text-[#FFFFFF] max-w-[688px]">Erhalte unabhängige Insights statt Intuition mit 
+                    <span class="font-bold">Echtzeitmessung</span>, 
+                    entdecke Ineffizienzen & schlage den Durchschnitt mit 
+                    <span class="font-bold">KI-basierter Optimierung</span>
+                     für deine Außenwerbekampagnen.
+                  </span>
+
+                  <div class="mt-[38px] flex gap-[25px] max-[768px]:flex-col">
+                    <button class="max-[768px]:w-full px-[8px] py-[5px] min-w-[175px] rounded-[2px] bg-[#FF5B0000] border-[#FF5B00] border-[1px] text-[#FF5B00] text-[16px] leading-[30px] font-bold">
+                      Sample Report
+                    </button>
+                    <button class="max-[768px]:w-full px-[8px] py-[5px] min-w-[175px] rounded-[2px] bg-[#FF5B00] text-[#FFFFFF] text-[16px] leading-[30px] font-bold">
+                      Kontakt
+                    </button>
+                  </div>
+                </div>
+
+                <div class="relative h-full max-[1340px]:w-full max-[1340px]:h-[400px] max-[1340px]:flex max-[1340px]:justify-center">
+                  <img class="max-[1600px]:w-[700px] max-[426px]:w-[350px]  absolute max-w-[700px] max-h-[603px]" src="./public/images/hero.png" alt="">
+                </div>
+            </section>
+        </div>
+      </main>
+    </div>
+    <script defer src="./js/header_menu.js"></script>
   </body>
 </html>
