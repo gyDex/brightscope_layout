@@ -9,11 +9,13 @@
 
   <!-- Connection Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="./assets/fonts/styles.css">
 </head>
   <body>
-    <div class="w-full relative overflow-hidden h-[1200px]">
-      <div class="z-[-10] w-[200%] h-[100%] absolute right-[-100px] min-[720px]:top-[-800px] min-[360px]:top-[-1000px] min-[1200px]:top-[-600px] min-[1440px]:top-[-500px] min-[1920px]:top-[-100px] bg-[#212B5F] rotate-[-22.5deg]"></div>
-      
+    <div class="w-full relative overflow-hidden min-h-[1200px] ">
+      <div class="z-[-10] w-[120%] h-[800px] min-[1200px]:h-[850px] absolute triangle-right"></div>
+
       <div class="z-[100]  pointer-events-none header_menu w-[100%] h-[100%] fixed flex justify-end">  
         <div id="header_menu_shadow" class=" absolute z-[1] h-[100%] w-[100%] bg-[#1d2f811f]"></div>
         
@@ -42,18 +44,179 @@
       </div>
 
       <header class="w-full justify-center flex">
-        <div class="px-[15px] max-w-[1200px] w-full flex justify-between items-center mt-[28.5px]">
+        <div class="header__modal px-[15px] relative  max-w-[1200px] w-full flex justify-between items-center mt-[28.5px]">
+          <div id="header__modal_platform" class="absolute top-[50px] rounded-b-[2px] z-[1000] min-h-[180px] rounded-[2px] border-[1px] border-[#212B5F40] w-full bg-[#FFFFFF]">
+              <ul class="grid grid-cols-2 z-[100] px-[16px] py-[17px] justify-stretch w-full">
+                <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                  <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                    <svg class="rounded-[2px]" width="25" height="17" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.8333 14.5833C21.9792 14.5833 22.9167 13.6458 22.9167 12.5V2.08333C22.9167 0.9375 21.9792 0 20.8333 0H4.16667C3.02083 0 2.08333 0.9375 2.08333 2.08333V12.5C2.08333 13.6458 3.02083 14.5833 4.16667 14.5833H0V16.6667H25V14.5833H20.8333ZM4.16667 2.08333H20.8333V12.5H4.16667V2.08333Z" fill="#FF5B00"/>
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Unsere Plattformen</h2>
+                    <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Entdecke unsere Mess- & Planungs-Plattformen</p>
+                  </div>
+                </li>
+
+                <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                  <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.14 10.9404C17.18 10.6404 17.2 10.3304 17.2 10.0004C17.2 9.68039 17.18 9.36039 17.13 9.06039L19.16 7.48039C19.34 7.34039 19.39 7.07039 19.28 6.87039L17.36 3.55039C17.24 3.33039 16.99 3.26039 16.77 3.33039L14.38 4.29039C13.88 3.91039 13.35 3.59039 12.76 3.35039L12.4 0.81039C12.36 0.57039 12.16 0.400391 11.92 0.400391H8.07999C7.83999 0.400391 7.64999 0.57039 7.60999 0.81039L7.24999 3.35039C6.65999 3.59039 6.11999 3.92039 5.62999 4.29039L3.23999 3.33039C3.01999 3.25039 2.76999 3.33039 2.64999 3.55039L0.739988 6.87039C0.619988 7.08039 0.659988 7.34039 0.859988 7.48039L2.88999 9.06039C2.83999 9.36039 2.79999 9.69039 2.79999 10.0004C2.79999 10.3104 2.81999 10.6404 2.86999 10.9404L0.839988 12.5204C0.659988 12.6604 0.609988 12.9304 0.719988 13.1304L2.63999 16.4504C2.75999 16.6704 3.00999 16.7404 3.22999 16.6704L5.61999 15.7104C6.11999 16.0904 6.64999 16.4104 7.23999 16.6504L7.59999 19.1904C7.64999 19.4304 7.83999 19.6004 8.07999 19.6004H11.92C12.16 19.6004 12.36 19.4304 12.39 19.1904L12.75 16.6504C13.34 16.4104 13.88 16.0904 14.37 15.7104L16.76 16.6704C16.98 16.7504 17.23 16.6704 17.35 16.4504L19.27 13.1304C19.39 12.9104 19.34 12.6604 19.15 12.5204L17.14 10.9404ZM9.99999 13.6004C8.01999 13.6004 6.39999 11.9804 6.39999 10.0004C6.39999 8.02039 8.01999 6.40039 9.99999 6.40039C11.98 6.40039 13.6 8.02039 13.6 10.0004C13.6 11.9804 11.98 13.6004 9.99999 13.6004Z" fill="#FF5B00"/>
+                    </svg>
+
+                  </div>
+
+                  <div>
+                    <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Technologie</h2>
+                    <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Unsere patentierte Technologie.</p>
+                  </div>
+                </li>
+
+                <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                  <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                      <svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M1.875 0C0.84375 0 0.00937521 0.855 0.00937521 1.9L0 17.1C0 18.145 0.834375 19 1.86562 19H13.125C14.1562 19 15 18.145 15 17.1V5.7L9.375 0H1.875ZM8.4375 6.65V1.425L13.5938 6.65H8.4375Z" fill="#FF5B00"/>
+                      </svg>
+
+                  </div>
+
+                  <div>
+                    <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Reporting</h2>
+                    <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">So liefern wir dir die Ergebnisse.n</p>
+                  </div>
+                </li>
+
+                <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                  <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.6799 2.3693H15.3201V10.9808H2.6799V2.3693ZM0 0V13.5779H7.36973V19H10.6303V13.5779H18V0H0Z" fill="#FF5B00"/>
+                    </svg>
+
+
+                  </div>
+
+                  <div>
+                    <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Messbare Werbeflächen</h2>
+                    <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Eine Übersicht der messbaren Anbieter & Medien.</p>
+                  </div>
+                </li>
+              </ul>
+          </div>
+
+          <div id="header__modal_platform2" class="absolute top-[50px] rounded-b-[2px] z-[1000] min-h-[180px] rounded-[2px] border-[1px] border-[#212B5F40] w-full bg-[#FFFFFF]">
+              <ul class="grid grid-cols-2 z-[100] px-[16px] py-[17px] justify-stretch w-full">
+                <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                  <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                    <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10.5 0H2.5C1.12 0 0 1.12 0 2.5V19.5C0 20.88 1.12 22 2.5 22H10.5C11.88 22 13 20.88 13 19.5V2.5C13 1.12 11.88 0 10.5 0ZM6.5 21C5.67 21 5 20.33 5 19.5C5 18.67 5.67 18 6.5 18C7.33 18 8 18.67 8 19.5C8 20.33 7.33 21 6.5 21ZM11 17H2V3H11V17Z" fill="#FF5B00"/>
+                    </svg>
+                  </div>
+
+                  <div>
+                    <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Kontakt</h2>
+                    <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Kontaktiere Brightscope.</p>
+                  </div>
+                </li>
+
+                <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                  <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                      <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 19C4 19.5 4.4 20 5 20H9C9.6 20 10 19.5 10 19V18H4V19ZM7 0C3.1 0 0 3.1 0 7C0 9.4 1.2 11.5 3 12.7V15C3 15.5 3.4 16 4 16H10C10.6 16 11 15.5 11 15V12.7C12.8 11.4 14 9.3 14 7C14 3.1 10.9 0 7 0Z" fill="#FF5B00"/>
+                      </svg>
+                  </div>
+
+                  <div>
+                    <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Knowledge-Hub</h2>
+                    <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Gratis Guides und Whitepaper.</p>
+                  </div>
+                </li>
+
+                <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                  <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                      <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.6364 5.14286C15.1455 5.14286 16.3545 3.99429 16.3545 2.57143C16.3545 1.14857 15.1455 0 13.6364 0C12.1273 0 10.9091 1.14857 10.9091 2.57143C10.9091 3.99429 12.1273 5.14286 13.6364 5.14286ZM6.36364 5.14286C7.87273 5.14286 9.08182 3.99429 9.08182 2.57143C9.08182 1.14857 7.87273 0 6.36364 0C4.85455 0 3.63636 1.14857 3.63636 2.57143C3.63636 3.99429 4.85455 5.14286 6.36364 5.14286ZM6.36364 6.85714C4.24545 6.85714 0 7.86 0 9.85714V12H12.7273V9.85714C12.7273 7.86 8.48182 6.85714 6.36364 6.85714ZM13.6364 6.85714C13.3727 6.85714 13.0727 6.87429 12.7545 6.9C13.8091 7.62 14.5455 8.58857 14.5455 9.85714V12H20V9.85714C20 7.86 15.7545 6.85714 13.6364 6.85714Z" fill="#FF5B00"/>
+                      </svg>
+                  </div>
+
+                  <div>
+                    <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Karriere</h2>
+                    <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Offene Stellen und Vorteile.</p>
+                  </div>
+                </li>
+
+                <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                  <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                      <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z" fill="#FF5B00"/>
+                      </svg>
+                  </div>
+
+                  <div>
+                    <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Newsletter</h2>
+                    <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Unsere E-Mail-Liste mit wertvollen Insights.</p>
+                  </div>
+                </li>
+
+                 <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                  <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                      <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.66667 3.4H0V7.65H0.00833333L0 15.3C0 16.235 0.75 17 1.66667 17H16.6667V15.3H1.66667V3.4ZM18.3333 1.7H11.6667L10 0H5C4.08333 0 3.34167 0.765 3.34167 1.7L3.33333 11.9C3.33333 12.835 4.08333 13.6 5 13.6H18.3333C19.25 13.6 20 12.835 20 11.9V3.4C20 2.465 19.25 1.7 18.3333 1.7ZM5.83333 11.05L9.58333 5.95L12.5 9.7835L14.5833 7.225L17.5 11.05H5.83333Z" fill="#FF5B00"/>
+                      </svg>
+
+                  </div>
+
+                  <div>
+                    <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Medien-Center</h2>
+                    <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Presseaussendungen, Artikel und Media Ki.</p>
+                  </div>
+                </li>
+
+                 <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                  <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M14.2222 0H1.77778C0.8 0 0 0.8 0 1.77778V14.2222C0 15.2 0.8 16 1.77778 16H14.2222C15.2 16 16 15.2 16 14.2222V1.77778C16 0.8 15.2 0 14.2222 0ZM9.77778 12.4444H3.55556V10.6667H9.77778V12.4444ZM12.4444 8.88889H3.55556V7.11111H12.4444V8.88889ZM12.4444 5.33333H3.55556V3.55556H12.4444V5.33333Z" fill="#FF5B00"/>
+                      </svg>
+
+                  </div>
+
+                  <div>
+                    <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Blog</h2>
+                    <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Unternehmens- und Industrie-Insights.</p>
+                  </div>
+                </li>
+
+                 <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                  <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                      <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M19 9.22C19 3.73 14.74 0 10 0C5.31 0 1 3.65 1 9.28C0.4 9.62 0 10.26 0 11V13C0 14.1 0.9 15 2 15H3V8.9C3 5.03 6.13 1.9 10 1.9C13.87 1.9 17 5.03 17 8.9V16H9V18H17C18.1 18 19 17.1 19 16V14.78C19.59 14.47 20 13.86 20 13.14V10.84C20 10.14 19.59 9.53 19 9.22Z" fill="#FF5B00"/>
+                      <path d="M7 11C7.55228 11 8 10.5523 8 10C8 9.44772 7.55228 9 7 9C6.44772 9 6 9.44772 6 10C6 10.5523 6.44772 11 7 11Z" fill="#FF5B00"/>
+                      <path d="M13 11C13.5523 11 14 10.5523 14 10C14 9.44772 13.5523 9 13 9C12.4477 9 12 9.44772 12 10C12 10.5523 12.4477 11 13 11Z" fill="#FF5B00"/>
+                      <path d="M16 8.03C15.52 5.18 13.04 3 10.05 3C7.01997 3 3.75997 5.51 4.01997 9.45C6.48997 8.44 8.34997 6.24 8.87997 3.56C10.19 6.19 12.88 8 16 8.03Z" fill="#FF5B00"/>
+                      </svg>
+
+                  </div>
+
+                  <div>
+                    <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Support</h2>
+                    <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Kontakt für Support-Anfragen.</p>
+                  </div>
+                </li>
+              </ul>
+          </div>
+
           <div class="flex gap-[31.3px] items-center">
             <div>
               <img src="./public/images/logo.svg" alt="">
             </div>
   
             <nav class="flex items-center gap-[30px] max-[950px]:hidden">
-              <a href="/home"  class="font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Home</a>
-              <a href="/home" class="font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Lösungen </a>
-              <a href="/home" class="font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Plattform</a>
-              <a href="/home" class="font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Preise </a>
-              <a href="/home" class="font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Unternehmen</a>
+              <a href="/home"  class="nav_item font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Home</a>
+              <a href="/home" class="nav_item font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Lösungen </a>
+              <a id="header__platform" href="/home" class="header__platform nav_item font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Plattform</a>
+              <a href="/home" class="nav_item font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Preise </a>
+              <a id="header__platform2"  href="/home" class=" header__platform nav_item font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Unternehmen</a>
             </nav>
           </div>
 
@@ -74,13 +237,13 @@
         
       </header>
 
-      <main class="w-full flex items-center flex-col">
-        <div class="w-full max-w-[1200px] p-[15px]">
+      <main class="w-full flex items-center relative flex-col">
+        <div class="w-full max-w-[1200px] p-[15px] pt-[0px]">
             <section class="min-[900px]:mt-[90px] flex max-[900px]:flex-col  max-[900px]:gap-[20px]">
-                <div class="max-[1340px]:w-full">
-                  <h1 class="text-[82px] leading-[70px] font-bold max-w-[500px] max-[768px]:text-[32px] max-[768px]:leading-[32px]">
-                    DOOH MESSUNG
-                    <span  class="bg-[linear-gradient(90deg,#57A2F1_0.03%,#6061F5_20.03%,#DB64A1_40.03%,#EE7B3C_60.03%,#EFAE3D_80.03%,#ED7458_100.03%)]
+                <div class="max-[1340px]:w-full max-[900px]:mt-[30px]">
+                  <h1 class="text-[82px] leading-[70px] font-[Rift] font-bold max-w-[500px] max-[768px]:text-[3rem] text-[white] max-[768px]:leading-[3rem]">
+                    DOOH MESSUNG <br>
+                    <span  class="bg-[linear-gradient(90deg,#DB64A1_40.03%,#EE7B3C_60.03%,#EFAE3D_80.03%,#ED7458_100.03%)]
                     bg-clip-text text-transparent">& OPTIMIERUNG</span>
                   </h1>
 
@@ -101,12 +264,835 @@
                   </div>
                 </div>
 
-                <div class="relative h-full max-[1340px]:w-full max-[1340px]:h-[400px] max-[1340px]:flex max-[1340px]:justify-center">
-                  <img class="max-[1600px]:w-[700px] max-[426px]:w-[350px]  absolute max-w-[700px] max-h-[603px]" src="./public/images/hero.png" alt="">
+                <div class="relative h-full max-[1340px]:w-full max-[1340px]:h-[400px] max-[426px]:h-[200px]">
+                  <img class="max-[1600px]:w-[700px] max-[426px]:w-[350px] min-[1600px]:left-[-100px]  w-[2000px] absolute max-w-[700px] max-h-[603px]" src="./public/images/notebook_ai.png" alt="">
                 </div>
             </section>
         </div>
+
+
+        <div class="w-full max-w-[1200px] max-[900px]:px-[25px]">
+          <h2 class="mt-[120px] mb-[48px] text-[16px] max-[900px]:text-[12px]  text-center font-bold leading-[30px] text-[#6A6F8C]">FÜHRENDE MARKEN UND AGENTUREN VERTRAUEN DER BRIGHTSCOPE-TECHNOLOGIE</h2>
+
+          <ul class="w-full flex items-center flex-wrap justify-center gap-[50px] mb-[150px]">
+            <li class="w-[50px]">
+              <img src="./public/images/companies/otto.svg" alt="">
+            </li>
+
+            <li class="w-[50px]">
+              <img src="./public/images/companies/aldi.svg" alt="">
+            </li>
+
+            <li class="w-[50px]">
+              <img src="./public/images/companies/eat.svg" alt="">
+            </li>
+
+            <li class="w-[50px]">
+              <img src="./public/images/companies/ikea.svg" alt="">
+            </li>
+
+            <li class="w-[50px]">
+              <img src="./public/images/companies/mac.svg" alt="">
+            </li>
+
+            <li class="w-[50px]">
+              <img src="./public/images/companies/swisscom.svg" alt="">
+            </li>
+
+            <li class="w-[50px]">
+              <img src="./public/images/companies/bmw.svg" alt="">
+            </li>
+
+            <li class="w-[50px]">
+              <img src="./public/images/companies/rewe.svg" alt="">
+            </li>
+
+            <li class="w-[50px]">
+              <img src="./public/images/companies/curpa.svg" alt="">
+            </li>
+
+            <li class="w-[50px]">
+              <img src="./public/images/companies/em.svg" alt="">
+            </li>
+
+            <li class="w-[50px]">
+              <img src="./public/images/companies/omd.svg" alt="">
+            </li>
+
+            <li class="w-[50px]">
+              <img src="./public/images/companies/iprospect.svg" alt="">
+            </li>
+          </ul>
+        </div>
+
+        <div class="w-full bg-[#F0F2F7] flex-col justify-center flex pt-[74px] pb-[120px]">
+            <div class="flex flex-col w-full items-center">
+              <h1 class="text-[#212B5F] font-[Rift] font-bold text-[4.5rem] leading-[4.5rem] max-[768px]:text-[3rem] max-[768px]:leading-[3rem]  max-[425px]:text-[2rem] max-[425px]:leading-[2rem]">LÖSUNGEN</h1>
+              <span class="block font-normal text-center text-[#212B5F] mt-[11px] text-[1.25rem] leading-[30px] max-[768px]:text-[0.8rem] max-[768px]:leading-[20px]">
+                Technologiegetriebene DOOH-Messung und -Optimierung, <br>
+              für erhöhte <span class="font-bold">Transparenz</span> und <span class="font-bold">Performance</span> ihrer Außenwerbekampagnen.</span>
+            </div>
+            <div class="flex gap-[20px] flex-col w-full items-center  mt-[67px]">
+              <div class="min-[900px]:max-w-fit max-[900px]:px-[10px] max-w-full w-full  min-[900px]:items-center flex-col flex gap-[20px]">
+                <div class="w-full max-[900px]:flex-col  justify-center flex gap-[20px]">
+                  <div class="w-[590px] max-[900px]:w-full max-[900px]:rounded-[20px] max-[900px]:h-fit max-[900px]:py-[25px]  h-[400px] bg-[#3371FF] justify-center rounded-tl-[20px] py-[55px]">
+                      <div class="flex gap-[17px] items-center justify-center mb-[53px] max-[900px]:mb-[20px]">
+                        <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                          <img src="./public/images/chart.svg" class="max-h-[40px] max-w-[40pxpx] relative z-[100] max-[900px]:h-[39px] max-[900px]:w-[30px]" alt="">
+                        </div>
+                        <h2 class="text-[#FFFFFF] font-bold text-[3.15rem] max-[900px]:text-[2.5rem]">Messung.</h2>
+                      </div>
+    
+                      <span class="block h-[197px] max-[900px]:h-fit  text-[#FFFFFF] font-normal  text-[1.25rem] leading-[30px] max-[768px]:text-[0.8rem] max-[768px]:leading-[20px] text-center">
+                        <span class="font-bold">
+                          Insights statt Intuition <br>
+                          mit messbar besseren Kampagnen
+                          <br>
+                        </span> Unsere Mess-Plattform hilft dir die  <br>
+                        tatsächliche quantitative Leistung deiner <br> 
+                        Außenwerbekampagnen zu verstehen.</span>
+                  </div>
+                  <div class="w-[590px] max-[900px]:w-full max-[900px]:rounded-[20px] max-[900px]:h-fit max-[900px]:py-[25px] relative h-[400px] bg-[#FF5B00] justify-center rounded-tr-[20px] py-[55px]">
+                      <img src="./public/images/ai.svg" class="h-[120px] w-[120px] absolute top-[-50px] right-[-50px] max-[900px]:right-[-10px] max-[900px]:top-[-10px] max-[900px]:w-[60px] max-[900px]:h-[60px]"" alt="">  
+
+                      <div class="flex gap-[17px] items-center justify-center mb-[53px] max-[900px]:mb-[20px]">
+                          <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                            <img src="./public/images/rocket.svg" class="max-h-[40px] max-w-[40pxpx] relative z-[100] max-[900px]:h-[39px] max-[900px]:w-[30px]" alt="">
+                          </div>
+                          <h2 class="text-[#FFFFFF] font-bold text-[3.15rem] max-[900px]:text-[2.5rem]">Optimierung.</h2>
+                      </div>
+      
+                      <span class="block h-[197px] max-[900px]:h-fit  text-[#FFFFFF] font-normal  text-[1.25rem] leading-[30px] max-[768px]:text-[0.8rem] max-[768px]:leading-[20px] text-center">
+                        <span class="font-bold">
+                          Schlage den Durchschnitt
+                          <br>
+                          mit planbar besseren Kampagnen
+                        </span>
+                        <br>
+                          Unsere KI-Optimierungs-Plattform hilft dir <br>
+                          nachweislich die Effektivität und Effizienz deiner  <br>
+                          Außenwerbekampagnen zu steigern.
+                      </span>
+                  </div>
+                </div>
+                <div class="rounded-b-[20px] pt-[27px] pb-[15px] w-full h-[150px] max-[900px]:rounded-[20px] max-[900px]:h-fit gradient__block-1">
+                    <ul class="max-[900px]:flex-col max-[900px]:gap-[20px] flex w-full items-center text-[1.25rem] font-normal leading-[30px] max-[768px]:text-[0.8rem] max-[768px]:leading-[20px] text-[white]">
+                      <li class="flex flex-col max-w-[380px] px-[50px] items-center">
+                        <h3 class="text-[1.25rem]  leading-[30px] max-[950px]:text-[0.8rem] max-[950px]:leading-[20px] font-semibold">01. Messen</h3>
+                        <p class="text-[1.25rem]  leading-[30px] max-[950px]:text-[0.8rem] max-[950px]:leading-[20px] font-normal max-w-fit flex justify-center items-center text-center">Erstmalige Messung
+                        der Kampagne.</p>
+                      </li>
+                      <li class="max-[900px]:hidden">
+                        <img src="./public/images/arrow_line.svg" alt="arrow_line">
+                      </li>
+                      <li class="flex flex-col max-w-[380px] px-[50px]  items-center">
+                        <h3 class="text-[1.25rem]  leading-[30px] max-[950px]:text-[0.8rem] max-[950px]:leading-[20px]  font-semibold">02. Optimieren</h3>
+                        <p class="text-[1.25rem] leading-[30px] max-[950px]:text-[0.8rem] max-[950px]:leading-[20px] font-normal max-w-fit flex justify-center items-center text-center">Optimierung der darauf
+                          folgenden Kampagne</p>
+                      </li>
+                      <li class="max-[900px]:hidden">
+                        <img src="./public/images/arrow_line.svg" alt="arrow_line">
+                      </li>
+                      <li class="flex flex-col max-w-[380px] items-center">
+                        <h3 class="text-[1.25rem]  leading-[30px] max-[950px]:text-[0.8rem] max-[950px]:leading-[20px] font-semibold">03. Überprüfen</h3>
+                        <p class="text-[1.25rem] leading-[30px] max-[950px]:text-[0.8rem] max-[950px]:leading-[20px] font-normal max-w-fit flex justify-center items-center text-center">Nochmalige Messung um 
+                        Verbesserungen festzustellen.</p>
+                      </li>
+                    </ul>
+                </div>
+
+                <p class="mt-[81px] text-center text-[#6A6F8C] text-[1.25rem] font-normal leading-[30px] max-[768px]:text-[0.8rem] max-[768px]:leading-[20px]">
+                  Unser Prozess für <span class="font-bold">nachweisbar</span> bessere Außenwerbekampagnen.
+                </p>
+
+              </div>
+            </div>
+        </div>
+
+        <div class="w-full h-[30px] gradient__block-1"></div>
+
+        <div class="bg-[#212B5F] w-full">
+          <div class="w-full justify-center flex">
+            <h1 class="mt-[50px] text-[#FFFFFF] font-[Inter] font-semibold text-[3.15rem] leading-[3.75rem] max-w-[1200px] text-center min-h-[150px] min-[900px]:h-[246px] max-[900px]:leading-[2.5rem]  max-[900px]:text-[1.5rem] ">
+              Brightscope <span class="text-[#6061F5]">misst</span> die tatsächliche Leistung von
+              Außenwerbekampagnen und optimiert diese
+              unter Einsatz von <span class="text-[#FF5B00]">Künstlicher</span> Intelligenz.
+            </h1>
+          </div>
+        </div>
+
+        <div class="w-full flex max-[1440px]:flex-col">
+          <div class="w-[50%]  max-[1440px]:w-full max-[1440px]:items-start max-[1440px]:px-[10px] bg-[#3371FF] h-[1100px] flex items-end flex-col relative">
+              <h1 class="mr-[60px] mt-[50px] text-[#FFFFFF] min-w-[540px]  font-semibold text-[3.15rem] leading-[3.75rem]  max-[900px]:leading-[2.5rem]  max-[900px]:text-[2.5rem] max-[900px]:mr-0">
+                Messplattform
+              </h1>
+              
+              <ul class="mt-[87px] max-[900px]:mt-[50px] flex flex-col gap-[61px]">
+                <li class="flex gap-[20px] items-center">
+                  <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                    <img src="./public/images/chart.svg" class="max-h-[40px] max-w-[40pxpx] relative z-[100] max-[900px]:h-[39px] max-[900px]:w-[30px]" alt="">
+                  </div>
+
+                  <div class="">
+                    <h3 class="font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem]max-[900px]:leading-[1.25rem]  max-[900px]:text-[1rem]">Leistungswerte</h3>
+                    <p class="min-w-[480px] font-normal text-[1.25rem] text-[#FFFFFF] fotn-[Inter] leading-[1.85rem] max-[900px]:leading-[1.85rem]  max-[900px]:text-[1rem]">Bruttokontakte, Nettokontakte, <br>
+                    Reichweite, GRP, OTS</p> 
+                  </div>
+                </li>
+
+                <li class="flex gap-[20px] items-center">
+                  <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                    <img src="./public/images/people.svg" class="max-h-[40px] max-w-[40pxpx] relative z-[100] max-[900px]:h-[39px] max-[900px]:w-[30px]" alt="">
+                  </div>
+
+                  <div class="">
+                    <h3 class="font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem]max-[900px]:leading-[1.25rem]  max-[900px]:text-[1rem]">Demografie</h3>
+                    <p class="min-w-[480px] font-normal text-[1.25rem] text-[#FFFFFF] fotn-[Inter] leading-[1.85rem] max-[900px]:leading-[1.85rem]  max-[900px]:text-[1rem]">Alter, Geschlecht
+                    & Herkunft<br></p> 
+                  </div>
+                </li>
+
+                <li class="flex gap-[20px] items-center">
+                  <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                    <img src="./public/images/diagram.svg" class="max-h-[40px] max-w-[40pxpx] relative z-[100] max-[900px]:h-[39px] max-[900px]:w-[30px]" alt="">
+                  </div>
+
+                  <div class="">
+                    <h3 class="font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem]max-[900px]:leading-[1.25rem]  max-[900px]:text-[1rem]">Leistungswerte</h3>
+                    <p class="min-w-[480px] font-normal text-[1.25rem] text-[#FFFFFF] fotn-[Inter] leading-[1.85rem] max-[900px]:leading-[1.85rem]  max-[900px]:text-[1rem]">Bruttokontakte, Nettokontakte, <br>
+                    Reichweite, GRP, OTS</p> 
+                  </div>
+                </li>
+
+                
+                <li class="flex gap-[20px] items-center">
+                  <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                    <img src="./public/images/curves.svg" class="max-h-[40px] max-w-[40pxpx] relative z-[100] max-[900px]:h-[39px] max-[900px]:w-[30px]" alt="">
+                  </div>
+
+                  <div class="">
+                    <h3 class="font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem]max-[900px]:leading-[1.25rem]  max-[900px]:text-[1rem]">Korrelation</h3>
+                    <p class="min-w-[480px] font-normal text-[1.25rem] text-[#FFFFFF] fotn-[Inter] leading-[1.85rem] max-[900px]:leading-[1.85rem]  max-[900px]:text-[1rem]">Medien und Anbieter
+                    <br>vs. Kosten und Leistung
+                    </p> 
+                  </div>
+                </li>
+              </ul>
+
+              <div class="w-full flex justify-center min-[900px]:hidden">
+                  <img class="absolute !max-w-[1200px] max-[900px]:w-[1000px] max-[1440px]:bottom-[-100px] max-[425px]:w-[800px]" src="./public/images/notebook_2.png" alt="">
+              </div>
+
+              <img class="max-[900px]:hidden absolute bottom-[-350px] !max-w-[1200px] right-[-250px] max-[900px]:w-[800px] max-[1440px]:bottom-[-100px] max-[900px]:right-0 max-[425px]:w-[300px]" src="./public/images/notebook_2.png" alt="">
+          </div>
+          <div class="w-[50%]  max-[1440px]:w-full items-start max-[1440px]:px-[10px] bg-[#FF5B00] h-[1100px] flex  flex-col relative">
+              <h1 class="mr-[60px] mt-[50px] min-[1440px]:ml-[60px] text-[#FFFFFF] min-w-[540px]  font-semibold text-[3.15rem] leading-[3.75rem]  max-[900px]:leading-[2.5rem]  max-[900px]:text-[2rem] max-[900px]:mr-0">
+                Optimierungsplattform.
+              </h1>
+              
+              <ul class="mt-[87px]  min-[900px]:ml-[60px] max-[900px]:mt-[50px] flex flex-col gap-[61px]">
+                <li class="flex gap-[20px] items-center">
+                  <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                    <img src="./public/images/squares.svg" class="max-h-[40px] max-w-[40pxpx] relative z-[100] max-[900px]:h-[39px] max-[900px]:w-[30px]" alt="">
+                  </div>
+
+                  <div class="">
+                    <h3 class="font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem]max-[900px]:leading-[1.25rem]  max-[900px]:text-[1rem]">Heatmaps</h3>
+                    <p class="min-w-[480px] font-normal text-[1.25rem] text-[#FFFFFF] fotn-[Inter] leading-[1.85rem] max-[900px]:leading-[1.85rem]  max-[900px]:text-[1rem]">Frequenz<br>
+und Zielgruppe</p> 
+                  </div>
+                </li>
+
+                <li class="flex gap-[20px] items-center">
+                  <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                    <img src="./public/images/magnifier.svg" class="max-h-[40px] max-w-[40pxpx] relative z-[100] max-[900px]:h-[39px] max-[900px]:w-[30px]" alt="">
+                  </div>
+
+                  <div class="">
+                     <h3 class="font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem]max-[900px]:leading-[1.25rem]  max-[900px]:text-[1rem]">Werbeflächen</h3>
+                    <p class="min-w-[480px] font-normal text-[1.25rem] text-[#FFFFFF] fotn-[Inter] leading-[1.85rem] max-[900px]:leading-[1.85rem]  max-[900px]:text-[1rem]">                    Erkundung 
+                    und Bewertung<br></p> 
+                  </div>
+                </li>
+
+                <li class="flex gap-[20px] items-center">
+                  <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                    <img src="./public/images/marker.svg" class="max-h-[40px] max-w-[40pxpx] relative z-[100] max-[900px]:h-[39px] max-[900px]:w-[30px]" alt="">
+                  </div>
+
+                  <div class="">
+                    <h3 class="font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem]max-[900px]:leading-[1.25rem]  max-[900px]:text-[1rem]">POI</h3>
+                    <p class="min-w-[480px] font-normal text-[1.25rem] text-[#FFFFFF] fotn-[Inter] leading-[1.85rem] max-[900px]:leading-[1.85rem]  max-[900px]:text-[1rem]">Integration
+                    und Verknüpfung<br></p> 
+                  </div>
+                </li>
+       
+                <li class="flex gap-[20px] items-center">
+                  <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                    <img src="./public/images/lines.svg" class="max-h-[40px] max-w-[40pxpx] relative z-[100] max-[900px]:h-[39px] max-[900px]:w-[30px]" alt="">
+                  </div>
+
+                  <div class="">
+                    <h3 class="font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem]max-[900px]:leading-[1.25rem]  max-[900px]:text-[1rem]">Optimierter Mediaplan</h3>
+                    <p class="min-w-[480px] font-normal text-[1.25rem] text-[#FFFFFF] fotn-[Inter] leading-[1.85rem] max-[900px]:leading-[1.85rem]  max-[900px]:text-[1rem]">Herunterladen<br>
+                    und teilen</p> 
+                  </div>
+                </li>
+              </ul>
+
+              <div class="w-full flex justify-center min-[900px]:hidden">
+                <img class="absolute bottom-[50px] !max-w-[1200px] max-[900px]:w-[700px]   max-[425px]:w-[500px]" src="./public/images/notebook_1.png" alt="">
+              </div>
+
+              <img class="max-[900px]:hidden absolute bottom-[-125px] !max-w-[1200px]  min-[1440px]:left-[-25px] max-[1440px]:bottom-[100px]  max-[1440px]:right-[-50px] max-[425px]:w-[500px]" src="./public/images/notebook_1.png" alt="">
+          </div>
+        </div>
+
+        <div class="w-full h-[200px] max-[900px]:hidden bg-[#F0F2F7]"></div>
+
+        <div class="w-full h-[30px] gradient__block-1"></div>
+
+        <div class="w-full h-fit bg-[white] flex flex-col items-center">
+          <h1 class="mt-[63px] font-bold text-[4.38rem] uppercase font-[Rift] text-[#212B5F] leading-[4.38rem] max-[900px]:leading-[3rem]  max-[900px]:text-[3rem]">
+            technologie
+          </h1>
+
+          <span class="text-[1.25rem] max-w-[1200px] mt-[20px] text-center font-normal  text-[#212B5F] leading-[1.25rem] max-[900px]:leading-[1rem]  max-[900px]:text-[1rem]">
+            Anonymisierte <span class="font-bold">Mobilfunk-Bewegungsdaten</span> in Kombination mit <span class="font-bold">Sensorik-Messung</span>
+            ermöglichen ein dynamisches Datenmodell, maschinelles Lernen erlaubt echte datengetriebene Planung
+          </span>
+
+          <div class="relative mt-[0px] h-[935px] max-[1200px]:h-[500px] max-[600px]:h-[300px] flex justify-center items-center">
+              <span class="font-[Inter] max-[1200px]:top-[125px] max-[600px]:top-[105px] max-[600px]:text-[0.8rem] max-[1200px]:text-[1.25rem] max-[1200px]:leading-[1.25rem] font-bold text-[1.9rem] leading-[2.5rem] top-[250px] absolute z-[100] text-[#212B5F]">
+                Sensorik-
+                <br>
+                Messung
+              </span>
+
+
+              <span class="font-[Inter]  max-[1200px]:top-[280px] max-[600px]:top-[160px] max-[600px]:text-[0.8rem] max-[1200px]:text-[1.25rem] max-[1200px]:leading-[1.25rem] font-bold text-[1.9rem] leading-[2.5rem] top-[550px] absolute z-[100] text-[#FFFFFF] text-center">
+                Mobilfunk-
+                <br>
+                Bewegungsdaten
+              </span>
+
+               <span class="font-[Inter] max-[1200px]:top-[200px] max-[600px]:top-[210px] max-[600px]:text-[0.8rem] max-[1200px]:text-[1.25rem] max-[1200px]:leading-[1.25rem] font-bold text-[1.9rem] leading-[2.5rem] font-bold text-[1.9rem] leading-[2.5rem] top-[380px] absolute z-[100] text-[#FFFFFF] text-center">
+                Werbeflächen-
+                <br>
+                Spezifikation
+              </span>
+
+              <div class="absolute bottom-[-50px] max-[1200px]:bottom-[-100px] w-[800px] max-[600px]:w-[500px]  max-[600px]:h-[300px] h-[500px]">
+                <img class="relative top-0 w-full" src="./public/images/circle_1.png" class="w-full" alt="">
+              </div>
+
+              <div class="absolute flex justify-center top-[200px] z-[1]">
+                <svg class="relative z-[10] max-[1200px]:hidden" xmlns="http://www.w3.org/2000/svg" width="1500" height="935" viewBox="0 0 1500 935" fill="none">
+                    <path d="M1500 753.5C1500 752.3 1500 751.2 1500 750C1500 335.8 1164.2 0 750 0C335.8 0 0 335.8 0 750C0 1164.2 0 752.3 0 753.5H1500Z" fill="#D9E0FC"/>
+                </svg>
+  
+                <img src="./public/images/camera.png" class="z-[300] top-[0px] absolute left-[250px] w-[192px] h-[335px]" alt="">
+              </div>
+
+              <div class="absolute flex justify-center top-[350px] z-[2]">
+                <svg class="relative z-[10] top-0 max-[1200px]:hidden" xmlns="http://www.w3.org/2000/svg" width="1200" height="748" viewBox="0 0 1200 748" fill="none">
+                    <path d="M1200 603.5C1200 602.3 1200 601.2 1200 600C1200 268.6 931.4 0 600 0C268.6 0 0 268.6 0 600C0 931.4 0 602.3 0 603.5H1199.9H1200Z" fill="#FF5B00"/>
+                </svg>
+                <img src="./public/images/antenna.png" class="z-[300] top-[50px] absolute right-[100px] w-[192px] h-[335px]" alt="">
+                
+              </div>
+              <div class="absolute flex justify-center top-[200px] z-[3]">
+                <svg class="absolute top-[300px] max-[1200px]:hidden  z-[100]" xmlns="http://www.w3.org/2000/svg" width="900" height="562" viewBox="0 0 900 562" fill="none">
+                    <path d="M900 453.5C900 452.3 900 451.2 900 450C900 201.5 698.5 0 450 0C201.5 0 0 201.5 0 450C0 698.5 0 452.3 0 453.5H899.9H900Z" fill="#2F4DF6"/>
+                </svg>
+              </div>
+
+
+              <div class="absolute flex justify-center bottom-[-100px] z-20">
+                <svg class="absolute top-[39px] z-[100] max-[1200px]:hidden" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M48 24L43.77 19.77L27 36.51V0H21V36.51L4.26 19.74L0 24L24 48L48 24Z" fill="white"/>
+                </svg>
+
+                <img src="./public/images/screen.png" class="z-[1] max-[1200px]:hidden bottom-[150px] absolute left-[-50px] w-[147px] h-[332px]" alt="">
+
+                <svg class="relative z-[10] max-[1200px]:hidden" xmlns="http://www.w3.org/2000/svg" width="600" height="375" viewBox="0 0 600 375" fill="none">
+                    <path d="M600 303.5C600 302.3 600 301.2 600 300C600 134.3 465.7 0 300 0C134.3 0 0 134.3 0 300C0 465.7 0 302.3 0 303.5H599.9H600Z" fill="#212B5F"/>
+                </svg>
+
+                <p class="absolute z-[100] text-center top-[117px] font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem]max-[900px]:leading-[1.25rem]  max-[900px]:text-[1rem]">
+                  Übersetzt in <br>
+                  valide Leistungswerte.
+                </p>
+
+                <svg class="absolute z-[100]  top-[217px]" width="100" height="46" viewBox="0 0 100 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M60.3 17.1C60.3 14.3 58.7 13.1 56.3 13.1H54V21.2H56.4C58.7 21.2 60.3 19.9 60.3 17.1ZM55.9 19.7V14.6H56.3C57.6 14.6 58.6 15.2 58.6 17.1C58.6 19 57.7 19.7 56.3 19.7H55.9ZM65.8 16.6L64.7 16.2C64 15.9 63.5 15.8 63.5 15.3C63.5 14.8 63.9 14.6 64.6 14.6C65.3 14.6 65.7 14.8 66.3 15.2L67.2 14.1C66.5 13.4 65.5 13 64.6 13C62.9 13 61.7 14.1 61.7 15.4C61.7 16.7 62.5 17.2 63.3 17.6L64.4 18C65.1 18.3 65.5 18.4 65.5 19C65.5 19.6 65.1 19.8 64.4 19.8C63.7 19.8 63 19.4 62.4 18.9L61.3 20.1C62.1 20.9 63.2 21.2 64.3 21.2C66.2 21.2 67.3 20.1 67.3 18.7C67.3 17.6 66.7 16.9 65.7 16.5L65.8 16.6ZM72.3 21.3C73.4 21.3 74.4 20.9 75 20.3V16.6H72V18.1H73.3V19.5C73.1 19.6 72.7 19.7 72.5 19.7C71 19.7 70.2 18.7 70.2 17.1C70.2 15.5 71 14.5 72.3 14.5C73.6 14.5 73.4 14.8 73.8 15.1L74.7 14C74.1 13.4 73.4 12.9 72.2 12.9C70.1 12.9 68.2 14.5 68.2 17.1C68.3 19.8 70 21.2 72.2 21.2L72.3 21.3ZM80 21.2L82.4 13.1H80.6L79.7 16.8C79.5 17.7 79.3 18.5 79.1 19.4C78.9 18.5 78.7 17.7 78.5 16.8L77.5 13H75.6L78 21.1H80.2L80 21.2ZM86.4 12.9C84.2 12.9 82.7 14.4 82.7 17.1C82.7 19.8 84.2 21.3 86.4 21.3C88.6 21.3 90.1 19.7 90.1 17.1C90.1 14.5 88.6 12.9 86.4 12.9ZM86.4 19.7C85.3 19.7 84.6 18.6 84.6 17.1C84.6 15.6 85.3 14.6 86.4 14.6C87.5 14.6 88.2 15.6 88.2 17.1C88.2 18.6 87.6 19.7 86.4 19.7ZM59.6 27H57.6L55.6 29.4V24.4H53.8V33.1H55.6V31.5L56.4 30.6L57.7 33H59.7L57.4 29.4L59.6 26.9V27ZM62.9 26.8C61.3 26.8 59.9 28 59.9 30C59.9 32 61.3 33.2 62.9 33.2C64.5 33.2 65.9 32 65.9 30C65.9 28 64.5 26.8 62.9 26.8ZM62.9 31.8C62.1 31.8 61.8 31.1 61.8 30C61.8 28.9 62.2 28.2 62.9 28.2C63.6 28.2 64 28.9 64 30C64 31.1 63.6 31.8 62.9 31.8ZM70.8 26.8C70 26.8 69.4 27.2 68.8 27.7V26.9H67.2V33.1H69V28.9C69.4 28.5 69.7 28.3 70.1 28.3C70.5 28.3 70.9 28.6 70.9 29.4V33H72.7V29.2C72.7 27.6 72.1 26.7 70.8 26.7V26.8ZM77.1 25.7C77.3 25.7 77.5 25.7 77.7 25.8L78.1 24.5C77.8 24.5 77.4 24.3 76.9 24.3C75.3 24.3 74.6 25.4 74.6 26.6V27H73.8V28.4H74.6V33.1H76.4V28.4H77.5V27H76.4V26.6C76.4 26 76.5 25.7 77 25.7H77.1ZM81 26.8C79.4 26.8 78 28 78 30C78 32 79.4 33.2 81 33.2C82.6 33.2 84 32 84 30C84 28 82.6 26.8 81 26.8ZM81 31.8C80.2 31.8 79.9 31.1 79.9 30C79.9 28.9 80.3 28.2 81 28.2C81.7 28.2 82.1 28.9 82.1 30C82.1 31.1 81.7 31.8 81 31.8ZM86.9 28V26.9H85.3V33.1H87.1V29.6C87.5 28.8 88 28.5 88.4 28.5C88.8 28.5 88.8 28.5 89 28.5L89.3 26.9C89.2 26.9 88.9 26.8 88.6 26.8C88 26.8 87.3 27.2 86.8 28H86.9ZM97.3 26.8C96.5 26.8 95.9 27.3 95.4 27.9C95.1 27.3 94.6 26.8 93.7 26.8C92.8 26.8 92.4 27.2 91.9 27.7V26.9H90.3V33.1H92.1V28.9C92.5 28.5 92.8 28.3 93.2 28.3C93.6 28.3 94 28.6 94 29.4V33H95.8V28.8C96.2 28.4 96.5 28.2 96.9 28.2C97.3 28.2 97.7 28.5 97.7 29.3V32.9H99.5V29.1C99.4 27.5 98.8 26.6 97.4 26.6L97.3 26.8ZM3 24.5L4.8 25.4L4.4 23.4L5.8 22L3.8 21.6L2.9 19.8L2 21.6L0 22L1.5 23.4L1.1 25.4L2.9 24.5H3ZM6.5 31.9L5.6 30.1L4.7 31.9L2.7 32.2L4.1 33.6L3.8 35.6L5.6 34.7L7.4 35.6L7.1 33.6L8.5 32.2L6.5 31.9ZM13.8 39.5L12.9 37.7L12 39.5L10 39.8L11.5 41.2L11.1 43.2L12.9 42.3L14.7 43.2L14.3 41.2L15.7 39.8L13.7 39.5H13.8ZM23.9 42.3L23 40.5L22.1 42.3L20.1 42.6L21.5 44L21.1 46L22.9 45.1L24.7 46L24.3 44L25.8 42.6L23.7 42.3H23.9ZM34.1 39.6L33.3 37.8L32.4 39.6L30.4 39.9L31.8 41.3L31.4 43.3L33.2 42.4L35 43.3L34.6 41.3L36.1 39.9L34 39.6H34.1ZM41.7 32.3L40.8 30.5L40 32.3L37.9 32.6L39.4 34L39 36L40.8 35.1L42.6 36L42.2 34L43.6 32.6L41.6 32.3H41.7ZM44.4 22.1L43.6 20.3L42.7 22.1L40.6 22.4L42.1 23.8L41.7 25.8L43.5 24.9L45.3 25.8L44.9 23.8L46.4 22.4L44.3 22.1H44.4ZM39 15.6L40.8 14.6L42.6 15.6L42.2 13.5L43.7 12.1L41.6 11.8L40.8 10L39.9 11.8L37.9 12.1L39.3 13.5L38.9 15.6H39ZM33.4 2.6L32.5 4.4L30.5 4.7L31.9 6.1L31.6 8.2L33.4 7.2L35.2 8.2L34.9 6.1L36.3 4.7L34.3 4.4L33.4 2.6ZM21.3 5.5L23.1 4.6L24.9 5.5L24.5 3.5L26 2.1L23.9 1.8L23.1 0L22.2 1.8L20.1 2.1L21.6 3.5L21.2 5.5H21.3ZM11.2 8.4L13 7.4L14.8 8.4L14.4 6.3L15.8 4.9L13.8 4.6L12.9 2.8L12 4.6L10 4.9L11.5 6.3L11.1 8.4H11.2ZM3.7 15.8L5.5 14.9L7.3 15.8L6.9 13.8L8.4 12.4L6.4 12.1L5.5 10.3L4.6 12.1L2.6 12.4L4 13.8L3.6 15.8H3.7ZM13.8 14.8V31.1C13.8 31.8 14.4 32.4 15.1 32.4H31.4C32.1 32.4 32.7 31.8 32.7 31.1V14.8C32.7 14.1 32.1 13.5 31.4 13.5H15.1C14.4 13.5 13.8 14.1 13.8 14.8ZM15.5 24.6L18 22.1L20.5 24.6L27.4 17.3L29.9 19.8L20.5 29.6L15.5 24.6Z" fill="white" fill-opacity="0.75"/>
+                </svg>
+
+
+              </div>
+
+
+          </div>
+        </div>
+
+        <div class="w-full min-h-[924px] relative flex flex-col items-center z-[100] max-[1600px]:min-h-[500px] overflow-x-hidden">
+          <div class="w-[150%]  min-w-[1000px] min-h-[924px] max-[1600px]:min-h-[500px] z-[100]   triangle absolute right-0"></div>
+            <div class="flex flex-col relative items-center mb-[50px] min-[1600px]:mb-[250px]">
+              <h1 class="relative  z-[100] mt-[63px] font-bold text-[4.38rem] uppercase font-[Rift] text-[#FFFFFF] leading-[4.38rem] max-[900px]:leading-[3rem]  max-[900px]:text-[3rem]">
+                REPORTING
+              </h1>
+            
+              <span class="relative z-[100] text-[1.25rem] max-w-[1200px] mt-[20px] text-center font-normal  text-[#FFFFFF] leading-[1.25rem] max-[900px]:leading-[1rem]  max-[900px]:text-[1rem]">
+                Übersichtliche  <span class="font-bold">Dashboards,</span>  leicht verständliche  <span class="font-bold">Reports</span>
+                & nahtlose <span class="font-bold">API-Lösungen.</span>
+              </span>
+            </div>
+
+            <div class="flex mb-[121px] relative z-[100] max-[1900px]:flex-col">
+              <div class="max-[1900px]:h-[350px] max-[1900px]:w-[350px] relative top-0 z-100 flex flex-col items-center rounded-l-[2px] w-[400px] h-[450px] bg-[#212B5F] z-100">
+                  <div class=" mt-[37px]">
+                    <img class="w-[300px] mb-[30px]" src="./public/images/notebook_1.png" alt="">
+
+                  </div>
+                  <div class="shrink-0 mb-[64px] max-[1900px]:mb-[32px] ">
+                    <h2 class="font-semibold text-[2rem] z-100 text-center mb-[20px] text-[#FFFFFF] leading-[2rem] max-[1900px]:leading-[1rem]  max-[1900px]:text-[1.5rem]">Dashboard</h2>
+                    <span class="text-[1.25rem] flex z-100 text-center font-normal  text-[#FFFFFF] leading-[2rem] max-[1900px]:leading-[1rem]  max-[1900px]:text-[1rem]">
+                      Das Ergebnis-Dashboard <br>
+                      liefert einen schnellen Überblick <br>
+                      über die wichtigsten Kennzahlen.
+                    </span>
+                  </div>
+              </div>
+
+              <div class="max-[1900px]:h-[350px] max-[1900px]:w-[350px] relative top-0 z-100 flex flex-col items-center w-[400px] h-[450px] bg-[#3371FF] z-100">
+                  <div class="mt-[37px]">
+                    <img class="w-[262px] mb-[18px]" src="./public/images/pdf.png" alt="">
+
+                  </div>
+                  <div class="shrink-0 mb-[64px] max-[1900px]:mb-[32px] ">
+                    <h2 class="font-semibold text-[2rem] z-100 text-center mb-[20px] text-[#FFFFFF] leading-[2rem] max-[1900px]:leading-[1rem]  max-[1900px]:text-[1.5rem]">PDF-Report</h2>
+                    <span class="text-[1.25rem] flex z-100 text-center font-normal  text-[#FFFFFF] leading-[2rem] max-[1900px]:leading-[1rem]  max-[1900px]:text-[1rem]">
+                      Leicht verständliche PDF-Reports <br>
+                      geben dir einen tieferen Einblick <br>
+                      zum Kontext der Ergebnisse.
+                    </span>
+                  </div>
+              </div>
+
+                            <div class="max-[1900px]:h-[350px] max-[1900px]:w-[350px] relative top-0 z-100 flex flex-col rounded-r-[2px] items-center w-[400px] h-[450px] bg-[#FF5B00] z-100">
+                  <div class="mt-[37px]">
+                    <img class="w-[300px] mb-[30px]" src="./public/images/notebook_1.png" alt="">
+
+                  </div>
+                  <div class="shrink-0 mb-[64px] max-[1900px]:mb-[32px] ">
+                    <h2 class="font-semibold text-[2rem] z-100 text-center mb-[20px] text-[#FFFFFF] leading-[2rem] max-[1900px]:leading-[1rem]  max-[1900px]:text-[1.5rem]">API-Schnittstelle</h2>
+                    <span class="text-[1.25rem] flex z-100 text-center font-normal  text-[#FFFFFF] leading-[2rem] max-[1900px]:leading-[1rem]  max-[1900px]:text-[1rem]">
+                        Nahtlose Integation <br>
+                        zu deiner Analytics- oder <br>
+                        Daten-Kollaborations-Software
+                    </span>
+                  </div>
+              </div>
+            </div>
+
+            <div class=" flex gap-[25px] mb-[108px] max-[768px]:flex-col">
+              <button class="max-[768px]:w-full px-[8px] py-[5px] min-w-[175px] rounded-[2px] bg-[#FF5B0000] border-[#FF5B00] border-[1px] text-[#FF5B00] text-[16px] leading-[30px] font-bold">
+                Sample Report
+              </button>
+              <button class="max-[768px]:w-full px-[8px] py-[5px] min-w-[175px] rounded-[2px] bg-[#FF5B00] text-[#FFFFFF] text-[16px] leading-[30px] font-bold">
+                Kontakt
+              </button>
+            </div>
+        </div>
+
+        <div class="w-full h-[30px] gradient__block-1"></div>
+        <div class="w-full flex flex-col items-center  bg-[#212B5F] px-[25px] pb-[50px]">
+            <span class="relative z-[100] mb-[28px] text-[1.25rem] max-w-[1200px] mt-[20px] text-center font-normal  text-[#FFFFFF] leading-[1.5rem] max-[900px]:leading-[0.8rem]  max-[900px]:text-[0.8rem]">
+              <span class="font-bold ">100% unabhängige Messung und Optimierung für Digitale (DOOH) und klassische (OOH) Außenwerbekampagnen.,</span>
+            </span>
+
+            <img src="./public/images/devices.png" alt="">
+            <span class="block relative z-[100] mb-[28px] text-[1.25rem] max-w-[1200px] mt-[20px] text-center font-normal  text-[#FFFFFF]  leading-[1.5rem]  max-[900px]:leading-[0.8rem]  max-[900px]:text-[0.8rem]">
+              <p class="font-bold ">Inventar von führenden Außenwerbe-Anbietern mess- und planbar:</p>
+              Deutschland: Ströer, Wall, WallDecaux, AWK Außenwerbung, Plakatunion, Schwarz Außenwerbung, Hygh u.v.m. <br>
+              Österreich: Gewista, Progress, Ankünder, Werbering, Epamedia, ÖBB, Infoscreen, Infinity Media, Post Werbefenster u.v.m. <br>
+              Schweiz: APG | SGA, Goldbach Neo, Swissplakat, Livesystems u.v.m. <br>
+
+              Das Produkt Brightscope steht in keiner Verbindung zu den oben angeführten Außenwerbeunternehmen.
+              Brightscope misst 100% unabhängig!
+              
+            </span>
+
+            <span class="block relative z-[100] text-[1.25rem] max-w-[1200px] mt-[20px] text-center font-normal  text-[#FFFFFF]  leading-[1.5rem]  max-[900px]:leading-[0.8rem]  max-[900px]:text-[0.8rem]"> 
+              Das Produkt Brightscope steht in keiner Verbindung zu den oben angeführten Außenwerbeunternehmen.
+            </span>
+            <span class="block relative font-bold  z-[100] text-[1.25rem] max-w-[1200px] text-center   text-[#FFFFFF]  leading-[1.5rem]  max-[900px]:leading-[0.8rem]  max-[900px]:text-[0.8rem]"> 
+              Brightscope misst 100% unabhängig!
+            </span>
+        </div>
+
+        <div class="w-full flex justify-center bg-[#F0F2F7] pb-[50px] min-[900px]:pb-[217px]">
+          <div class="max-w-[1200px] w-full flex flex-col items-center">
+            <div class="flex flex-col items-center">
+              <h1 class="mt-[63px] font-bold text-[4.38rem] uppercase font-[Rift] text-[#212B5F] leading-[4.38rem] max-[900px]:leading-[3rem]  max-[900px]:text-[2rem]">
+                EINE PREISLISTE OHNE ZAHLEN?
+              </h1>
+    
+              <span class="text-[1.25rem]  max-w-[1200px] mt-[20px] text-center font-normal  text-[#212B5F] leading-[2rem] max-[900px]:leading-[1rem]  max-[900px]:text-[1rem]">
+               <span class="font-bold block">Jeder Kunde ist anders, daher bieten wir ein individuelles Angebot, das speziell <br>
+                auf die Bedürfnisse und Anforderungen des einzelnen Kunden zugeschnitten ist.</span>
+                </span>
+                <span class="text-[1.25rem]  max-w-[1200px] mt-[20px] text-center font-normal  text-[#212B5F] leading-[1.25rem] max-[900px]:leading-[1rem]  max-[900px]:text-[1rem]">
+                    Um mehr zu erfahren, fülle einfach das Formular aus. <br>
+                    Wir melden uns in Kürze mit allen Einzelheiten bei dir.
+              </span>
+            </div>
+
+            <form class="gap-[20px] max-[900px]:px-[5px] max-[900px]:flex-col flex min-[900px]:mt-[100px] mt-[50px]" action="">
+              <div class="w-[580px] max-[900px]:w-full  gap-[20px] flex flex-col">
+                <div class="flex max-[900px]:flex-col gap-[20px]">
+                  <input class="w-[50%] max-[900px]:w-[100%]  text-[15px] leading-[30px] placeholder:text-[#6A6F8C99] text-[#6A6F8C] focus-within:outline-none px-[11px] py-[5px]" placeholder="Vorname" type="text">
+                  <input class="w-[50%] max-[900px]:w-[100%] text-[15px] leading-[30px] placeholder:text-[#6A6F8C99] text-[#6A6F8C] focus-within:outline-none px-[11px] py-[5px]" placeholder="Nachname" type="text">
+                </div>
+  
+                <div class="flex max-[900px]:flex-col gap-[20px]">
+                  <input class="w-[50%]  max-[900px]:w-[100%] text-[15px] leading-[30px] placeholder:text-[#6A6F8C99] text-[#6A6F8C] focus-within:outline-none px-[11px] py-[5px]" placeholder="Unternehmen" type="text">
+                  <div class="relative w-[50%] max-[900px]:w-[100%] flex items-center">
+                    <svg class="absolute left-[75px] pointer-events-none z-10" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.0575 0L4.5 3.09042L7.9425 0L9 0.951417L4.5 5L0 0.951417L1.0575 0Z" fill="#6A6F8C"/>
+                    </svg>
+                    <select class="relative h-[40px] w-full text-[15px] leading-[30px] placeholder:text-[#6A6F8C99] text-[#6A6F8C] focus-within:outline-none px-[11px] py-[5px]" placeholder="Vorname" type="text">
+                      <option value="Branche">Branche</option>
+                    </select>
+                  </div>
+                </div>
+  
+                <div class="flex max-[900px]:flex-col  gap-[20px]">
+                  <input class="w-[50%] max-[900px]:w-[100%]  text-[15px] leading-[30px] placeholder:text-[#6A6F8C99] text-[#6A6F8C] focus-within:outline-none px-[11px] py-[5px]" placeholder="Unternehmens E-Mail" type="text">
+                  <input class="w-[50%] max-[900px]:w-[100%] text-[15px] leading-[30px] placeholder:text-[#6A6F8C99] text-[#6A6F8C] focus-within:outline-none px-[11px] py-[5px]" placeholder="Tel.-Nr." type="text">
+                </div>
+  
+                  <div class="relative w-[100%] flex items-center">
+                    <svg class="absolute left-[54px] pointer-events-none z-10" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1.0575 0L4.5 3.09042L7.9425 0L9 0.951417L4.5 5L0 0.951417L1.0575 0Z" fill="#6A6F8C"/>
+                    </svg>
+                    <select class="relative h-[40px] w-full text-[15px] leading-[30px] placeholder:text-[#6A6F8C99] text-[#6A6F8C] focus-within:outline-none px-[11px] py-[5px]" placeholder="Vorname" type="text">
+                      <option value="Branche">Land</option>
+                    </select>
+                  </div>
+  
+                <textarea class="w-[100%] max-h-[234px] min-h-[234px]  text-[15px] leading-[30px] placeholder:text-[#6A6F8C99] text-[#6A6F8C] focus-within:outline-none px-[11px] py-[5px]" placeholder="Deine Nachricht" type="text"></textarea>
+              </div>
+
+
+              <div class="max-w-[479px] flex flex-col ">
+                <div class="grow">
+                  <div class=" items-start  flex max-w-full text-wrap break-words">
+                    <div class="popup__join_checkbox mt-[5px] mr-[5px]">
+                        <label class="checkbox">
+                            <input class="checkbox-input" type="checkbox" id="myCheckbox">
+                            <div class="checkbox-new">
+                                <div class="checkbox-new_unchecked">
+                                </div>
+                                <div class="checkbox-new_checked">
+                                    <img src="./public/images/check.svg" alt="check">
+                                </div>
+                                
+                            </div>
+            
+                        </label>
+                    </div>
+                    <p class="pointer-events-none text-[10px] text-[#6A6F8C80] leading-[18px] font-normal block max-w-full text-wrap break-words">
+                      <span class="font-semibold text-[#6A6F8C]">Ich stimme zu, Marketing-Mitteilungen von Brightscope zu erhalten. Ja, ich möchte Informationen 
+                        über neue Angebote zu eigenen Produkten und Dienstleistungen, Aktionen (zB Gewinnspiele, Testangebote, Newsletter) und Einladungen zu Veranstaltungen der Folyo GmbH per E-Mail erhalten. </span> <br>
+                        Zu diesem Zweck dürfen mein Vor-/Nachname, Unternehmensname, und meine E-Mail-Adresse von der Folyo GmbH verwendet werden. Ihre Daten 
+                        werden hier für in unserem Kundenbeziehungsmanagement-Tool „HubSpot“ gespeichert und damit an die HubSpot, Inc. 
+                        (25 First Street, 2nd Floor, Cambridge, MA 02141, United States) übermittelt. Wir weisen darauf hin, dass HubSpot, 
+                        Inc. eventuell keinen angemessenen Schutz im Sinne der Verordnung (EU) 2016/679 (Datenschutz-Grundverordnung) gegen die
+                         Überwachung durch Dritte (insbesondere durch staatliche Behörden) während der Übermittlung von personenbezogenen Daten von der EU in die 
+                         USA bietet (insbesondere aufgrund des Anwendungsbereichs folgender USA-Überwachungsgesetze: FISA 702 und/oder EO 12.333). Sie stimmen hiermit 
+                         ausdrücklich dem Transfer Ihrer personenbezogenen Daten in die USA zu. Diese Einwilligung können Sie jederzeit durch Mitteilung an 
+                         <a href="#" class="cursor-pointer text-[#3371FF]">„info@brightscope.io“</a> oder per Brief an die Folyo GmbH, Edelhofgasse 21, 1180 Wien, Österreich widerrufen. Der Widerruf berührt nicht die Rechtmäßigkeit der Verarbeitung bis zum Widerruf. Weitere Informationen zur Datenverarbeitung finden Sie in unserer <a href="#" class="cursor-pointer text-[#3371FF]">Website Datenschutzerklärung. </a>
+                    </p>
+                  </div>
+    
+                  <div class="mt-[20px] popup__join_checkbox items-start  flex max-w-full text-wrap break-words">
+                    <div class="popup__join_checkbox mt-[5px] mr-[5px]">
+                        <label class="checkbox">
+                            <input class="checkbox-input" type="checkbox" id="myCheckbox">
+                            <div class="checkbox-new">
+                                <div class="checkbox-new_unchecked">
+                                </div>
+                                <div class="checkbox-new_checked">
+                                    <img src="./public/images/check.svg" alt="check">
+                                </div>
+                                
+                            </div>
+            
+                        </label>
+                    </div>
+                      <p class="pointer-events-none text-[10px] text-[#6A6F8C80] leading-[18px] font-normal block max-w-full text-wrap break-words"> 
+                        <span class="font-semibold text-[#6A6F8C]">
+                          Ich stimme der Speicherung und Verarbeitung meiner persönlichen Daten durch Brightscope zu. <br>
+                        </span>
+                          Natürlich können Sie sich jederzeit von dieser Art der Kommunikation abmelden. Mit der Anmeldung stimmen Sie der Speicherung und Bearbeitung ihrer Daten, wie in unserer <a href="#" class="cursor-pointer text-[#3371FF]">Datenschutz-Mitteilung</a> angegeben, zu.
+                        </p>
+                  </div>
+                </div>
+
+                <button class="shrink-0 max-[768px]:w-full min-[900px]:max-w-[175px] px-[8px] py-[5px] min-w-[175px] max-[900px]:mt-[50px] rounded-[2px] bg-[#FF5B00] text-[#FFFFFF] text-[16px] leading-[30px] font-bold">
+                  Anfrage senden
+                </button>
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+        <div class="w-full flex max-[1440px]:flex-col">
+          <div class="w-[50%]  max-[1440px]:w-full max-[1440px]:items-start max-[1440px]:px-[10px] bg-[#3371FF] h-[200px] flex items-end flex-col relative">              
+              <ul class="mt-[55px] max-[900px]:mt-[50px] flex flex-col gap-[61px]">
+                <li class="flex gap-[20px] items-center">
+                  <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                      <svg width="30" height="43" viewBox="0 0 30 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.57143 40.85C8.57143 41.925 9.42857 43 10.7143 43H19.2857C20.5714 43 21.4286 41.925 21.4286 40.85V38.7H8.57143V40.85ZM15 0C6.64286 0 0 6.665 0 15.05C0 20.21 2.57143 24.725 6.42857 27.305V32.25C6.42857 33.325 7.28571 34.4 8.57143 34.4H21.4286C22.7143 34.4 23.5714 33.325 23.5714 32.25V27.305C27.4286 24.51 30 19.995 30 15.05C30 6.665 23.3571 0 15 0Z" fill="#3371FF"/>
+                      </svg>
+
+                  </div>
+
+                  <div class="">
+                    <h3 class="font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem]max-[900px]:leading-[1.25rem]  max-[900px]:text-[1rem]">Knowledge-Hub</h3>
+                    <p class="min-w-[480px] font-normal text-[1.25rem] text-[#FFFFFF] fotn-[Inter] leading-[1.85rem] max-[900px]:leading-[1.85rem]  max-[900px]:text-[1rem]">Hol dir Gratis Guides <br> und Whitepaper</p> 
+                  </div>
+                </li>
+              </ul>
+          </div>
+          <div class="w-[50%]  max-[1440px]:w-full items-start max-[1440px]:px-[10px] bg-[#FF5B00] h-[200px] flex  flex-col relative">      
+              <ul class="mt-[55px]  min-[1440px]:ml-[60px] max-[900px]:mt-[50px] flex flex-col gap-[61px]">
+                <li class="flex gap-[20px] items-center">
+                  <div class="h-[82px] w-[100px] max-[900px]:h-[60px] max-[900px]:w-[80px] bg-[#FFFFFFCC] rounded-[2px] flex justify-center items-center">
+                    <svg width="40" height="25" viewBox="0 0 40 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M27.2727 10.7143C30.2909 10.7143 32.7091 8.32143 32.7091 5.35714C32.7091 2.39286 30.2909 0 27.2727 0C24.2545 0 21.8182 2.39286 21.8182 5.35714C21.8182 8.32143 24.2545 10.7143 27.2727 10.7143ZM12.7273 10.7143C15.7455 10.7143 18.1636 8.32143 18.1636 5.35714C18.1636 2.39286 15.7455 0 12.7273 0C9.70909 0 7.27273 2.39286 7.27273 5.35714C7.27273 8.32143 9.70909 10.7143 12.7273 10.7143ZM12.7273 14.2857C8.49091 14.2857 0 16.375 0 20.5357V25H25.4545V20.5357C25.4545 16.375 16.9636 14.2857 12.7273 14.2857ZM27.2727 14.2857C26.7455 14.2857 26.1455 14.3214 25.5091 14.375C27.6182 15.875 29.0909 17.8929 29.0909 20.5357V25H40V20.5357C40 16.375 31.5091 14.2857 27.2727 14.2857Z" fill="#FF5B00"/>
+</svg>
+
+                  </div>
+
+                  <div class="">
+                    <h3 class="font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem]max-[900px]:leading-[1.25rem]  max-[900px]:text-[1rem]">Karriere bei Brightscope</h3>
+                    <p class="min-w-[480px] font-normal text-[1.25rem] text-[#FFFFFF] fotn-[Inter] leading-[1.85rem] max-[900px]:leading-[1.85rem]  max-[900px]:text-[1rem]">Sieh dir die aktuell offenen <br> Stellen bei uns an.</p> 
+                  </div>
+                </li>               
+              </ul>
+          </div>
+        </div>
+
+        <div class="w-full h-[30px] gradient__block-1"></div>
       </main>
+
+      <footer class="flex w-full flex-col items-center bg-[#212B5F]">
+          <div class="w-full max-w-[1200px] flex flex-col items-end pt-[75px] pb-[147px]">
+              <div class="w-full flex items-center max-[900px]:flex-col justify-between min-[900px]:px-[35px] px-[5px] py-[31px] bg-[#FFFFFF26] min-[900px]:h-[125px] rounded-[2px]">
+                  <div class="w-full">
+                    <h3 class="font-bold text-[1.25rem] fotn-[Inter] text-[#FFFFFF] leading-[1.25rem] max-[900px]:leading-[0.8rem]  max-[900px]:text-[0.8rem] max-[900px]:mb-[10px] max-[900px]:text-center">
+                      Jetzt für unseren  kostenlosen Newsletter registrieren!
+                      <p class="min-w-[480px] font-normal text-[1.25rem] text-[#FFFFFF] fotn-[Inter] leading-[1.85rem] max-[900px]:leading-[0.8rem]  max-[900px]:text-[0.8rem] max-[900px]:mt-[10px]">Bleibe auf dem neuesten Stand. Kein Spam.</p> 
+                    </h3>
+                  </div>
+
+                  <div class="flex max-[900px]:mt-[2rem]">
+                    <input class=" min-[900px]:max-w-[300px] max-[900px]:w-[100%] h-[40px]  text-[15px] leading-[30px] placeholder:text-[#6A6F8C99] text-[#6A6F8C] focus-within:outline-none px-[11px] py-[5px]" placeholder="E-Mail Adresse" type="text">
+                    <button class="shrink-0 min-[900px]:max-w-[150px] px-[8px] py-[5px] min-[900px]:min-w-[175px] rounded-[2px] bg-[#FF5B00] text-[#FFFFFF] text-[16px] leading-[30px] font-bold">
+                      Registrieren
+                    </button>
+                  </div>
+              </div>
+
+              <hr class="w-full max-w-[1022px] border-[#FFFFFF] opacity-10 border-[0.5px] mt-[102px] mb-[58px]">
+
+              <ul class="grid max-[1200px]:px-[10px] max-[1200px]:gap-[25px] max-[1200px]:w-full max-[1200px]:grid-cols-[100%] grid-cols-[300px_300px_300px_300px]">
+                <li class="flex flex-col">
+                  <div class="grow">
+                    <h3 class="text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-bold text-[#FFFFFF]">Headquarter</h3>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Leopold-Ungar-Platz 2</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">1190 Wien, Österreich</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">+43 664 332 777 1  </span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">info@brightscope.io</span>
+                  </div>
+
+                  <div class="shrink-0">
+                    <h3 class="text-[1rem] max-[1200px]:mt-[16px] mb-[16px] leading-[1rem] max-[1200px]:text-[1rem] max-[1200px]:leading-[1rem] font-bold text-[#FFFFFF]">Follow us:</h3>
+                    <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_80_322)">
+                      <path d="M28.7053 0H2.28867C1.02324 0 0 0.999024 0 2.23418V28.7598C0 29.9949 1.02324 31 2.28867 31H28.7053C29.9707 31 31 29.9949 31 28.7658V2.23418C31 0.999024 29.9707 0 28.7053 0ZM9.19707 26.4166H4.59551V11.6189H9.19707V26.4166ZM6.89629 9.60273C5.41895 9.60273 4.22617 8.40996 4.22617 6.93867C4.22617 5.46738 5.41895 4.27461 6.89629 4.27461C8.36758 4.27461 9.56035 5.46738 9.56035 6.93867C9.56035 8.40391 8.36758 9.60273 6.89629 9.60273ZM26.4166 26.4166H21.8211V19.2236C21.8211 17.5102 21.7908 15.3002 19.4295 15.3002C17.0379 15.3002 16.6746 17.1711 16.6746 19.1025V26.4166H12.0852V11.6189H16.493V13.6412H16.5535C17.165 12.4787 18.6666 11.2496 20.9008 11.2496C25.5568 11.2496 26.4166 14.3133 26.4166 18.2973V26.4166Z" fill="white" fill-opacity="0.75"/>
+                      </g>
+                      <defs>
+                      <clipPath id="clip0_80_322">
+                      <rect width="31" height="31" fill="white"/>
+                      </clipPath>
+                      </defs>
+                    </svg>
+
+                  </div>
+                </li>
+                <li class="flex flex-col">
+                  <div class="grow">
+                    <h3 class="text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-bold text-[#FFFFFF]">Headquarter</h3>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Home</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Lösungen</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Plattform</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Technologie</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Reporting</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Messbare Werbeflächen</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Preise</span>
+                  </div>
+                </li>
+
+                <li class="flex flex-col">
+                  <div class="grow">
+                    <h3 class="text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-bold text-[#FFFFFF]">Headquarter</h3>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Kontakt</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Karriere</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Medien-Center</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Ressourcen</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Newsletter</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Blog</span>
+                    <span class="mt-[2rem] block text-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">Support</span>
+                  </div>
+                </li>
+                                </li>
+                <li class="flex flex-col">
+                  <div class="grow">
+                    <h3 class="text-[1rem] mb-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-bold text-[#FFFFFF]">Mitgliedschaften</h3>
+                    <!-- <svg width="212" height="38" viewBox="0 0 212 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M20.6187 27.4915V12.0057C20.6187 9.91775 17.4868 12.0057 15.8338 11.2227C14.1808 10.1787 12.1798 9.48275 10.0919 9.48275C4.52394 9.39575 0 13.6587 0 18.8786C0 24.0986 4.52394 28.3615 10.0049 28.3615C15.4858 28.3615 14.2678 27.6655 15.9208 26.5345C16.5298 27.3175 18.0958 28.1005 19.7488 28.1005C21.4017 28.1005 20.5317 27.5785 20.5317 27.5785M15.4858 18.8786C15.4858 21.5756 13.3108 23.7506 10.6139 23.7506C7.9169 23.7506 5.74193 21.5756 5.74193 18.8786C5.74193 16.1817 7.9169 14.0067 10.6139 14.0067C13.3108 14.0067 15.4858 16.1817 15.4858 18.8786Z" fill="white" fill-opacity="0.75"/>
+                      <path d="M90.2178 27.4922V12.0064C90.2178 9.91839 86.9118 12.0064 85.1719 11.2234C83.5189 10.1794 81.5179 9.4834 79.4299 9.4834C77.342 9.4834 76.646 9.7444 75.428 10.2664C76.472 11.1364 77.168 12.2674 77.168 13.8333V15.0513C77.9509 14.4423 78.9079 14.0943 80.0389 14.0943C82.7359 14.0943 84.9109 16.2693 84.9109 18.9663C84.9109 21.6632 82.7359 23.8382 80.0389 23.8382C77.342 23.8382 78.0379 23.4902 77.168 22.8812V28.1012C77.8639 28.2752 78.6469 28.3622 79.4299 28.3622C81.6919 28.3622 83.6929 27.6662 85.3459 26.5352C85.9548 27.3182 87.7818 28.1012 89.3478 28.1012C90.9138 28.1012 90.1308 27.5792 90.1308 27.5792" fill="white" fill-opacity="0.75"/>
+                      <path d="M75.1671 27.7532V14.3553C75.1671 10.7884 71.0781 9.4834 68.0332 9.4834C64.9882 9.4834 63.4222 10.4404 61.8562 12.0064C60.5513 10.0924 58.7243 9.4834 56.6363 9.4834C54.5483 9.4834 53.0693 10.3534 51.8514 11.2234C49.8504 12.0934 46.5444 9.91839 46.5444 12.0064V15.6603V27.8402H52.2864V25.1432C52.2864 25.0562 52.2864 24.9692 52.2864 24.8822V16.1823C52.2864 14.7033 53.0694 13.6593 55.2443 13.6593C57.4193 13.6593 58.0283 14.4423 58.0283 15.8343V27.8402H63.7702V16.1823C63.7702 14.7033 64.5532 13.6593 66.7282 13.6593C68.9031 13.6593 69.5121 14.4423 69.5121 15.8343V20.1843C69.8601 23.4902 72.1221 26.3612 75.2541 27.7532" fill="white" fill-opacity="0.75"/>
+                      <path d="M42.8905 28.0133V22.9673V11.9185C42.8905 9.8305 39.5846 11.9185 37.8446 11.1355C36.1916 10.0915 34.1906 9.39551 32.1027 9.39551C26.5347 9.39551 22.0978 13.6585 22.0978 18.8784C22.0978 24.0983 26.6217 28.3613 32.1027 28.3613C37.5836 28.3613 36.1046 27.9263 37.3226 26.9693V27.7523C37.3226 30.9712 34.3646 32.4502 31.7547 32.6242H28.5357L27.4917 37.2352H32.1027C37.4966 37.2352 42.6295 33.1462 42.8035 28.1003L42.8905 28.0133ZM37.4966 18.8784C37.4966 21.5754 35.3216 23.7503 32.6246 23.7503C29.9277 23.7503 27.7527 21.5754 27.7527 18.8784C27.7527 16.1814 29.9277 14.0064 32.6246 14.0064C35.3216 14.0064 37.4966 16.1814 37.4966 18.8784Z" fill="white" fill-opacity="0.75"/>
+                      <path d="M107.879 9.91745V5.13251C107.879 4.52352 106.835 5.13251 106.313 4.95852C105.791 4.61052 105.182 4.43652 104.573 4.43652C103.964 4.43652 103.877 4.43652 103.529 4.61052C103.877 4.87152 104.138 5.21951 104.138 5.74151V6.0025C104.312 5.9155 104.573 5.82851 104.834 5.82851C105.617 5.82851 106.313 6.5245 106.313 7.30749C106.313 8.09048 105.617 8.78647 104.834 8.78647C104.051 8.78647 104.399 8.78647 104.138 8.61247V10.0915C104.312 10.0915 104.486 10.0915 104.66 10.0915C105.356 10.0915 105.965 9.91745 106.487 9.48246C106.661 9.74346 107.27 10.0045 107.705 10.0045C108.14 10.0045 107.966 9.83046 107.966 9.83046" fill="white" fill-opacity="0.75"/>
+                      <path d="M103.268 10.0045V5.9155C103.268 4.78452 102.05 4.43652 101.093 4.43652C100.136 4.43652 99.7008 4.69752 99.1788 5.21951C98.7438 4.61052 98.2218 4.43652 97.6128 4.43652C97.0038 4.43652 96.5688 4.69752 96.1338 4.95852C95.5248 5.21951 94.4808 4.43652 94.4808 5.04552V6.2635V10.0045H96.2208V9.22146V6.6115C96.2208 6.1765 96.4818 5.82851 97.0908 5.82851C97.6998 5.82851 97.9608 6.0895 97.9608 6.5245V10.1785H99.7008V6.6115C99.7008 6.1765 99.9618 5.82851 100.571 5.82851C101.18 5.82851 101.441 6.0895 101.441 6.5245V7.82948C101.528 8.87347 102.224 9.74346 103.181 10.0915" fill="white" fill-opacity="0.75"/>
+                      <path d="M105.878 3.47996H107.618C106.226 1.39198 103.964 0 101.267 0C98.5697 0 96.3078 1.39198 94.9158 3.47996H96.5688C97.6997 2.17497 99.3527 1.39198 101.267 1.39198C103.181 1.39198 104.747 2.17497 105.878 3.47996Z" fill="white" fill-opacity="0.75"/>
+                      <path d="M96.5688 11.0488H94.9158C96.3078 13.1368 98.5697 14.5288 101.267 14.5288C103.964 14.5288 106.226 13.1368 107.618 11.0488H105.878C104.747 12.3538 103.094 13.1368 101.18 13.1368C99.2657 13.1368 97.6997 12.3538 96.5688 11.0488Z" fill="white" fill-opacity="0.75"/>
+                      <path d="M212 27.8991C210.118 27.9101 208.236 27.9101 206.355 27.9211C206.121 27.9211 205.954 27.8219 205.854 27.6236C205.497 26.8632 205.13 26.1028 204.773 25.3424C204.283 24.3065 203.794 23.2706 203.292 22.2347C202.591 20.758 201.889 19.2923 201.199 17.8156C200.687 16.7466 200.186 15.6667 199.674 14.5867C199.64 14.5206 199.607 14.4544 199.562 14.3773C199.473 14.5536 199.395 14.7189 199.317 14.8842C198.783 15.9973 198.248 17.1103 197.714 18.2233C197.135 19.4356 196.556 20.6368 195.977 21.849C195.275 23.3037 194.585 24.7693 193.883 26.224C193.672 26.6758 193.449 27.1277 193.237 27.5795C193.126 27.8109 192.97 27.9211 192.703 27.9211C191.656 27.9101 190.61 27.9211 189.563 27.9211H187.091C191.244 19.1711 195.398 10.4321 199.54 1.7041H199.584C199.607 1.74818 199.629 1.79226 199.651 1.84736C200.999 4.70159 202.357 7.55582 203.704 10.41C204.629 12.3606 205.553 14.3222 206.477 16.2728C207.123 17.6503 207.78 19.0168 208.437 20.3943C209.25 22.1135 210.074 23.8436 210.887 25.5628C211.243 26.3122 211.599 27.0615 211.956 27.8109C211.956 27.8219 211.978 27.8329 211.978 27.855C212 27.866 212 27.888 212 27.8991Z" fill="white" fill-opacity="0.75"/>
+                      <path d="M172.326 1.68247C172.66 2.39879 173.005 3.1151 173.339 3.83141C174.631 6.56441 175.922 9.2864 177.225 12.0194C178.094 13.8377 178.951 15.6671 179.82 17.4854C180.532 18.9952 181.256 20.516 181.969 22.0257C182.86 23.9102 183.762 25.8056 184.652 27.6901C184.686 27.7562 184.708 27.8223 184.753 27.9105H183.617C182.592 27.9105 181.557 27.8995 180.532 27.8995C179.508 27.8995 179.575 27.8995 179.107 27.9105C178.862 27.9105 178.706 27.8113 178.595 27.5909C178.127 26.5881 177.648 25.5852 177.181 24.5824C176.346 22.8082 175.499 21.0339 174.664 19.2707C174.018 17.9042 173.361 16.5267 172.716 15.1602C172.593 14.9067 172.471 14.6422 172.337 14.3557C172.237 14.554 172.148 14.7304 172.07 14.8957C171.736 15.601 171.402 16.2952 171.068 17.0005C170.477 18.2458 169.876 19.4801 169.286 20.7253C168.707 21.9265 168.139 23.1277 167.56 24.3289C167.081 25.3208 166.614 26.3016 166.135 27.2934C166.079 27.4146 166.023 27.5248 165.968 27.646C165.879 27.8223 165.734 27.8995 165.545 27.8995H163.763C162.805 27.8995 161.837 27.8885 160.879 27.8885C159.921 27.8885 160.311 27.8995 160.022 27.8995H159.877C159.944 27.7452 159.999 27.613 160.066 27.4807C160.957 25.6073 161.837 23.7449 162.727 21.8714C163.563 20.1192 164.387 18.367 165.222 16.6148C165.7 15.612 166.179 14.6091 166.647 13.6063C167.66 11.4684 168.674 9.3415 169.687 7.20358C170.544 5.39627 171.413 3.57795 172.27 1.77064C172.292 1.72656 172.304 1.68247 172.326 1.64941C172.326 1.67145 172.326 1.68247 172.326 1.68247Z" fill="white" fill-opacity="0.75"/>
+                      <path d="M150 1.77051H155.389V27.8883H150C150 19.1824 150 10.4764 150 1.77051Z" fill="white" fill-opacity="0.75"/>
+                      <path d="M174.397 25.8494C174.419 26.9183 173.528 27.9101 172.303 27.9101C171.079 27.9101 170.221 26.9844 170.199 25.8714C170.177 24.6702 171.201 23.7225 172.37 23.7445C173.484 23.7776 174.43 24.7363 174.397 25.8494Z" fill="white" fill-opacity="0.75"/>
+                    </svg> -->
+
+                    <h3 class="text-[1rem] mt-[2rem] mb-[1rem]  leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-bold text-[#FFFFFF]">Privacy by Design</h3>
+                    <svg class="mt-[1rem]   mb-[2rem]" width="100" height="46" viewBox="0 0 100 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M60.3 17.1C60.3 14.3 58.7 13.1 56.3 13.1H54V21.2H56.4C58.7 21.2 60.3 19.9 60.3 17.1ZM55.9 19.7V14.6H56.3C57.6 14.6 58.6 15.2 58.6 17.1C58.6 19 57.7 19.7 56.3 19.7H55.9ZM65.8 16.6L64.7 16.2C64 15.9 63.5 15.8 63.5 15.3C63.5 14.8 63.9 14.6 64.6 14.6C65.3 14.6 65.7 14.8 66.3 15.2L67.2 14.1C66.5 13.4 65.5 13 64.6 13C62.9 13 61.7 14.1 61.7 15.4C61.7 16.7 62.5 17.2 63.3 17.6L64.4 18C65.1 18.3 65.5 18.4 65.5 19C65.5 19.6 65.1 19.8 64.4 19.8C63.7 19.8 63 19.4 62.4 18.9L61.3 20.1C62.1 20.9 63.2 21.2 64.3 21.2C66.2 21.2 67.3 20.1 67.3 18.7C67.3 17.6 66.7 16.9 65.7 16.5L65.8 16.6ZM72.3 21.3C73.4 21.3 74.4 20.9 75 20.3V16.6H72V18.1H73.3V19.5C73.1 19.6 72.7 19.7 72.5 19.7C71 19.7 70.2 18.7 70.2 17.1C70.2 15.5 71 14.5 72.3 14.5C73.6 14.5 73.4 14.8 73.8 15.1L74.7 14C74.1 13.4 73.4 12.9 72.2 12.9C70.1 12.9 68.2 14.5 68.2 17.1C68.3 19.8 70 21.2 72.2 21.2L72.3 21.3ZM80 21.2L82.4 13.1H80.6L79.7 16.8C79.5 17.7 79.3 18.5 79.1 19.4C78.9 18.5 78.7 17.7 78.5 16.8L77.5 13H75.6L78 21.1H80.2L80 21.2ZM86.4 12.9C84.2 12.9 82.7 14.4 82.7 17.1C82.7 19.8 84.2 21.3 86.4 21.3C88.6 21.3 90.1 19.7 90.1 17.1C90.1 14.5 88.6 12.9 86.4 12.9ZM86.4 19.7C85.3 19.7 84.6 18.6 84.6 17.1C84.6 15.6 85.3 14.6 86.4 14.6C87.5 14.6 88.2 15.6 88.2 17.1C88.2 18.6 87.6 19.7 86.4 19.7ZM59.6 27H57.6L55.6 29.4V24.4H53.8V33.1H55.6V31.5L56.4 30.6L57.7 33H59.7L57.4 29.4L59.6 26.9V27ZM62.9 26.8C61.3 26.8 59.9 28 59.9 30C59.9 32 61.3 33.2 62.9 33.2C64.5 33.2 65.9 32 65.9 30C65.9 28 64.5 26.8 62.9 26.8ZM62.9 31.8C62.1 31.8 61.8 31.1 61.8 30C61.8 28.9 62.2 28.2 62.9 28.2C63.6 28.2 64 28.9 64 30C64 31.1 63.6 31.8 62.9 31.8ZM70.8 26.8C70 26.8 69.4 27.2 68.8 27.7V26.9H67.2V33.1H69V28.9C69.4 28.5 69.7 28.3 70.1 28.3C70.5 28.3 70.9 28.6 70.9 29.4V33H72.7V29.2C72.7 27.6 72.1 26.7 70.8 26.7V26.8ZM77.1 25.7C77.3 25.7 77.5 25.7 77.7 25.8L78.1 24.5C77.8 24.5 77.4 24.3 76.9 24.3C75.3 24.3 74.6 25.4 74.6 26.6V27H73.8V28.4H74.6V33.1H76.4V28.4H77.5V27H76.4V26.6C76.4 26 76.5 25.7 77 25.7H77.1ZM81 26.8C79.4 26.8 78 28 78 30C78 32 79.4 33.2 81 33.2C82.6 33.2 84 32 84 30C84 28 82.6 26.8 81 26.8ZM81 31.8C80.2 31.8 79.9 31.1 79.9 30C79.9 28.9 80.3 28.2 81 28.2C81.7 28.2 82.1 28.9 82.1 30C82.1 31.1 81.7 31.8 81 31.8ZM86.9 28V26.9H85.3V33.1H87.1V29.6C87.5 28.8 88 28.5 88.4 28.5C88.8 28.5 88.8 28.5 89 28.5L89.3 26.9C89.2 26.9 88.9 26.8 88.6 26.8C88 26.8 87.3 27.2 86.8 28H86.9ZM97.3 26.8C96.5 26.8 95.9 27.3 95.4 27.9C95.1 27.3 94.6 26.8 93.7 26.8C92.8 26.8 92.4 27.2 91.9 27.7V26.9H90.3V33.1H92.1V28.9C92.5 28.5 92.8 28.3 93.2 28.3C93.6 28.3 94 28.6 94 29.4V33H95.8V28.8C96.2 28.4 96.5 28.2 96.9 28.2C97.3 28.2 97.7 28.5 97.7 29.3V32.9H99.5V29.1C99.4 27.5 98.8 26.6 97.4 26.6L97.3 26.8ZM3 24.5L4.8 25.4L4.4 23.4L5.8 22L3.8 21.6L2.9 19.8L2 21.6L0 22L1.5 23.4L1.1 25.4L2.9 24.5H3ZM6.5 31.9L5.6 30.1L4.7 31.9L2.7 32.2L4.1 33.6L3.8 35.6L5.6 34.7L7.4 35.6L7.1 33.6L8.5 32.2L6.5 31.9ZM13.8 39.5L12.9 37.7L12 39.5L10 39.8L11.5 41.2L11.1 43.2L12.9 42.3L14.7 43.2L14.3 41.2L15.7 39.8L13.7 39.5H13.8ZM23.9 42.3L23 40.5L22.1 42.3L20.1 42.6L21.5 44L21.1 46L22.9 45.1L24.7 46L24.3 44L25.8 42.6L23.7 42.3H23.9ZM34.1 39.6L33.3 37.8L32.4 39.6L30.4 39.9L31.8 41.3L31.4 43.3L33.2 42.4L35 43.3L34.6 41.3L36.1 39.9L34 39.6H34.1ZM41.7 32.3L40.8 30.5L40 32.3L37.9 32.6L39.4 34L39 36L40.8 35.1L42.6 36L42.2 34L43.6 32.6L41.6 32.3H41.7ZM44.4 22.1L43.6 20.3L42.7 22.1L40.6 22.4L42.1 23.8L41.7 25.8L43.5 24.9L45.3 25.8L44.9 23.8L46.4 22.4L44.3 22.1H44.4ZM39 15.6L40.8 14.6L42.6 15.6L42.2 13.5L43.7 12.1L41.6 11.8L40.8 10L39.9 11.8L37.9 12.1L39.3 13.5L38.9 15.6H39ZM33.4 2.6L32.5 4.4L30.5 4.7L31.9 6.1L31.6 8.2L33.4 7.2L35.2 8.2L34.9 6.1L36.3 4.7L34.3 4.4L33.4 2.6ZM21.3 5.5L23.1 4.6L24.9 5.5L24.5 3.5L26 2.1L23.9 1.8L23.1 0L22.2 1.8L20.1 2.1L21.6 3.5L21.2 5.5H21.3ZM11.2 8.4L13 7.4L14.8 8.4L14.4 6.3L15.8 4.9L13.8 4.6L12.9 2.8L12 4.6L10 4.9L11.5 6.3L11.1 8.4H11.2ZM3.7 15.8L5.5 14.9L7.3 15.8L6.9 13.8L8.4 12.4L6.4 12.1L5.5 10.3L4.6 12.1L2.6 12.4L4 13.8L3.6 15.8H3.7ZM13.8 14.8V31.1C13.8 31.8 14.4 32.4 15.1 32.4H31.4C32.1 32.4 32.7 31.8 32.7 31.1V14.8C32.7 14.1 32.1 13.5 31.4 13.5H15.1C14.4 13.5 13.8 14.1 13.8 14.8ZM15.5 24.6L18 22.1L20.5 24.6L27.4 17.3L29.9 19.8L20.5 29.6L15.5 24.6Z" fill="white" fill-opacity="0.75"/>
+                    </svg>
+
+                    <h3 class="text-[1rem] mt-[1rem] leading-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-bold text-[#FFFFFF]">Datenpartner</h3>
+                    <!-- <svg class="mt-[1rem]" width="281" height="91" viewBox="0 0 281 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M237.218 11.1216C235.771 11.1216 234.381 11.7211 233.372 12.774V7.20257C233.372 7.02709 233.226 6.88086 233.051 6.88086H231.091C230.916 6.88086 230.77 7.02709 230.77 7.20257V22.2644C230.77 22.4399 230.916 22.5861 231.091 22.5861H233.051C233.226 22.5861 233.372 22.4399 233.372 22.2644V21.2262C234.381 22.2791 235.756 22.8786 237.218 22.8786C240.275 22.8786 242.746 20.2464 242.746 17.0001C242.746 13.7537 240.275 11.1216 237.218 11.1216ZM236.765 20.5243C234.908 20.5243 233.402 18.9742 233.387 17.044V16.9562C233.416 15.026 234.908 13.4759 236.765 13.4759C238.637 13.4759 240.143 15.0552 240.143 17.0001C240.143 18.945 238.622 20.5243 236.765 20.5243Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M249.955 11.1221C246.65 11.1221 243.974 13.7542 243.974 17.0006C243.974 20.2469 246.65 22.8791 249.955 22.8791C253.26 22.8791 255.936 20.2469 255.936 17.0006C255.936 13.7542 253.26 11.1221 249.955 11.1221ZM249.94 20.5248C248.068 20.5248 246.562 18.9455 246.562 17.0006C246.562 15.0557 248.083 13.4764 249.94 13.4764C251.797 13.4764 253.318 15.0557 253.318 17.0006C253.318 18.9455 251.797 20.5248 249.94 20.5248Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M213.383 11.4145H211.423C211.248 11.4145 211.101 11.5608 211.101 11.7362V12.7745C210.092 11.7216 208.718 11.1221 207.255 11.1221C204.199 11.1221 201.728 13.7542 201.728 17.0006C201.728 20.2469 204.199 22.8791 207.255 22.8791C208.703 22.8791 210.092 22.2796 211.101 21.2267V22.2649C211.101 22.4404 211.248 22.5866 211.423 22.5866H213.383C213.558 22.5866 213.704 22.4404 213.704 22.2649V11.7362C213.704 11.5608 213.558 11.4145 213.383 11.4145ZM207.709 20.5248C205.837 20.5248 204.331 18.9455 204.331 17.0006C204.331 15.0557 205.852 13.4764 207.709 13.4764C209.566 13.4764 211.072 15.0265 211.087 16.9567V17.0445C211.072 18.9747 209.566 20.5248 207.709 20.5248Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M223.165 11.1221C221.718 11.1221 220.328 11.7216 219.319 12.7745V11.7362C219.319 11.5608 219.173 11.4145 218.998 11.4145H217.038C216.863 11.4145 216.717 11.5608 216.717 11.7362V26.7981C216.717 26.9736 216.863 27.1198 217.038 27.1198H218.998C219.173 27.1198 219.319 26.9736 219.319 26.7981V21.2267C220.328 22.2796 221.703 22.8791 223.165 22.8791C226.222 22.8791 228.693 20.2469 228.693 17.0006C228.693 13.7542 226.222 11.1221 223.165 11.1221ZM222.712 20.5248C220.855 20.5248 219.349 18.9747 219.334 17.0445V16.9567C219.363 15.0265 220.855 13.4764 222.712 13.4764C224.584 13.4764 226.09 15.0557 226.09 17.0006C226.09 18.9455 224.584 20.5248 222.712 20.5248Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M195.864 11.1213C194.402 11.1359 193.071 11.984 192.442 13.3148C191.726 11.9548 190.293 11.1067 188.757 11.1213C187.558 11.1213 186.432 11.7062 185.73 12.6713V11.7355C185.73 11.56 185.584 11.4137 185.408 11.4137H183.449C183.273 11.4137 183.127 11.56 183.127 11.7355V22.2641C183.127 22.4396 183.273 22.5858 183.449 22.5858H185.408C185.584 22.5858 185.73 22.4396 185.73 22.2641V15.9616C185.803 14.5577 186.783 13.4317 187.982 13.4317C189.225 13.4317 190.263 14.47 190.263 15.8299V22.2641C190.263 22.4396 190.41 22.5858 190.585 22.5858H192.559C192.735 22.5858 192.881 22.4396 192.881 22.2641L192.866 15.713C193.042 14.4261 193.963 13.4317 195.089 13.4317C196.332 13.4317 197.37 14.47 197.37 15.8299V22.2641C197.37 22.4396 197.516 22.5858 197.692 22.5858H199.666C199.841 22.5858 199.988 22.4396 199.988 22.2641L199.973 15.0257C199.973 12.8614 198.131 11.1213 195.864 11.1213Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M266.479 22.1328L263.087 16.9708L266.45 11.8527C266.538 11.7211 266.494 11.531 266.362 11.4433C266.318 11.414 266.26 11.3994 266.201 11.3994H263.935C263.759 11.3994 263.598 11.4872 263.511 11.6334L261.537 14.9528L259.562 11.648C259.475 11.5018 259.314 11.414 259.138 11.414H256.872C256.711 11.414 256.579 11.5456 256.579 11.7065C256.579 11.765 256.594 11.8235 256.623 11.8674L259.987 16.9855L256.594 22.1474C256.506 22.2791 256.55 22.4692 256.682 22.5569C256.726 22.5861 256.784 22.6008 256.843 22.6008H259.109C259.285 22.6008 259.446 22.513 259.533 22.3668L261.551 19.0035L263.569 22.3668C263.657 22.513 263.818 22.6008 263.993 22.6008H266.231C266.392 22.6008 266.523 22.4692 266.523 22.3083C266.523 22.2498 266.509 22.1913 266.479 22.1328Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M164 4C156.82 4 151 9.82002 151 17C151 24.18 156.82 30 164 30C171.18 30 177 24.18 177 17C177 9.82002 171.18 4 164 4ZM170.171 20.1879C165.726 24.6333 157.785 23.2148 157.785 23.2148C157.785 23.2148 156.352 15.2891 160.812 10.829C163.283 8.35771 167.378 8.46007 169.966 11.0337C172.555 13.6074 172.642 17.7165 170.171 20.1879Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M165.492 11.6182L164.219 14.2357L161.602 15.5079L164.219 16.7801L165.492 19.3977L166.764 16.7801L169.381 15.5079L166.764 14.2357L165.492 11.6182Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M39.5148 15.5907C39.5148 19.8531 36.1803 22.9939 32.0882 22.9939C27.9961 22.9939 24.6616 19.8531 24.6616 15.5907C24.6616 11.2983 27.9961 8.1875 32.0882 8.1875C36.1803 8.1875 39.5148 11.2983 39.5148 15.5907ZM36.2638 15.5907C36.2638 12.9272 34.3312 11.1047 32.0882 11.1047C29.8452 11.1047 27.9126 12.9272 27.9126 15.5907C27.9126 18.2276 29.8452 20.0767 32.0882 20.0767C34.3312 20.0767 36.2638 18.2242 36.2638 15.5907Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M55.5361 15.5907C55.5361 19.8531 52.2017 22.9939 48.1096 22.9939C44.0174 22.9939 40.683 19.8531 40.683 15.5907C40.683 11.3017 44.0174 8.1875 48.1096 8.1875C52.2017 8.1875 55.5361 11.2983 55.5361 15.5907ZM52.2851 15.5907C52.2851 12.9272 50.3525 11.1047 48.1096 11.1047C45.8666 11.1047 43.934 12.9272 43.934 15.5907C43.934 18.2276 45.8666 20.0767 48.1096 20.0767C50.3525 20.0767 52.2851 18.2242 52.2851 15.5907Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M70.8899 8.63476V21.9258C70.8899 27.3931 67.6656 29.6261 63.8538 29.6261C60.2657 29.6261 58.1062 27.2262 57.2918 25.2636L60.1222 24.0854C60.6262 25.2903 61.8612 26.7122 63.8505 26.7122C66.2904 26.7122 67.8024 25.2069 67.8024 22.3731V21.3083H67.689C66.9613 22.2062 65.5594 22.9906 63.7904 22.9906C60.0888 22.9906 56.6976 19.7663 56.6976 15.6174C56.6976 11.4385 60.0888 8.1875 63.7904 8.1875C65.5561 8.1875 66.958 8.97188 67.689 9.84304H67.8024V8.6381H70.8899V8.63476ZM68.0327 15.6174C68.0327 13.0106 66.2938 11.1047 64.0808 11.1047C61.8378 11.1047 59.9586 13.0106 59.9586 15.6174C59.9586 18.1975 61.8378 20.0767 64.0808 20.0767C66.2938 20.0767 68.0327 18.1975 68.0327 15.6174Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M75.98 0.844727V22.5403H72.8091V0.844727H75.98Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M88.3365 18.0267L90.8599 19.709C90.0455 20.9139 88.0829 22.99 84.6917 22.99C80.4861 22.99 77.3452 19.739 77.3452 15.5868C77.3452 11.1843 80.5128 8.18359 84.3279 8.18359C88.1696 8.18359 90.0488 11.241 90.663 12.8932L91.0001 13.7343L81.1036 17.8331C81.8612 19.3184 83.0395 20.0761 84.6917 20.0761C86.3472 20.0761 87.4954 19.2617 88.3365 18.0267ZM80.5695 15.3632L87.185 12.6162C86.8212 11.6916 85.7264 11.0474 84.438 11.0474C82.7858 11.0474 80.4861 12.506 80.5695 15.3632Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M12.6589 13.6649V10.524H23.243C23.3465 11.0714 23.3999 11.719 23.3999 12.4199C23.3999 14.7764 22.7557 17.6903 20.6796 19.7664C18.6602 21.8692 16.0801 22.9907 12.6622 22.9907C6.3271 22.9907 1 17.8304 1 11.4953C1 5.16021 6.3271 0 12.6622 0C16.1669 0 18.6636 1.37517 20.5394 3.16756L18.3231 5.38385C16.978 4.12216 15.1555 3.14085 12.6589 3.14085C8.03271 3.14085 4.41455 6.86916 4.41455 11.4953C4.41455 16.1215 8.03271 19.8498 12.6589 19.8498C15.6595 19.8498 17.3685 18.6449 18.4633 17.5501C19.3511 16.6622 19.9352 15.3939 20.1656 13.6615L12.6589 13.6649Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M186.9 80.2996H183.7V67.7996H179.6V65.0996H191.1V67.7996H187V80.3996L186.9 80.2996ZM196.4 68.3996C197.5 68.3996 198.4 68.5996 199.2 68.9996C200 69.3996 200.6 69.9996 201 70.7996C201.4 71.5996 201.6 72.4996 201.6 73.6996V75.1996H194.1C194.1 76.0996 194.4 76.7996 194.9 77.2996C195.4 77.7996 196.1 78.0996 197 78.0996C197.9 78.0996 198.4 78.0996 199.1 77.8996C199.7 77.6996 200.3 77.4996 201 77.1996V79.6996C200.4 79.9996 199.8 80.1996 199.2 80.2996C198.6 80.3996 197.8 80.4996 196.9 80.4996C196 80.4996 194.7 80.2996 193.8 79.8996C192.9 79.4996 192.2 78.7996 191.7 77.8996C191.2 76.9996 190.9 75.8996 190.9 74.5996C190.9 73.2996 191.1 72.0996 191.6 71.1996C192.1 70.2996 192.7 69.5996 193.5 69.0996C194.3 68.5996 195.3 68.3996 196.4 68.3996ZM196.5 70.6996C195.9 70.6996 195.4 70.8996 195 71.2996C194.6 71.6996 194.4 72.2996 194.3 73.1996H198.8C198.8 72.6996 198.8 72.2996 198.5 71.8996C198.3 71.4996 198.1 71.1996 197.8 70.9996C197.5 70.7996 197.1 70.6996 196.6 70.6996H196.5ZM210.8 68.3996C211 68.3996 211.1 68.3996 211.4 68.3996C211.6 68.3996 211.8 68.3996 211.9 68.3996L211.7 71.3996C211.7 71.3996 211.5 71.3996 211.3 71.3996C211.1 71.3996 211 71.3996 210.8 71.3996C210.4 71.3996 210 71.3996 209.6 71.5996C209.2 71.5996 208.9 71.8996 208.6 72.0996C208.3 72.2996 208.1 72.5996 207.9 72.9996C207.7 73.3996 207.6 73.7996 207.6 74.3996V80.2996H204.4V68.6996H206.8L207.3 70.6996H207.4C207.6 70.2996 207.9 69.8996 208.3 69.5996C208.6 69.2996 209 68.9996 209.5 68.7996C210 68.5996 210.4 68.4996 211 68.4996L210.8 68.3996ZM218.3 68.3996C219.9 68.3996 221.1 68.6996 221.9 69.3996C222.7 70.0996 223.2 71.0996 223.2 72.4996V80.2996H221L220.4 78.6996C220.1 79.0996 219.7 79.4996 219.4 79.6996C219.1 79.9996 218.7 80.1996 218.2 80.2996C217.8 80.3996 217.2 80.4996 216.6 80.4996C216 80.4996 215.3 80.3996 214.7 80.0996C214.2 79.7996 213.7 79.3996 213.4 78.8996C213.1 78.2996 212.9 77.5996 212.9 76.7996C212.9 75.5996 213.3 74.5996 214.2 74.0996C215.1 73.4996 216.4 73.1996 218.1 73.0996H220.1V72.4996C220.1 71.8996 219.9 71.3996 219.6 71.1996C219.3 70.8996 218.8 70.7996 218.3 70.7996C217.8 70.7996 217.2 70.7996 216.6 71.0996C216.1 71.2996 215.5 71.4996 215 71.6996L214 69.4996C214.6 69.1996 215.3 68.8996 216.1 68.6996C216.9 68.4996 217.7 68.3996 218.5 68.3996H218.3ZM218.8 74.9996C217.8 74.9996 217.1 75.1996 216.7 75.5996C216.3 75.9996 216.1 76.3996 216.1 76.8996C216.1 77.3996 216.2 77.6996 216.5 77.8996C216.8 78.0996 217.2 78.1996 217.6 78.1996C218.3 78.1996 218.9 77.9996 219.3 77.5996C219.8 77.1996 220 76.5996 220 75.8996V74.8996H218.8V74.9996ZM229.6 80.2996H226.4V64.0996H229.6V80.3996V80.2996ZM231.3 68.6996H234.8L237 75.2996C237 75.4996 237.1 75.6996 237.2 75.8996C237.2 76.0996 237.2 76.2996 237.3 76.5996C237.3 76.7996 237.3 77.0996 237.3 77.2996C237.3 76.8996 237.3 76.5996 237.5 76.2996C237.5 75.9996 237.7 75.5996 237.8 75.2996L240 68.6996H243.4L238.5 81.8996C238.2 82.6996 237.8 83.3996 237.3 83.8996C236.8 84.3996 236.3 84.7996 235.7 85.0996C235.1 85.3996 234.4 85.4996 233.6 85.4996C232.8 85.4996 232.9 85.4996 232.7 85.4996C232.4 85.4996 232.2 85.4996 232 85.3996V82.8996C232.2 82.8996 232.3 82.8996 232.6 82.8996C232.8 82.8996 233.1 82.8996 233.3 82.8996C233.7 82.8996 234.1 82.8996 234.4 82.5996C234.7 82.3996 235 82.1996 235.2 81.7996C235.4 81.4996 235.6 81.0996 235.7 80.7996L235.9 80.1996L231.3 68.5996V68.6996ZM250.1 77.9996C250.5 77.9996 250.8 77.9996 251.1 77.8996C251.4 77.8996 251.8 77.6996 252.1 77.5996V79.9996C251.8 80.0996 251.3 80.2996 250.8 80.3996C250.3 80.4996 249.8 80.5996 249.2 80.5996C248.6 80.5996 247.9 80.4996 247.3 80.2996C246.8 80.0996 246.3 79.6996 246 79.0996C245.7 78.4996 245.5 77.6996 245.5 76.6996V71.0996H244V69.7996L245.8 68.6996L246.7 66.1996H248.7V68.6996H252V71.0996H248.7V76.6996C248.7 77.0996 248.8 77.4996 249.1 77.6996C249.4 77.8996 249.7 77.9996 250.1 77.9996ZM257.6 68.6996V80.3996H254.4V68.6996H257.6ZM256 64.0996C256.5 64.0996 256.9 64.1996 257.2 64.3996C257.5 64.5996 257.7 64.9996 257.7 65.5996C257.7 66.1996 257.5 66.5996 257.2 66.7996C256.9 66.9996 256.5 67.0996 256 67.0996C255.5 67.0996 255.1 66.9996 254.8 66.7996C254.5 66.5996 254.3 66.1996 254.3 65.5996C254.3 64.9996 254.5 64.5996 254.8 64.3996C255.1 64.1996 255.6 64.0996 256 64.0996ZM265.7 80.5996C264.5 80.5996 263.6 80.3996 262.7 79.9996C261.9 79.5996 261.3 78.8996 260.8 77.9996C260.4 77.0996 260.2 75.9996 260.2 74.5996C260.2 73.1996 260.4 71.9996 260.9 71.0996C261.4 70.1996 262.1 69.4996 262.9 69.0996C263.8 68.6996 264.8 68.4996 265.9 68.4996C267 68.4996 267.4 68.4996 268 68.6996C268.6 68.8996 269.1 68.9996 269.6 69.2996L268.7 71.7996C268.2 71.5996 267.7 71.3996 267.3 71.2996C266.9 71.1996 266.4 71.0996 266 71.0996C265.6 71.0996 265 71.1996 264.6 71.4996C264.2 71.7996 264 72.0996 263.8 72.6996C263.6 73.1996 263.5 73.8996 263.5 74.5996C263.5 75.2996 263.5 75.9996 263.8 76.4996C264 76.9996 264.3 77.3996 264.7 77.5996C265.1 77.7996 265.5 77.9996 266 77.9996C266.5 77.9996 267.3 77.9996 267.8 77.6996C268.3 77.4996 268.8 77.2996 269.3 76.9996V79.6996C268.8 79.9996 268.3 80.1996 267.8 80.3996C267.3 80.4996 266.6 80.5996 265.8 80.5996H265.7ZM280.1 76.8996C280.1 77.6996 279.9 78.3996 279.5 78.8996C279.1 79.3996 278.6 79.8996 277.8 80.0996C277.1 80.3996 276.1 80.4996 275 80.4996C273.9 80.4996 273.5 80.4996 272.9 80.2996C272.3 80.2996 271.7 79.9996 271.1 79.7996V77.1996C271.7 77.4996 272.4 77.6996 273.1 77.8996C273.8 78.0996 274.5 78.1996 275 78.1996C275.5 78.1996 276.1 78.1996 276.3 77.8996C276.6 77.6996 276.7 77.4996 276.7 77.1996C276.7 76.8996 276.7 76.7996 276.5 76.6996C276.5 76.4996 276.2 76.3996 275.8 76.1996C275.4 75.9996 274.9 75.6996 274.1 75.3996C273.4 75.0996 272.8 74.7996 272.3 74.4996C271.8 74.1996 271.5 73.7996 271.3 73.3996C271.1 72.9996 271 72.3996 271 71.7996C271 70.6996 271.4 69.8996 272.3 69.3996C273.1 68.8996 274.3 68.5996 275.7 68.5996C277.1 68.5996 277.1 68.5996 277.8 68.7996C278.5 68.8996 279.1 69.1996 279.8 69.4996L278.8 71.7996C278.4 71.5996 278 71.4996 277.7 71.3996C277.3 71.2996 277 71.1996 276.7 71.0996C276.4 71.0996 276 70.9996 275.7 70.9996C275.4 70.9996 274.9 70.9996 274.6 71.1996C274.4 71.2996 274.3 71.4996 274.3 71.7996C274.3 72.0996 274.3 72.1996 274.5 72.2996C274.6 72.3996 274.9 72.5996 275.2 72.7996C275.6 72.9996 276.1 73.1996 276.8 73.4996C277.5 73.7996 278 74.0996 278.5 74.3996C279 74.6996 279.4 74.9996 279.6 75.4996C279.9 75.8996 280 76.4996 280 77.1996L280.1 76.8996Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M159.1 65.5V83.4L162 84.5V62.1L159.2 61L151 70.3L153.9 71.4L159.1 65.5Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M164.1 63.0004V85.3004L166.9 86.4004L175 77.1004L172.1 76.0004L166.9 81.9004V64.0004L164 62.9004L164.1 63.0004Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M9.6 50C4.9 50 1 53.9 1 58.6V80.1H78.5V50H9.6Z" stroke="white" stroke-opacity="0.75" stroke-width="0.4"/>
+                    <path d="M54.3001 69.1998C52.5001 69.1998 51.3001 68.2998 51.3001 66.0998C51.3001 63.8998 52.3001 62.7998 54.6001 62.7998C56.9001 62.7998 55.7001 62.8998 56.1001 63.0998L55.8001 64.3998C55.4001 64.2998 55.1001 64.1998 54.7001 64.1998C53.6001 64.1998 53.1001 64.9998 53.1001 66.0998C53.1001 67.1998 53.5001 67.8998 54.7001 67.8998C55.9001 67.8998 55.6001 67.7998 56.0001 67.5998L56.2001 68.8998C55.9001 69.0998 55.3001 69.1998 54.6001 69.1998M39.5001 62.1998C40.1001 62.1998 40.5001 61.7998 40.5001 61.1998C40.5001 60.5998 40.1001 60.2998 39.5001 60.2998C38.9001 60.2998 38.5001 60.6998 38.5001 61.1998C38.5001 61.6998 38.9001 62.1998 39.5001 62.1998ZM38.6001 69.0998H40.2001V62.8998C39.5001 62.8998 38.6001 62.9998 38.6001 64.1998V69.0998ZM59.4001 64.1998C58.7001 64.1998 58.0001 64.6998 58.0001 66.0998C58.0001 67.4998 58.4001 67.8998 59.4001 67.8998C60.4001 67.8998 60.8001 67.2998 60.8001 65.9998C60.8001 64.6998 60.4001 64.1998 59.4001 64.1998ZM59.4001 69.2998C57.6001 69.2998 56.4001 68.2998 56.4001 66.1998C56.4001 64.0998 57.7001 62.8998 59.6001 62.8998C61.5001 62.8998 62.5001 63.8998 62.5001 65.9998C62.5001 67.9998 61.3001 69.3998 59.4001 69.3998M27.6001 64.2998C27.3001 64.1998 26.7001 63.9998 26.3001 63.9998C25.9001 63.9998 25.4001 64.0998 25.4001 64.5998C25.4001 65.6998 28.1001 64.9998 28.1001 67.1998C28.1001 69.3998 26.9001 69.2998 25.5001 69.2998C24.1001 69.2998 24.2001 69.1998 23.7001 68.9998V67.6998C23.8001 67.6998 24.7001 67.9998 25.5001 67.9998C26.3001 67.9998 26.5001 67.7998 26.5001 67.3998C26.5001 66.2998 23.7001 66.9998 23.7001 64.7998C23.7001 62.5998 24.8001 62.8998 26.1001 62.8998C27.4001 62.8998 27.5001 62.9998 27.8001 63.1998L27.5001 64.3998L27.6001 64.2998ZM37.9001 62.8998C37.6001 64.6998 36.7001 67.5998 36.1001 69.0998H34.4001L33.2001 64.9998L32.0001 69.0998H30.3001C29.8001 67.6998 28.8001 64.6998 28.5001 62.8998H30.1001L31.1001 67.1998L32.4001 62.8998H34.0001L35.2001 67.0998L36.3001 62.8998H37.8001H37.9001ZM70.5001 62.7998C71.7001 62.7998 72.4001 63.4998 72.4001 64.8998V69.1998H70.8001V65.2998C70.8001 64.6998 70.6001 64.1998 69.9001 64.1998C69.2001 64.1998 68.6001 64.7998 68.6001 65.8998V69.1998H67.0001V65.2998C67.0001 64.6998 66.8001 64.1998 66.1001 64.1998C65.4001 64.1998 64.8001 64.8998 64.8001 65.8998V69.1998H63.2001V62.9998C64.3001 62.8998 64.7001 63.2998 64.7001 63.9998C65.1001 63.2998 65.8001 62.8998 66.6001 62.8998C67.4001 62.8998 68.2001 63.4998 68.3001 64.0998C68.6001 63.4998 69.3001 62.8998 70.3001 62.8998M45.0001 64.2998C44.6001 64.1998 44.1001 63.9998 43.7001 63.9998C43.3001 63.9998 42.8001 64.0998 42.8001 64.5998C42.8001 65.6998 45.6001 64.9998 45.6001 67.1998C45.6001 69.3998 44.4001 69.2998 43.0001 69.2998C41.6001 69.2998 41.7001 69.1998 41.1001 68.9998V67.6998C41.2001 67.6998 42.1001 67.9998 42.9001 67.9998C43.7001 67.9998 43.8001 67.7998 43.8001 67.3998C43.8001 66.2998 41.0001 66.9998 41.0001 64.7998C41.0001 62.5998 42.2001 62.8998 43.4001 62.8998C44.6001 62.8998 44.8001 62.9998 45.1001 63.1998L44.8001 64.3998L45.0001 64.2998ZM50.1001 64.2998C49.8001 64.1998 49.2001 63.9998 48.8001 63.9998C48.4001 63.9998 47.9001 64.0998 47.9001 64.5998C47.9001 65.6998 50.7001 64.9998 50.7001 67.1998C50.7001 69.3998 49.5001 69.2998 48.1001 69.2998C46.7001 69.2998 46.8001 69.1998 46.3001 68.9998V67.6998C46.4001 67.6998 47.3001 67.9998 48.1001 67.9998C48.9001 67.9998 49.1001 67.7998 49.1001 67.3998C49.1001 66.2998 46.3001 66.9998 46.3001 64.7998C46.3001 62.5998 47.4001 62.8998 48.7001 62.8998C50.0001 62.8998 50.1001 62.9998 50.4001 63.1998L50.1001 64.3998V64.2998Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M19.4 66.1998C19.4 66.0998 19.2 65.9998 19.1 65.8998H17.8C17.8 65.8998 17.8 65.8998 17.8 65.7998H13V66.1998C13 66.2998 17.6 66.2998 17.6 66.2998H19.2L19.4 66.1998Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M20.1001 67.1994C20.1001 67.1994 20.1001 67.0994 20.0001 66.9994H17.5001C17.5001 66.9994 17.5001 66.9994 17.5001 66.8994H13.1001V67.3994H17.3001C17.3001 67.3994 17.3001 67.3994 17.3001 67.2994H20.1001V67.1994Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M20.5 68.1998C20.5 68.0998 20.5 67.9998 20.4 67.8998H16.9C16.9 67.8998 16.9 67.8998 16.9 67.7998H13V68.2998H16.7V68.1998H20.5Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M20.7 69.1998C20.7 69.0998 20.7 68.9998 20.7 68.8998H16.4C16.4 68.8998 16.4 68.8998 16.4 68.7998H13V69.2998H16.1V69.1998H20.6H20.7Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M12.8 56.8002C12.6 56.8002 12.3 56.8002 12.1 56.9002C12 56.9002 11.9 56.9002 11.8 57.0002H13V56.7002C13 56.7002 12.8 56.7002 12.7 56.7002" fill="white" fill-opacity="0.75"/>
+                    <path d="M11.2001 57.7998C11.2001 57.7998 11.2001 57.9998 11.2001 58.0998H13.0001V57.7998H11.2001Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M16.8 74.3C17 74.3 17.2 74.1 17.4 74H13V74.3H16.8Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M13 75V75.3C13.5 75.3 14.1 75.2 14.7 75H13Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M13 59.1002V59.8002H12C12 59.7002 12 59.6002 12 59.6002L11.7 59.2002C11.7 59.2002 11.7 59.2002 11.6 59.1002H13ZM12.7 60.7002C12.7 60.7002 12.6 60.5002 12.5 60.4002C12.5 60.3002 12.4 60.2002 12.3 60.1002H13V60.7002H12.7ZM15.5 70.4002C15.5 70.3002 20.5 70.3002 20.5 70.3002C20.5 70.2002 20.5 70.1002 20.5 70.0002H15.6V69.9002H12.9V70.1002C12.2 69.9002 12.1 69.3002 11.9 68.6002C11.9 68.3002 11.8 67.9002 11.6 67.6002C11.4 67.2002 11 67.0002 10.6 66.7002C10.1 66.3002 9.50002 65.9002 9.50002 65.2002C9.50002 64.5002 10 64.2002 10.6 64.0002C11 63.9002 11.3 63.7002 11.6 63.4002C11.8 63.2002 11.9 62.9002 12 62.6002C12.2 62.1002 12.4 61.6002 13.1 61.5002V61.3002C13.1 61.3002 13.1 61.3002 13.1 61.2002H13.9L14.1 61.4002L14.4 61.6002H13.2V62.1002H15.2C15.2 62.2002 15.2 62.3002 15.2 62.3002L15.6 62.6002H13.1V62.8002V63.0002H16.3C16.3 63.1002 16.6 63.3002 16.9 63.5002H13.2V63.9002C13.2 64.0002 17.5 64.0002 17.5 64.0002C17.7 64.2002 17.9 64.4002 18 64.5002H13.1V65.0002H18.1C18.1 65.0002 18.1 65.0002 18.1 64.9002H18.5C18.4 64.9002 18.3 64.7002 18.2 64.6002C18.2 64.3002 18.3 64.0002 18.4 63.6002C18.4 63.2002 18.4 62.8002 18.4 62.4002C18.4 61.8002 18.2 61.2002 18 60.7002C17.8 60.2002 17.5 59.8002 17.1 59.5002H17C16.8 59.2002 16.6 59.1002 16.3 58.9002C16.1 58.8002 15.8 58.6002 15.6 58.5002C15.2 58.3002 14.7 58.2002 14.3 58.2002C13.7 58.2002 13.4 58.3002 13.1 58.5002H11.5C11.5 58.5002 11.5 58.5002 11.5 58.4002C11.5 58.4002 11.5 58.4002 11.5 58.3002L10.9 58.8002H10.7C10.3 59.2002 9.90002 59.5002 9.50002 59.8002C9.20002 60.1002 8.90002 60.3002 8.60002 60.5002C8.30002 60.8002 8.00002 61.0002 7.80002 61.3002C7.30002 61.9002 7.00002 62.5002 6.90002 63.2002V63.5002C6.90002 63.6002 6.90002 63.7002 6.90002 63.9002C6.90002 64.3002 7.20002 64.7002 7.40002 65.1002C7.70002 65.5002 8.10002 65.8002 8.40002 66.1002L8.60002 66.3002L8.80002 66.5002C9.20002 66.8002 9.50002 67.1002 9.90002 67.4002C10 67.5002 10.1 67.6002 10.2 67.7002C10.2 67.7002 10 67.9002 9.90002 68.0002H10.4C10.6 68.2002 10.8 68.5002 10.9 68.7002H9.50002C9.50002 68.8002 9.50002 68.9002 9.50002 69.0002H11.2C11.2 69.1002 11.3 69.2002 11.4 69.3002C11.4 69.4002 11.5 69.6002 11.6 69.7002H9.60002C9.60002 69.8002 9.60002 69.9002 9.60002 70.0002H11.7C11.7 70.2002 11.8 70.5002 11.9 70.7002H9.90002C9.90002 70.7002 10 70.9002 10.1 70.9002H12C12 71.1002 12.1 71.3002 12.2 71.5002C12.2 71.5002 12.2 71.5002 12.2 71.6002H10.8C10.9 71.6002 11 71.8002 11.1 71.9002H12.3V72.1002C12.3 72.1002 12.4 72.4002 12.5 72.6002H12.2C12.3 72.6002 12.5 72.7002 12.6 72.8002C12.6 72.9002 12.8 73.1002 12.9 73.1002C12.9 73.1002 13 73.1002 13.1 73.1002V72.8002H18.5C18.5 72.8002 18.7 72.7002 18.8 72.6002H13.3C13.3 72.5002 12.9 72.5002 12.9 72.5002V72.0002H13.8C13.8 72.0002 13.8 72.0002 13.8 71.9002H19.4C19.4 71.8002 19.6 71.7002 19.6 71.6002H14C14 71.6002 14 71.6002 14 71.5002H12.7V71.0002H14.4C14.4 71.0002 14.4 71.0002 14.4 70.9002H19.8C19.8 70.8002 19.8 70.7002 19.9 70.6002H14.5C14.5 70.5002 12.5 70.5002 12.5 70.5002V70.0002H14.9L15.5 70.4002Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M39.6 86.2998C39.6 86.2998 39.5 86.3998 39.4 86.4998C39.4 86.4998 39.4 86.5998 39.4 86.6998C39.4 86.7998 39.4 86.8998 39.5 86.9998C39.5 86.9998 39.7 87.0998 39.8 87.0998C39.9 87.0998 40 87.0998 40.1 87.0998C40.1 87.0998 40.3 86.9998 40.3 86.8998C40.3 86.8998 40.4 86.6998 40.4 86.5998C40.4 86.4998 40.4 86.3998 40.4 86.2998C40.2 86.2998 40 86.2998 39.8 86.2998C39.7 86.2998 39.5 86.2998 39.5 86.3998L39.6 86.2998Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M56.8999 86.2998C56.8999 86.2998 56.8 86.3998 56.7 86.4998C56.7 86.4998 56.7 86.5998 56.7 86.6998C56.7 86.7998 56.6999 86.8998 56.7999 86.9998C56.7999 86.9998 56.9999 87.0998 57.0999 87.0998C57.1999 87.0998 57.2999 87.0998 57.3999 87.0998C57.3999 87.0998 57.5999 86.9998 57.5999 86.8998C57.5999 86.8998 57.7 86.6998 57.7 86.5998C57.7 86.4998 57.7 86.3998 57.7 86.2998C57.5 86.2998 57.2999 86.2998 57.0999 86.2998C56.9999 86.2998 56.7999 86.2998 56.7999 86.3998L56.8999 86.2998Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M53.5999 83.7002H53.3999C53.3999 83.7002 53.3 83.7002 53.2 83.7002V85.3002C53.2 85.3002 53.4 85.3002 53.5 85.3002C53.8 85.3002 54 85.3002 54.2 85.1002C54.4 85.0002 54.5 84.8002 54.5 84.5002C54.5 84.2002 54.4999 84.1002 54.2999 83.9002C54.1999 83.8002 53.8999 83.7002 53.5999 83.7002Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M34.5 83.7002H34.3C34.3 83.7002 34.2 83.7002 34.1 83.7002V85.3002C34.1 85.3002 34.3 85.3002 34.4 85.3002C34.7 85.3002 34.9 85.3002 35.1 85.1002C35.3 85.0002 35.4 84.8002 35.4 84.5002C35.4 84.2002 35.4 84.1002 35.2 83.9002C35.1 83.8002 34.8 83.7002 34.5 83.7002Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M7 84.9006C7.3 84.9006 7.5 84.9006 7.7 84.7006C7.9 84.6006 7.9 84.4006 7.9 84.2006C7.9 84.0006 7.9 83.9006 7.7 83.8006C7.6 83.7006 7.4 83.6006 7.1 83.6006C6.8 83.6006 6.9 83.6006 6.8 83.6006C6.8 83.6006 6.6 83.6006 6.5 83.6006V84.8006C6.5 84.8006 6.6 84.8006 6.7 84.8006H6.9L7 84.9006Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M7.69998 85.8006C7.49998 85.8006 7.29998 85.6006 6.99998 85.6006H6.79998H6.59998V86.9006C6.59998 86.9006 6.69998 86.9006 6.79998 86.9006C6.79998 86.9006 6.99998 86.9006 7.09998 86.9006C7.39998 86.9006 7.59998 86.9006 7.79998 86.7006C7.99998 86.5006 7.99998 86.4006 7.99998 86.2006C7.99998 86.0006 7.99998 85.8006 7.69998 85.7006V85.8006Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M23.7 84.7998C23.5 84.7998 23.4 84.7998 23.2 84.9998C23.1 85.0998 23 85.2998 23 85.4998H24.3C24.3 85.2998 24.3 85.0998 24.2 84.9998C24.1 84.8998 23.9 84.7998 23.8 84.7998H23.7Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M1 81.2002V89.0002C1 89.8002 1.6 90.4002 2.4 90.4002H77C77.8 90.4002 78.4 89.8002 78.4 89.0002V81.2002H1ZM8.8 86.8002C8.8 87.0002 8.6 87.1002 8.5 87.3002C8.4 87.4002 8.2 87.6002 7.9 87.6002C7.7 87.6002 7.4 87.7002 7 87.7002C6.6 87.7002 6.7 87.7002 6.4 87.7002C6.2 87.7002 5.9 87.7002 5.6 87.7002V83.0002C5.8 83.0002 6 83.0002 6.3 83.0002C6.6 83.0002 6.9 83.0002 7.2 83.0002C7.7 83.0002 8.1 83.1002 8.4 83.3002C8.7 83.5002 8.8 83.8002 8.8 84.2002C8.8 84.6002 8.8 84.7002 8.6 84.8002C8.5 85.0002 8.3 85.1002 8.1 85.2002C8.2 85.2002 8.4 85.2002 8.5 85.4002C8.6 85.4002 8.7 85.6002 8.8 85.6002C8.8 85.6002 8.9 85.8002 9 85.9002C9 86.0002 9 86.1002 9 86.2002C9 86.4002 9 86.5002 9 86.7002L8.8 86.8002ZM12.7 87.7002H11.9C11.9 87.7002 11.9 87.5002 11.9 87.4002C11.9 87.3002 11.9 87.2002 11.9 87.1002C11.8 87.3002 11.6 87.5002 11.4 87.6002C11.2 87.7002 11 87.8002 10.7 87.8002C10.4 87.8002 10.3 87.8002 10.2 87.8002C10.1 87.8002 10 87.7002 9.9 87.6002C9.9 87.5002 9.8 87.4002 9.7 87.2002C9.7 87.1002 9.7 86.9002 9.7 86.8002V84.4002H10.6V86.6002C10.6 86.8002 10.6 86.9002 10.6 87.0002C10.6 87.1002 10.8 87.2002 10.9 87.2002C11 87.2002 11.1 87.2002 11.2 87.2002C11.2 87.2002 11.4 87.1002 11.5 87.0002C11.5 86.9002 11.6 86.8002 11.7 86.6002C11.7 86.5002 11.7 86.3002 11.7 86.2002V84.5002H12.6V88.0002L12.7 87.7002ZM15.7 87.1002C15.7 87.2002 15.5 87.4002 15.4 87.5002C15.3 87.5002 15.1 87.7002 14.9 87.7002C14.7 87.7002 14.5 87.7002 14.3 87.7002C14.1 87.7002 14.1 87.7002 13.9 87.7002C13.8 87.7002 13.7 87.7002 13.5 87.7002V87.0002C13.6 87.0002 13.7 87.0002 13.9 87.0002C14 87.0002 14.2 87.0002 14.3 87.0002C14.4 87.0002 14.6 87.0002 14.7 87.0002C14.8 87.0002 14.9 86.8002 14.9 86.7002C14.9 86.6002 14.9 86.5002 14.8 86.5002C14.8 86.5002 14.6 86.4002 14.5 86.4002C14.4 86.4002 14.3 86.4002 14.2 86.3002C14.1 86.3002 14 86.3002 13.9 86.1002C13.8 86.1002 13.7 85.9002 13.6 85.8002C13.6 85.7002 13.5 85.5002 13.5 85.3002C13.5 85.1002 13.5 85.0002 13.5 84.9002C13.5 84.8002 13.7 84.6002 13.8 84.5002C13.9 84.4002 14.1 84.3002 14.3 84.3002C14.5 84.3002 14.7 84.3002 14.9 84.3002C15.1 84.3002 15.1 84.3002 15.2 84.3002C15.3 84.3002 15.4 84.3002 15.5 84.3002V85.0002C15.4 85.0002 15.3 85.0002 15.2 85.0002C15.1 85.0002 15 85.0002 14.9 85.0002C14.7 85.0002 14.6 85.0002 14.5 85.0002C14.5 85.0002 14.4 85.2002 14.4 85.3002C14.4 85.4002 14.4 85.5002 14.5 85.5002C14.5 85.5002 14.7 85.6002 14.8 85.7002C14.9 85.7002 15 85.7002 15.1 85.8002C15.2 85.8002 15.3 85.9002 15.4 86.0002C15.5 86.0002 15.6 86.2002 15.7 86.3002C15.7 86.4002 15.8 86.6002 15.8 86.8002C15.8 87.0002 15.8 87.1002 15.7 87.3002V87.1002ZM17.5 87.7002H16.6V84.2002H17.5V87.7002ZM17.4 83.6002C17.3 83.7002 17.2 83.8002 17 83.8002C16.8 83.8002 16.7 83.8002 16.6 83.6002C16.5 83.5002 16.4 83.4002 16.4 83.2002C16.4 83.0002 16.4 82.9002 16.6 82.8002C16.7 82.7002 16.8 82.6002 17 82.6002C17.2 82.6002 17.3 82.6002 17.4 82.8002C17.5 82.9002 17.6 83.0002 17.6 83.2002C17.6 83.4002 17.6 83.5002 17.4 83.6002ZM21.4 87.7002H20.5V85.5002C20.5 85.3002 20.5 85.2002 20.5 85.1002C20.5 85.0002 20.3 84.9002 20.2 84.9002C20.1 84.9002 20 84.9002 19.9 84.9002C19.9 84.9002 19.7 85.0002 19.6 85.1002C19.6 85.2002 19.5 85.3002 19.4 85.5002C19.4 85.6002 19.4 85.8002 19.4 85.9002V87.6002H18.5V84.1002H19.3C19.3 84.1002 19.3 84.3002 19.3 84.4002C19.3 84.5002 19.3 84.6002 19.3 84.7002C19.4 84.5002 19.6 84.3002 19.8 84.2002C20 84.1002 20.2 84.0002 20.5 84.0002C20.8 84.0002 20.9 84.0002 21 84.0002C21.1 84.0002 21.2 84.1002 21.3 84.2002C21.3 84.3002 21.4 84.4002 21.5 84.6002C21.5 84.7002 21.5 84.9002 21.5 85.0002V87.4002L21.4 87.7002ZM25.2 85.9002C25.2 85.9002 25.2 86.0002 25.2 86.1002H23.1C23.1 86.8002 23.4 87.1002 24.1 87.1002C24.8 87.1002 24.4 87.1002 24.6 87.1002C24.8 87.1002 24.9 87.1002 25.1 86.9002V87.6002C25 87.6002 24.8 87.7002 24.6 87.8002C24.4 87.8002 24.2 87.8002 24 87.8002C23.4 87.8002 23 87.7002 22.7 87.4002C22.4 87.1002 22.3 86.7002 22.3 86.0002C22.3 85.3002 22.3 85.5002 22.4 85.3002C22.4 85.1002 22.6 84.9002 22.7 84.7002C22.8 84.5002 23 84.4002 23.2 84.3002C23.4 84.3002 23.6 84.2002 23.9 84.2002C24.2 84.2002 24.4 84.2002 24.5 84.3002C24.7 84.3002 24.8 84.5002 25 84.6002C25.1 84.7002 25.2 84.9002 25.3 85.1002C25.3 85.3002 25.3 85.5002 25.3 85.7002C25.3 85.9002 25.3 85.8002 25.3 85.9002H25.2ZM28 87.1002C28 87.2002 27.8 87.4002 27.7 87.5002C27.6 87.5002 27.4 87.7002 27.2 87.7002C27 87.7002 26.8 87.7002 26.6 87.7002C26.4 87.7002 26.4 87.7002 26.2 87.7002C26.1 87.7002 26 87.7002 25.8 87.7002V87.0002C25.9 87.0002 26 87.0002 26.2 87.0002C26.3 87.0002 26.5 87.0002 26.6 87.0002C26.7 87.0002 26.9 87.0002 27 87.0002C27.1 87.0002 27.2 86.8002 27.2 86.7002C27.2 86.6002 27.2 86.5002 27.1 86.5002C27.1 86.5002 26.9 86.4002 26.8 86.4002C26.7 86.4002 26.6 86.4002 26.5 86.3002C26.4 86.3002 26.3 86.3002 26.2 86.1002C26.1 86.1002 26 85.9002 25.9 85.8002C25.9 85.7002 25.8 85.5002 25.8 85.3002C25.8 85.1002 25.8 85.0002 25.8 84.9002C25.8 84.8002 26 84.6002 26.1 84.5002C26.2 84.4002 26.4 84.3002 26.6 84.3002C26.8 84.3002 27 84.3002 27.2 84.3002C27.4 84.3002 27.4 84.3002 27.5 84.3002C27.6 84.3002 27.7 84.3002 27.8 84.3002V85.0002C27.7 85.0002 27.6 85.0002 27.5 85.0002C27.4 85.0002 27.3 85.0002 27.2 85.0002C27 85.0002 26.9 85.0002 26.8 85.0002C26.8 85.0002 26.7 85.2002 26.7 85.3002C26.7 85.4002 26.7 85.5002 26.8 85.5002C26.8 85.5002 27 85.6002 27.1 85.7002C27.2 85.7002 27.3 85.7002 27.4 85.8002C27.5 85.8002 27.6 85.9002 27.7 86.0002C27.8 86.0002 27.9 86.2002 28 86.3002C28 86.4002 28.1 86.6002 28.1 86.8002C28.1 87.0002 28.1 87.1002 28 87.3002V87.1002ZM30.9 87.1002C30.9 87.2002 30.7 87.4002 30.6 87.5002C30.5 87.5002 30.3 87.7002 30.1 87.7002C29.9 87.7002 29.7 87.7002 29.5 87.7002C29.3 87.7002 29.3 87.7002 29.1 87.7002C29 87.7002 28.9 87.7002 28.7 87.7002V87.0002C28.8 87.0002 28.9 87.0002 29.1 87.0002C29.2 87.0002 29.4 87.0002 29.5 87.0002C29.6 87.0002 29.8 87.0002 29.9 87.0002C30 87.0002 30.1 86.8002 30.1 86.7002C30.1 86.6002 30.1 86.5002 30 86.5002C30 86.5002 29.8 86.4002 29.7 86.4002C29.6 86.4002 29.5 86.4002 29.4 86.3002C29.3 86.2002 29.2 86.3002 29.1 86.1002C29 86.1002 28.9 85.9002 28.8 85.8002C28.8 85.7002 28.7 85.5002 28.7 85.3002C28.7 85.1002 28.7 85.0002 28.7 84.9002C28.7 84.8002 28.9 84.6002 29 84.5002C29.1 84.4002 29.3 84.3002 29.5 84.3002C29.7 84.3002 29.9 84.3002 30.1 84.3002C30.3 84.3002 30.3 84.3002 30.4 84.3002C30.5 84.3002 30.6 84.3002 30.7 84.3002V85.0002C30.6 85.0002 30.5 85.0002 30.4 85.0002C30.3 85.0002 30.2 85.0002 30.1 85.0002C29.9 85.0002 29.8 85.0002 29.7 85.0002C29.7 85.0002 29.6 85.2002 29.6 85.3002C29.6 85.4002 29.6 85.5002 29.7 85.5002C29.7 85.5002 29.9 85.6002 30 85.7002C30.1 85.7002 30.2 85.7002 30.3 85.8002C30.4 85.8002 30.5 85.9002 30.6 86.0002C30.7 86.0002 30.8 86.2002 30.9 86.3002C30.9 86.4002 31 86.6002 31 86.8002C31 87.0002 31 87.1002 30.9 87.3002V87.1002ZM36.2 85.1002C36.2 85.3002 36 85.5002 35.8 85.6002C35.6 85.7002 35.4 85.9002 35.2 85.9002C35 85.9002 34.7 86.0002 34.4 86.0002H34.3C34.3 86.0002 34.2 86.0002 34.1 86.0002V87.7002H33.2V83.0002C33.4 83.0002 33.6 83.0002 33.8 83.0002C34 83.0002 34.2 83.0002 34.5 83.0002C35.1 83.0002 35.5 83.1002 35.8 83.4002C36.1 83.7002 36.3 84.0002 36.3 84.5002C36.3 85.0002 36.3 84.9002 36.2 85.1002ZM37.8 87.7002H36.9V82.6002H37.8V87.7002ZM40.6 87.7002C40.6 87.6002 40.6 87.5002 40.6 87.4002C40.6 87.4002 40.6 87.2002 40.6 87.1002C40.6 87.3002 40.4 87.5002 40.2 87.6002C40 87.7002 39.8 87.8002 39.5 87.8002C39.2 87.8002 38.9 87.8002 38.8 87.6002C38.6 87.4002 38.5 87.2002 38.5 86.9002C38.5 86.6002 38.5 86.5002 38.6 86.3002C38.6 86.1002 38.8 86.0002 39 85.9002C39.2 85.8002 39.4 85.7002 39.6 85.7002C39.8 85.7002 40.1 85.7002 40.4 85.7002V85.5002C40.4 85.3002 40.4 85.2002 40.3 85.1002C40.3 85.1002 40 85.0002 39.8 85.0002C39.6 85.0002 39.5 85.0002 39.3 85.0002C39.1 85.0002 38.9 85.1002 38.8 85.2002V84.4002C38.8 84.4002 39.1 84.3002 39.3 84.2002C39.5 84.2002 39.7 84.2002 40 84.2002C40.3 84.2002 40.5 84.2002 40.7 84.2002C40.9 84.2002 41 84.3002 41.1 84.4002C41.2 84.5002 41.3 84.6002 41.3 84.8002C41.3 85.0002 41.3 85.1002 41.3 85.3002V86.7002C41.3 86.8002 41.3 87.0002 41.3 87.1002C41.3 87.3002 41.3 87.4002 41.3 87.6002H40.5L40.6 87.7002ZM44.3 84.9002H43.5V86.4002C43.5 86.6002 43.5 86.8002 43.5 86.9002C43.5 86.9002 43.7 87.0002 43.8 87.0002C43.9 87.0002 44.1 87.0002 44.2 87.0002V87.7002C44.1 87.7002 44 87.7002 43.8 87.7002C43.7 87.7002 43.6 87.7002 43.4 87.7002C43.2 87.7002 43.1 87.7002 42.9 87.7002C42.8 87.7002 42.7 87.6002 42.6 87.5002C42.6 87.5002 42.5 87.3002 42.4 87.2002C42.4 87.1002 42.4 86.9002 42.4 86.7002V84.9002H41.8V84.2002H42.4V83.1002L43.3 82.9002V84.2002H44.1V84.9002H44.3ZM45.9 87.7002H45V84.2002H45.9V87.7002ZM45.9 83.6002C45.8 83.7002 45.7 83.8002 45.5 83.8002C45.3 83.8002 45.2 83.8002 45.1 83.6002C45 83.5002 44.9 83.4002 44.9 83.2002C44.9 83.0002 44.9 82.9002 45.1 82.8002C45.2 82.7002 45.3 82.6002 45.5 82.6002C45.7 82.6002 45.8 82.6002 45.9 82.8002C46 82.9002 46.1 83.0002 46.1 83.2002C46.1 83.4002 46.1 83.5002 45.9 83.6002ZM49.9 87.7002H49V85.5002C49 85.3002 49 85.2002 49 85.1002C49 85.0002 48.8 84.9002 48.7 84.9002C48.6 84.9002 48.5 84.9002 48.4 84.9002C48.4 84.9002 48.2 85.0002 48.1 85.1002C48.1 85.2002 48 85.3002 47.9 85.5002C47.9 85.6002 47.9 85.8002 47.9 85.9002V87.6002H47V84.1002H47.8C47.8 84.1002 47.8 84.3002 47.8 84.4002C47.8 84.5002 47.8 84.6002 47.8 84.7002C47.9 84.5002 48.1 84.3002 48.3 84.2002C48.5 84.1002 48.7 84.0002 49 84.0002C49.3 84.0002 49.4 84.0002 49.5 84.0002C49.6 84.0002 49.7 84.1002 49.8 84.2002C49.8 84.3002 49.9 84.4002 50 84.6002C50 84.7002 50 84.9002 50 85.0002V87.4002L49.9 87.7002ZM55.3 85.1002C55.3 85.3002 55.1 85.5002 54.9 85.6002C54.7 85.7002 54.5 85.9002 54.3 85.9002C54.1 85.9002 53.8 86.0002 53.5 86.0002H53.4C53.4 86.0002 53.3 86.0002 53.2 86.0002V87.7002H52.3V83.0002C52.5 83.0002 52.7 83.0002 52.9 83.0002C53.1 83.0002 53.3 83.0002 53.6 83.0002C54.2 83.0002 54.6 83.1002 54.9 83.4002C55.2 83.7002 55.4 84.0002 55.4 84.5002C55.4 85.0002 55.4 84.9002 55.3 85.1002ZM57.9 87.7002C57.9 87.6002 57.9 87.5002 57.9 87.4002C57.9 87.4002 57.9 87.2002 57.9 87.1002C57.9 87.3002 57.7 87.5002 57.5 87.6002C57.3 87.7002 57.1 87.8002 56.8 87.8002C56.5 87.8002 56.2 87.8002 56.1 87.6002C55.9 87.4002 55.8 87.2002 55.8 86.9002C55.8 86.6002 55.8 86.5002 55.9 86.3002C55.9 86.1002 56.1 86.0002 56.3 85.9002C56.5 85.8002 56.7 85.7002 56.9 85.7002C57.1 85.7002 57.4 85.7002 57.7 85.7002V85.5002C57.7 85.3002 57.7 85.2002 57.6 85.1002C57.6 85.1002 57.3 85.0002 57.1 85.0002C56.9 85.0002 56.8 85.0002 56.6 85.0002C56.4 85.0002 56.2 85.1002 56.1 85.2002V84.4002C56.1 84.4002 56.4 84.3002 56.6 84.2002C56.8 84.2002 57 84.2002 57.3 84.2002C57.6 84.2002 57.8 84.2002 58 84.2002C58.2 84.2002 58.3 84.3002 58.4 84.4002C58.5 84.5002 58.6 84.6002 58.6 84.8002C58.6 85.0002 58.6 85.1002 58.6 85.3002V86.7002C58.6 86.8002 58.6 87.0002 58.6 87.1002C58.6 87.3002 58.6 87.4002 58.6 87.6002H57.8L57.9 87.7002ZM61.5 85.0002C60.9 84.9002 60.5 85.3002 60.5 86.3002V87.7002H59.6V84.2002H60.4C60.4 84.2002 60.4 84.4002 60.4 84.5002C60.4 84.6002 60.4 84.8002 60.4 84.9002C60.4 84.8002 60.4 84.7002 60.6 84.6002C60.6 84.6002 60.7 84.4002 60.8 84.3002C60.8 84.3002 61 84.2002 61.1 84.1002C61.2 84.1002 61.4 84.1002 61.5 84.1002V85.0002ZM64 84.9002H63.2V86.4002C63.2 86.6002 63.2 86.8002 63.2 86.9002C63.2 86.9002 63.4 87.0002 63.5 87.0002C63.6 87.0002 63.8 87.0002 63.9 87.0002V87.7002C63.8 87.7002 63.7 87.7002 63.5 87.7002C63.4 87.7002 63.3 87.7002 63.1 87.7002C62.9 87.7002 62.8 87.7002 62.6 87.7002C62.5 87.7002 62.4 87.6002 62.3 87.5002C62.3 87.5002 62.2 87.3002 62.1 87.2002C62.1 87.1002 62.1 86.9002 62.1 86.7002V84.9002H61.5V84.2002H62.1V83.1002L63 82.9002V84.2002H63.8V84.9002H64ZM67.8 87.7002H66.9V85.5002C66.9 85.3002 66.9 85.2002 66.9 85.1002C66.9 85.0002 66.7 84.9002 66.6 84.9002C66.5 84.9002 66.4 84.9002 66.3 84.9002C66.3 84.9002 66.1 85.0002 66 85.1002C66 85.2002 65.9 85.3002 65.8 85.5002C65.8 85.6002 65.8 85.8002 65.8 85.9002V87.6002H64.9V84.1002H65.7C65.7 84.1002 65.7 84.3002 65.7 84.4002C65.7 84.5002 65.7 84.6002 65.7 84.7002C65.8 84.5002 66 84.3002 66.2 84.2002C66.4 84.1002 66.6 84.0002 66.9 84.0002C67.2 84.0002 67.3 84.0002 67.4 84.0002C67.5 84.0002 67.6 84.1002 67.7 84.2002C67.7 84.3002 67.8 84.4002 67.9 84.6002C67.9 84.7002 67.9 84.9002 67.9 85.0002V87.4002L67.8 87.7002ZM71.6 85.9002C71.6 85.9002 71.6 86.0002 71.6 86.1002H69.5C69.5 86.8002 69.8 87.1002 70.5 87.1002C71.2 87.1002 70.8 87.1002 71 87.1002C71.2 87.1002 71.3 87.1002 71.5 86.9002V87.6002C71.4 87.6002 71.2 87.7002 71 87.8002C70.8 87.8002 70.6 87.8002 70.4 87.8002C69.8 87.8002 69.4 87.7002 69.1 87.4002C68.8 87.1002 68.7 86.7002 68.7 86.0002C68.7 85.3002 68.7 85.5002 68.8 85.3002C68.8 85.1002 69 84.9002 69.1 84.7002C69.2 84.5002 69.4 84.4002 69.6 84.3002C69.8 84.3002 70 84.2002 70.3 84.2002C70.6 84.2002 70.8 84.2002 71 84.3002C71.2 84.3002 71.3 84.5002 71.5 84.6002C71.6 84.7002 71.7 84.9002 71.8 85.1002C71.8 85.3002 71.8 85.5002 71.8 85.7002C71.8 85.9002 71.8 85.8002 71.8 85.9002H71.6ZM74.1 85.0002C73.5 84.9002 73.1 85.3002 73.1 86.3002V87.7002H72.2V84.2002H73C73 84.2002 73 84.4002 73 84.5002C73 84.6002 73 84.8002 73 84.9002C73 84.8002 73 84.7002 73.2 84.6002C73.2 84.6002 73.3 84.4002 73.4 84.3002C73.4 84.3002 73.6 84.2002 73.7 84.1002C73.8 84.1002 74 84.1002 74.1 84.1002V85.0002Z" fill="white" fill-opacity="0.75"/>
+                    <path d="M70.1 84.7998C69.9 84.7998 69.8 84.7998 69.6 84.9998C69.5 85.0998 69.4 85.2998 69.4 85.4998H70.7C70.7 85.2998 70.7 85.0998 70.6 84.9998C70.5 84.8998 70.3 84.7998 70.2 84.7998H70.1Z" fill="white" fill-opacity="0.75"/>
+                    </svg> -->
+
+
+
+                  </div>
+                </li>
+              </ul>
+
+              <hr class="w-full max-w-[1200px] border-[#FFFFFF] opacity-10 border-[0.5px] mt-[102px] mb-[42px]">
+
+              <ul class="grid max-[1200px]:px-[10px] max-[1200px]:gap-[25px] max-[1200px]:w-full max-[1200px]:grid-cols-[100%] grid-cols-[300px_300px_300px_300px]">
+                <li class="flex flex-col">
+                  <div class="grow">
+                    <h3 class="text-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-bold text-[#FFFFFF]">Deutschland</h3>
+                    <span class=" block text-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">
+                      Gertrudenstraße 30-36 <br>
+                      50667 Köln <br>
+                      Deutschland <br>
+                      +49 151 5840 4676
+                    </span>
+                  </div>
+                </li>
+                <li class="flex flex-col">
+                  <div class="grow">
+                    <h3 class="text-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-bold text-[#FFFFFF]">Großbritannien</h3>
+                    <span class=" block text-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">
+                      4 Winsley Street  <br>
+                      London W1W 8HF <br>
+                      Großbritannien <br>
+                      +44 800 060 8703
+                    </span>
+                </li>
+                <li class="flex flex-col">
+                  <div class="grow">
+                    <h3 class="text-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-bold text-[#FFFFFF]">USA</h3>
+                    <span class=" block text-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">
+                      230 Park Avenue, 3rd Floor <br>
+                      New York City, NY 10169 <br>
+                      USA <br>
+                      +1 212 972 5700
+                    </span>
+                  </div>
+                </li>
+                                </li>
+                <li class="flex flex-col">
+                  <div class="grow">
+                    <h3 class="text-[1rem]  max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-bold text-[#FFFFFF]">Asien</h3>
+                    <span class=" block text-[1rem] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">
+                      38 Wong Chuk Hang Road, 1/F <br>
+                      AXA Southside <br>
+                      Hong Kong Island, Hong Kong, China <br>
+                      +852 5808 6169
+                    </span>
+                  </div>
+                </li>
+              </ul>
+
+              <hr class="w-full max-w-[1200px] border-[#FFFFFF] opacity-10 border-[0.5px] mt-[51px] mb-[34px]">
+
+               <span class="text-[1rem] w-full flex justify-start max-[1200px]:px-[10px] max-[900px]:text-[0.8rem] max-[900px]:leading-[0.8rem] font-normal text-[#FFFFFFBF]">
+                  Copyright 2025 Brightscope • Eine Marke der Folyo GmbH · Alle Rechte vorbehalten <br>
+                  Nutzungsbedingungen | Datenschutz | Impressum
+                </span>
+          </div>
+
+
+      </footer>
+
+
+
     </div>
     <script defer src="./js/header_menu.js"></script>
   </body>
