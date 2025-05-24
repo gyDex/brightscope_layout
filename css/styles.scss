@@ -148,13 +148,6 @@ select {
   background-color: white;
 }
 
-// .nav_item:hover ~ #header__modal_platform,
-// #header__platform:hover ~ #header__modal_platform,
-// /* Оставляем модалку открытой при наведении на неё */
-// #header__modal_platform:hover {
-//   visibility: visible;
-// }
-
 /* Скрываем модалку по умолчанию (если не задано в inline-стилях) */
 #header__modal_platform {
   visibility: hidden;
