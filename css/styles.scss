@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+$primary-color: #3498db;
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  font-family: Inter;
+  // font-family: Rift;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.back_white {
+  background-color: white;
+}
+.tab-select-orange::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 5px;
+    background-color: #FF5B00;
+}
+.tab-select-blue::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    height: 5px;
+    background-color: #3371FF;
+}
+
+.header__select {
+  color: #FFFFFF80;
+  background-color: transparent;
+  background: url('../public/images/header_select_arrow.svg') no-repeat center;
+  background-position: 25px 10px;
+  appearance: none;
+  width: 40px;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+  &:focus-within {
+    outline: none;
+    border: none;
+  }
+}
+
+.gradient__block-1 {
+  background: linear-gradient(90deg, #57A2F1 0.03%, #6061F5 20.03%, #DB64A1 40.03%, #EE7B3C 60.03%, #EFAE3D 80.03%, #ED7458 100.03%);
+}
+
+.triangle {
+    background: #212B5F;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.triangle-right {
+  background: #212B5F;
+  clip-path: polygon(0 0, 0% 100%, 100% 0%);
+}
+
+@media (max-width: 600px) {
+  .triangle-right {
+      clip-path: polygon(0 0, 0% 81%, 228% 0%);
+  }
+}
+
+
+.popup__join_checkbox input[type="checkbox"] {
+    border: 1px solid #6A6F8C;
+    width: 8px;
+    height: 8px;
+  }
+  
+  .checkbox{
+    position: relative;
+    width: fit-content;
+  
+    position: relative;
+    height: 8px;
+
+    display: flex;
+  }
+  
+  .checkbox-label{
+  
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19.8px;
+  }
+  .checkbox-new {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    width: 8px;
+    height: 8px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    /* border-radius: 20px; */
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  .checkbox-new_checked {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .checkbox-input:not(:checked) + .checkbox-new > .checkbox-new_checked {
+    display: none;
+  }
+  .checkbox-input:checked {
+    background: var(--yellow-color);  
+    border: 15px solid #6A6F8C;
+  }
+  
+  .panel_admin_records input[type="checkbox"]:checked {
+    border: 1px solid transparent;
+  }
+  
+  .checkbox-input:checked + .checkbox-new {
+    color: #6A6F8C;
+  }
+  
+  .checkbox-input {
+    appearance: none;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFFFFF;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: white;
+}
+
+// .nav_item:hover ~ #header__modal_platform,
+// #header__platform:hover ~ #header__modal_platform,
+// /* Оставляем модалку открытой при наведении на неё */
+// #header__modal_platform:hover {
+//   visibility: visible;
+// }
+
+/* Скрываем модалку по умолчанию (если не задано в inline-стилях) */
+#header__modal_platform {
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+#header__modal_platform2:hover {
+  visibility: visible;
+}
+
+/* Скрываем модалку по умолчанию (если не задано в inline-стилях) */
+#header__modal_platform2 {
+  visibility: hidden;
+  transition: 0.4s;
+}
+
+.nav_item:hover #header__modal_platform {
+  color: #FF5B00 ;
+} 
+.nav_item:hover > svg {
+
+    fill: #FF5B00 !important;
+  
+}
+.nav_item {
+  svg {
+    transition:  0.2s transform;
+  }
+}
+.nav_item:hover {
+  svg {
+    transform:  rotateZ(180deg);
+  }
+  svg path{
+    fill: #FF5B00 !important;
+  }
+} 
+.nav_item:hover {
+  color: #FF5B00 !important;
+} 
+.nav_item {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  height: 5px;
+}
+
+.nav_item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  bottom: -30px;
+  height: 5px;
+  background-color: #FF5B00;
+  display: none;
+}
+.nav_item:hover::before {
+  display: block;
+}

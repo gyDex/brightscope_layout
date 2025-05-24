@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet" />
+
+    
+  <!-- Connection Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="stylesheet" href="../assets/fonts/styles.css">
+
+    <title>Document</title>
+</head>
+<body class=" bg-[#f5f5f5]">
+    <div class="w-full relative overflow-x-hidden min-h-[1200px] h-full">
+        <div class="z-[-10] w-[120%] max-[1900px]:max-w-[1600px] h-[800px] min-[1200px]:h-[850px] absolute bg-[#3371FF] triangle-right"></div>
+
+        <div class="z-[100]  pointer-events-none header_menu w-[100%] h-[100%] fixed flex justify-end">  
+            <div id="header_menu_shadow" class="pointer-events-auto absolute z-[1] h-[100%] w-[100%] bg-[#1d2f811f]"></div>
+            
+            <div id="header_menu_content"  class="z-[10] pointer-events-auto duration-500 translate-x-[500px] w-[100%] absolute max-w-[500px] bg-[#FFFFFF] h-[100%]  shadow-md shadow-[#212B5F]">
+            <button id="btn_header_menu_close" class=" absolute right-[30px] h-[30px] w-[30px] top-[30px]" >
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#212B5F" viewBox="0 0 50 50" width="30px" height="30px"><path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"/></svg>
+            </button>
+            <ul class="flex flex-col gap-[30px] px-[10px] mt-[60px] py-[10px]">
+                <li class="border-b-[#212B5F] border-b-[1px] h-[30px] relative pb-[20px]">
+                <a href="/home"  class="font-bold text-[16px] leading-[0px] h-[100%] w-[100%] flex items-center text-[#212B5F]">Home</a>
+                </li> 
+                <li class="border-b-[#212B5F] border-b-[1px] h-[30px] relative pb-[20px]">
+                <a href="/home"  class="font-bold text-[16px] leading-[0px] h-[100%] w-[100%] flex items-center text-[#212B5F]">Lösungen</a>
+                </li>
+                <li class="border-b-[#212B5F] border-b-[1px] h-[30px] relative pb-[20px]">
+                <a href="/home"  class="font-bold text-[16px] leading-[0px] h-[100%] w-[100%] flex items-center text-[#212B5F]">Plattform
+                    <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.0575 0L4.5 3.09042L7.9425 0L9 0.951417L4.5 5L0 0.951417L1.0575 0Z" fill="white"/>
+                    </svg>
+                </a>
+                </li>
+                <li class="border-b-[#212B5F] border-b-[1px] h-[30px] relative pb-[20px]">
+                <a href="/home"  class="font-bold text-[16px] leading-[0px] h-[100%] w-[100%] flex items-center text-[#212B5F]">Preise</a>
+                </li>
+                <li class="border-b-[#212B5F] border-b-[1px] h-[30px] relative pb-[20px]">
+                <a href="/home"  class="font-bold text-[16px] leading-[0px] h-[100%] w-[100%] flex items-center text-[#212B5F]">Unternehmen
+                    <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.0575 0L4.5 3.09042L7.9425 0L9 0.951417L4.5 5L0 0.951417L1.0575 0Z" fill="white"/>
+                    </svg>
+                </a>
+                </li>
+            </ul>
+            </div>
+        </div>
+
+        <header class="w-full justify-center flex max-[900px]:px-[15px]">
+            <div class="header__modal relative  max-w-[1200px] w-full flex justify-between items-center mt-[28.5px]">
+            <div id="header__modal_platform" class="absolute top-[53px] rounded-b-[2px] z-[1000] min-h-[180px] rounded-[2px] border-[1px] border-[#212B5F40] w-full bg-[#FFFFFF]">
+                <ul class="grid grid-cols-2 z-[100] px-[16px] py-[17px] justify-stretch w-full">
+                    <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                    <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                        <svg class="rounded-[2px]" width="25" height="17" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.8333 14.5833C21.9792 14.5833 22.9167 13.6458 22.9167 12.5V2.08333C22.9167 0.9375 21.9792 0 20.8333 0H4.16667C3.02083 0 2.08333 0.9375 2.08333 2.08333V12.5C2.08333 13.6458 3.02083 14.5833 4.16667 14.5833H0V16.6667H25V14.5833H20.8333ZM4.16667 2.08333H20.8333V12.5H4.16667V2.08333Z" fill="#FF5B00"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Unsere Plattformen</h2>
+                        <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Entdecke unsere Mess- & Planungs-Plattformen</p>
+                    </div>
+                    </li>
+
+                    <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                    <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.14 10.9404C17.18 10.6404 17.2 10.3304 17.2 10.0004C17.2 9.68039 17.18 9.36039 17.13 9.06039L19.16 7.48039C19.34 7.34039 19.39 7.07039 19.28 6.87039L17.36 3.55039C17.24 3.33039 16.99 3.26039 16.77 3.33039L14.38 4.29039C13.88 3.91039 13.35 3.59039 12.76 3.35039L12.4 0.81039C12.36 0.57039 12.16 0.400391 11.92 0.400391H8.07999C7.83999 0.400391 7.64999 0.57039 7.60999 0.81039L7.24999 3.35039C6.65999 3.59039 6.11999 3.92039 5.62999 4.29039L3.23999 3.33039C3.01999 3.25039 2.76999 3.33039 2.64999 3.55039L0.739988 6.87039C0.619988 7.08039 0.659988 7.34039 0.859988 7.48039L2.88999 9.06039C2.83999 9.36039 2.79999 9.69039 2.79999 10.0004C2.79999 10.3104 2.81999 10.6404 2.86999 10.9404L0.839988 12.5204C0.659988 12.6604 0.609988 12.9304 0.719988 13.1304L2.63999 16.4504C2.75999 16.6704 3.00999 16.7404 3.22999 16.6704L5.61999 15.7104C6.11999 16.0904 6.64999 16.4104 7.23999 16.6504L7.59999 19.1904C7.64999 19.4304 7.83999 19.6004 8.07999 19.6004H11.92C12.16 19.6004 12.36 19.4304 12.39 19.1904L12.75 16.6504C13.34 16.4104 13.88 16.0904 14.37 15.7104L16.76 16.6704C16.98 16.7504 17.23 16.6704 17.35 16.4504L19.27 13.1304C19.39 12.9104 19.34 12.6604 19.15 12.5204L17.14 10.9404ZM9.99999 13.6004C8.01999 13.6004 6.39999 11.9804 6.39999 10.0004C6.39999 8.02039 8.01999 6.40039 9.99999 6.40039C11.98 6.40039 13.6 8.02039 13.6 10.0004C13.6 11.9804 11.98 13.6004 9.99999 13.6004Z" fill="#FF5B00"/>
+                        </svg>
+
+                    </div>
+
+                    <div>
+                        <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Technologie</h2>
+                        <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Unsere patentierte Technologie.</p>
+                    </div>
+                    </li>
+
+                    <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                    <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                        <svg width="15" height="19" viewBox="0 0 15 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.875 0C0.84375 0 0.00937521 0.855 0.00937521 1.9L0 17.1C0 18.145 0.834375 19 1.86562 19H13.125C14.1562 19 15 18.145 15 17.1V5.7L9.375 0H1.875ZM8.4375 6.65V1.425L13.5938 6.65H8.4375Z" fill="#FF5B00"/>
+                        </svg>
+
+                    </div>
+
+                    <div>
+                        <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Reporting</h2>
+                        <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">So liefern wir dir die Ergebnisse.n</p>
+                    </div>
+                    </li>
+
+                    <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                    <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                        <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.6799 2.3693H15.3201V10.9808H2.6799V2.3693ZM0 0V13.5779H7.36973V19H10.6303V13.5779H18V0H0Z" fill="#FF5B00"/>
+                        </svg>
+
+
+                    </div>
+
+                    <div>
+                        <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Messbare Werbeflächen</h2>
+                        <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Eine Übersicht der messbaren Anbieter & Medien.</p>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="header__modal_platform2" class="absolute top-[53px] rounded-b-[2px] z-[1000] min-h-[180px] rounded-[2px] border-[1px] border-[#212B5F40] w-full bg-[#FFFFFF]">
+                <ul class="grid grid-cols-2 z-[100] px-[16px] py-[17px] justify-stretch w-full">
+                    <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                    <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.5 0H2.5C1.12 0 0 1.12 0 2.5V19.5C0 20.88 1.12 22 2.5 22H10.5C11.88 22 13 20.88 13 19.5V2.5C13 1.12 11.88 0 10.5 0ZM6.5 21C5.67 21 5 20.33 5 19.5C5 18.67 5.67 18 6.5 18C7.33 18 8 18.67 8 19.5C8 20.33 7.33 21 6.5 21ZM11 17H2V3H11V17Z" fill="#FF5B00"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Kontakt</h2>
+                        <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Kontaktiere Brightscope.</p>
+                    </div>
+                    </li>
+
+                    <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                    <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                        <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 19C4 19.5 4.4 20 5 20H9C9.6 20 10 19.5 10 19V18H4V19ZM7 0C3.1 0 0 3.1 0 7C0 9.4 1.2 11.5 3 12.7V15C3 15.5 3.4 16 4 16H10C10.6 16 11 15.5 11 15V12.7C12.8 11.4 14 9.3 14 7C14 3.1 10.9 0 7 0Z" fill="#FF5B00"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Knowledge-Hub</h2>
+                        <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Gratis Guides und Whitepaper.</p>
+                    </div>
+                    </li>
+
+                    <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                    <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                        <svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.6364 5.14286C15.1455 5.14286 16.3545 3.99429 16.3545 2.57143C16.3545 1.14857 15.1455 0 13.6364 0C12.1273 0 10.9091 1.14857 10.9091 2.57143C10.9091 3.99429 12.1273 5.14286 13.6364 5.14286ZM6.36364 5.14286C7.87273 5.14286 9.08182 3.99429 9.08182 2.57143C9.08182 1.14857 7.87273 0 6.36364 0C4.85455 0 3.63636 1.14857 3.63636 2.57143C3.63636 3.99429 4.85455 5.14286 6.36364 5.14286ZM6.36364 6.85714C4.24545 6.85714 0 7.86 0 9.85714V12H12.7273V9.85714C12.7273 7.86 8.48182 6.85714 6.36364 6.85714ZM13.6364 6.85714C13.3727 6.85714 13.0727 6.87429 12.7545 6.9C13.8091 7.62 14.5455 8.58857 14.5455 9.85714V12H20V9.85714C20 7.86 15.7545 6.85714 13.6364 6.85714Z" fill="#FF5B00"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Karriere</h2>
+                        <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Offene Stellen und Vorteile.</p>
+                    </div>
+                    </li>
+
+                    <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                    <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 0H2C0.9 0 0.00999999 0.9 0.00999999 2L0 14C0 15.1 0.9 16 2 16H18C19.1 16 20 15.1 20 14V2C20 0.9 19.1 0 18 0ZM18 4L10 9L2 4V2L10 7L18 2V4Z" fill="#FF5B00"/>
+                        </svg>
+                    </div>
+
+                    <div>
+                        <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Newsletter</h2>
+                        <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Unsere E-Mail-Liste mit wertvollen Insights.</p>
+                    </div>
+                    </li>
+
+                    <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                    <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                        <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.66667 3.4H0V7.65H0.00833333L0 15.3C0 16.235 0.75 17 1.66667 17H16.6667V15.3H1.66667V3.4ZM18.3333 1.7H11.6667L10 0H5C4.08333 0 3.34167 0.765 3.34167 1.7L3.33333 11.9C3.33333 12.835 4.08333 13.6 5 13.6H18.3333C19.25 13.6 20 12.835 20 11.9V3.4C20 2.465 19.25 1.7 18.3333 1.7ZM5.83333 11.05L9.58333 5.95L12.5 9.7835L14.5833 7.225L17.5 11.05H5.83333Z" fill="#FF5B00"/>
+                        </svg>
+
+                    </div>
+
+                    <div>
+                        <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Medien-Center</h2>
+                        <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Presseaussendungen, Artikel und Media Ki.</p>
+                    </div>
+                    </li>
+
+                    <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                    <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.2222 0H1.77778C0.8 0 0 0.8 0 1.77778V14.2222C0 15.2 0.8 16 1.77778 16H14.2222C15.2 16 16 15.2 16 14.2222V1.77778C16 0.8 15.2 0 14.2222 0ZM9.77778 12.4444H3.55556V10.6667H9.77778V12.4444ZM12.4444 8.88889H3.55556V7.11111H12.4444V8.88889ZM12.4444 5.33333H3.55556V3.55556H12.4444V5.33333Z" fill="#FF5B00"/>
+                        </svg>
+
+                    </div>
+
+                    <div>
+                        <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Blog</h2>
+                        <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Unternehmens- und Industrie-Insights.</p>
+                    </div>
+                    </li>
+
+                    <li class="w-full flex  items-center gap-[15px] hover:bg-[#F0F2F7] px-[14px] py-[13px] rounded-[2px]">
+                    <div class="bg-[#FF5B001A] h-[41px] w-[50px] flex items-center justify-center">
+                        <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19 9.22C19 3.73 14.74 0 10 0C5.31 0 1 3.65 1 9.28C0.4 9.62 0 10.26 0 11V13C0 14.1 0.9 15 2 15H3V8.9C3 5.03 6.13 1.9 10 1.9C13.87 1.9 17 5.03 17 8.9V16H9V18H17C18.1 18 19 17.1 19 16V14.78C19.59 14.47 20 13.86 20 13.14V10.84C20 10.14 19.59 9.53 19 9.22Z" fill="#FF5B00"/>
+                        <path d="M7 11C7.55228 11 8 10.5523 8 10C8 9.44772 7.55228 9 7 9C6.44772 9 6 9.44772 6 10C6 10.5523 6.44772 11 7 11Z" fill="#FF5B00"/>
+                        <path d="M13 11C13.5523 11 14 10.5523 14 10C14 9.44772 13.5523 9 13 9C12.4477 9 12 9.44772 12 10C12 10.5523 12.4477 11 13 11Z" fill="#FF5B00"/>
+                        <path d="M16 8.03C15.52 5.18 13.04 3 10.05 3C7.01997 3 3.75997 5.51 4.01997 9.45C6.48997 8.44 8.34997 6.24 8.87997 3.56C10.19 6.19 12.88 8 16 8.03Z" fill="#FF5B00"/>
+                        </svg>
+
+                    </div>
+
+                    <div>
+                        <h2 class="text-[1rem] leading-[25px] font-bold text-[#212B5F]">Support</h2>
+                        <p class="text-[1rem] leading-[25px] font-normal text-[#212B5F80]">Kontakt für Support-Anfragen.</p>
+                    </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="flex gap-[31.3px] items-center">
+                <div>
+                <img src="../public/images/logo.svg" alt="">
+                </div>
+    
+                <nav class="flex items-center mt-[8px] gap-[30px] max-[950px]:hidden">
+                <a href="/home"  class="nav_item font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Home</a>
+                <a href="/home" class="nav_item font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Lösungen </a>
+                <a id="header__platform" href="/home" class="header__platform nav_item font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Plattform                     <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.0575 0L4.5 3.09042L7.9425 0L9 0.951417L4.5 5L0 0.951417L1.0575 0Z" fill="white"/>
+                    </svg></a>
+                <a href="/home" class="nav_item font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Preise </a>
+                <a id="header__platform2"  href="/home" class=" header__platform nav_item font-bold text-[16px] leading-[0px] text-[#FFFFFF]">Unternehmen                    <svg width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.0575 0L4.5 3.09042L7.9425 0L9 0.951417L4.5 5L0 0.951417L1.0575 0Z" fill="white"/>
+                    </svg></a>
+                </nav>
+            </div>
+
+            <div class="flex gap-[22px] items-center">
+                <select class="header__select" name="" id="">
+                <option value="DE">DE</option>
+                </select>
+
+                <button id="btn_header_menu_open" class="min-[950px]:hidden cursor-pointer p-[2px]">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" viewBox="0 0 50 50" width="30px" height="30px"><path d="M 5 8 A 2.0002 2.0002 0 1 0 5 12 L 45 12 A 2.0002 2.0002 0 1 0 45 8 L 5 8 z M 5 23 A 2.0002 2.0002 0 1 0 5 27 L 45 27 A 2.0002 2.0002 0 1 0 45 23 L 5 23 z M 5 38 A 2.0002 2.0002 0 1 0 5 42 L 45 42 A 2.0002 2.0002 0 1 0 45 38 L 5 38 z"/></svg>
+                </button>
+
+                <button class="max-[950px]:hidden font-bold text-[16px] text-[#FFFFFF] text-center cursor-pointer border-[1px] border-[#FFFFFF] rounded-[2px] p-[8px] px-[25px]">
+                    Login / Register
+                </button>
+            </div>
+            </div>
+            
+        </header>
+
+        <main class="flex justify-center relative mb-[100px]">
+            <section class="max-w-[1200px] min-[900px]:h-[1536px] w-full h-full back_white mt-[43.5px] pt-[65px] px-[50px]">
+                <div class="flex gap-[50px] pl-[141px] max-[1100px]:p-[0px] max-[1100px]:justify-center flex-wrap border-b-[#918B9E] border-b-[0.5px]">
+                    <div class=" relative h-[29px] font-bold text-[16px] text-[#556072BF]">
+                        Kontakt
+                    </div>
+                    <div class="tab-select-blue relative h-[29px] font-bold text-[16px] text-[#3371FF]">
+                        Karriere
+                    </div>
+                    <div class=" relative h-[29px] font-bold text-[16px] text-[#556072BF]">
+                        Medien-Center
+                    </div>
+                    <div class=" relative h-[29px] font-bold text-[16px] text-[#556072BF]">
+                        Knowledge
+                    </div>
+                    <div class=" relative h-[29px] font-bold text-[16px] text-[#556072BF]">
+                        Newsletter
+                    </div>
+                    <div class=" relative h-[29px] font-bold text-[16px] text-[#556072BF]">
+                        Blog
+                    </div>
+                    <div class=" relative h-[29px] font-bold text-[16px] text-[#556072BF]">
+                        Support
+                    </div>
+                </div>
+
+                <div class="mt-[50px] max-[600px]:flex-col pt-[15px] bg-[#F0F2F7] relative items-center flex justify-between rounded-[2px]">
+                    <div class="p-[30px] max-[600px]:pb-[0px] flex items-center flex-col pt-[25px] pb-0">
+                        <h2 class="font-bold text-[20px] leading-[30px] text-[#212B5F]">Was du erwarten kannst</h2>
+                        <p class="font-normal text-[15px] w-[70%] text-center leading-[25px] text-[#212B5F]">
+                             Wir arbeiten zusammen daran, die alte Welt der Außenwerbung mit neuen Technologien zu verbinden.
+                            Unsere Team-Mitglieder genießen dabei einige großartige Vorteile.
+                        </p>
+
+                        <div class=" grid  grid-cols-4 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1 mt-[43px] gap-[10px]">
+                            <div class="flex gap-[15px] items-center ">
+                                <div class="h-[55px] w-[75px] bg-[#FFFFFF] flex justify-center items-center">
+                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.225 13.95L10.45 15.725C9.6 14.8625 8.775 13.75 8.2125 12.05L10.6375 11.4375C11.0375 12.55 11.6 13.3125 12.225 13.95ZM13.75 7.5L8.75 2.5L3.75 7.5H7.525C7.55 8.5125 7.625 9.425 7.7625 10.2125L10.1875 9.6C10.1 9 10.0375 8.2875 10.025 7.5H13.75ZM26.25 7.5L21.25 2.5L16.25 7.5H19.9875C19.8625 12.1 18.3875 13.4375 16.8125 14.85C16.1875 15.4 15.55 16 15 16.7875C14.575 16.175 14.0875 15.6875 13.5875 15.2375L11.825 17C12.9875 18.0625 13.75 18.925 13.75 21.25V27.5H16.25V21.25C16.25 18.725 17.1375 17.925 18.4875 16.7125C20.2125 15.1625 22.3375 13.2375 22.4875 7.5H26.25Z" fill="#3371FF"/>
+                                    </svg>
+                                </div>
+                                <p class="w-[150px] font-bold text-[20px] leading-[30px] text-[#212B5F]">Flexibles <br>
+                                Arbeiten</p>
+                            </div>
+
+                            <div class="flex gap-[15px] items-center ">
+                                <div class="h-[55px] w-[75px] bg-[#FFFFFF] flex justify-center items-center">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_14_316)">
+                                    <path d="M19.9375 13.4792C19.9792 13.1667 20 12.8438 20 12.5C20 12.1667 19.9792 11.8333 19.9271 11.5208L22.0417 9.875C22.2292 9.72917 22.2813 9.44792 22.1667 9.23958L20.1667 5.78125C20.0417 5.55208 19.7813 5.47917 19.5521 5.55208L17.0625 6.55208C16.5417 6.15625 15.9896 5.82292 15.375 5.57292L15 2.92708C14.9584 2.67708 14.75 2.5 14.5 2.5H10.5C10.25 2.5 10.0521 2.67708 10.0104 2.92708L9.63545 5.57292C9.02087 5.82292 8.45837 6.16667 7.94795 6.55208L5.45837 5.55208C5.2292 5.46875 4.96878 5.55208 4.84378 5.78125L2.8542 9.23958C2.7292 9.45833 2.77087 9.72917 2.9792 9.875L5.09378 11.5208C5.0417 11.8333 5.00003 12.1771 5.00003 12.5C5.00003 12.8229 5.02087 13.1667 5.07295 13.4792L2.95837 15.125C2.77087 15.2708 2.71878 15.5521 2.83337 15.7604L4.83337 19.2188C4.95837 19.4479 5.21878 19.5208 5.44795 19.4479L7.93753 18.4479C8.45837 18.8437 9.01045 19.1771 9.62503 19.4271L10 22.0729C10.0521 22.3229 10.25 22.5 10.5 22.5H14.5C14.75 22.5 14.9584 22.3229 14.9896 22.0729L15.3646 19.4271C15.9792 19.1771 16.5417 18.8437 17.0521 18.4479L19.5417 19.4479C19.7709 19.5312 20.0313 19.4479 20.1563 19.2188L22.1563 15.7604C22.2813 15.5312 22.2292 15.2708 22.0313 15.125L19.9375 13.4792ZM12.5 16.25C10.4375 16.25 8.75003 14.5625 8.75003 12.5C8.75003 10.4375 10.4375 8.75 12.5 8.75C14.5625 8.75 16.25 10.4375 16.25 12.5C16.25 14.5625 14.5625 16.25 12.5 16.25Z" fill="#3371FF"/>
+                                    </g>
+                                    <defs>
+                                    <clipPath id="clip0_14_316">
+                                    <rect width="25" height="25" fill="white"/>
+                                    </clipPath>
+                                    </defs>
+                                    </svg>
+
+                                </div>
+                                <p class="w-[150px] font-bold text-[20px] leading-[30px] text-[#212B5F]">
+                                Persönliche <br>
+                                Entwicklung</p>
+                            </div>
+                            <div class="flex gap-[15px] items-center ">
+                                <div class="h-[55px] w-[75px] bg-[#FFFFFF] flex justify-center items-center">
+                                    <svg width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 2.5H27.5V0H5C3.625 0 2.5 1.125 2.5 2.5V16.25H0V20H17.5V16.25H5V2.5ZM28.75 5H21.25C20.5625 5 20 5.5625 20 6.25V18.75C20 19.4375 20.5625 20 21.25 20H28.75C29.4375 20 30 19.4375 30 18.75V6.25C30 5.5625 29.4375 5 28.75 5ZM27.5 16.25H22.5V7.5H27.5V16.25Z" fill="#3371FF"/>
+                                    </svg>
+
+
+
+                                </div>
+                                <p class="w-[150px] font-bold text-[20px] leading-[30px] text-[#212B5F]">
+                                Top-notch<br>
+                               tech pack</p>
+                            </div>
+                            <div class="flex gap-[15px] items-center ">
+                                <div class="h-[55px] w-[75px] bg-[#FFFFFF] flex justify-center items-center">
+                                    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13 26C11.2017 26 9.51167 25.6587 7.93 24.9762C6.34833 24.2937 4.9725 23.3675 3.8025 22.1975C2.6325 21.0275 1.70625 19.6517 1.02375 18.07C0.34125 16.4883 0 14.7983 0 13C0 11.2017 0.34125 9.51167 1.02375 7.93C1.70625 6.34833 2.6325 4.9725 3.8025 3.8025C4.9725 2.6325 6.34833 1.70625 7.93 1.02375C9.51167 0.34125 11.2017 0 13 0C14.7983 0 16.4883 0.34125 18.07 1.02375C19.6517 1.70625 21.0275 2.6325 22.1975 3.8025C23.3675 4.9725 24.2937 6.34833 24.9762 7.93C25.6587 9.51167 26 11.2017 26 13C26 14.7983 25.6587 16.4883 24.9762 18.07C24.2937 19.6517 23.3675 21.0275 22.1975 22.1975C21.0275 23.3675 19.6517 24.2937 18.07 24.9762C16.4883 25.6587 14.7983 26 13 26ZM13 23.4C15.9033 23.4 18.3625 22.3925 20.3775 20.3775C22.3925 18.3625 23.4 15.9033 23.4 13C23.4 12.8483 23.3946 12.6912 23.3837 12.5287C23.3729 12.3662 23.3675 12.2308 23.3675 12.1225C23.2592 12.7508 22.9667 13.2708 22.49 13.6825C22.0133 14.0942 21.45 14.3 20.8 14.3H18.2C17.485 14.3 16.8729 14.0454 16.3637 13.5362C15.8546 13.0271 15.6 12.415 15.6 11.7V10.4H10.4V7.8C10.4 7.085 10.6546 6.47292 11.1637 5.96375C11.6729 5.45458 12.285 5.2 13 5.2H14.3C14.3 4.70167 14.4354 4.26292 14.7062 3.88375C14.9771 3.50458 15.3075 3.19583 15.6975 2.9575C15.2642 2.84917 14.8254 2.7625 14.3812 2.6975C13.9371 2.6325 13.4767 2.6 13 2.6C10.0967 2.6 7.6375 3.6075 5.6225 5.6225C3.6075 7.6375 2.6 10.0967 2.6 13H9.1C10.53 13 11.7542 13.5092 12.7725 14.5275C13.7908 15.5458 14.3 16.77 14.3 18.2V19.5H10.4V23.075C10.8333 23.1833 11.2612 23.2646 11.6837 23.3187C12.1062 23.3729 12.545 23.4 13 23.4Z" fill="#3371FF"/>
+                                    </svg>
+
+
+                                </div>
+                                <p class="w-[150px] font-bold text-[20px] leading-[30px] text-[#212B5F]">
+                                Internationales<br>
+                               Team</p>
+                            </div>
+                        </div>
+
+                        <h2 class="font-bold text-[20px] leading-[25px] text-[#212B5F] mt-[80px]">Wer du bist</h2>
+
+                        <div class="grid grid-cols-4 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1 mt-[33px] mb-[57px] gap-[10px]">
+                            <div class="flex gap-[15px] items-center ">
+                                <div class="h-[55px] w-[75px] bg-[#FFFFFF] flex justify-center items-center">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M22.2222 0H2.76389C1.22222 0 0.0138889 1.25 0.0138889 2.77778L0 22.2222C0 23.75 1.22222 25 2.76389 25H22.2222C23.75 25 25 23.75 25 22.2222V2.77778C25 1.25 23.75 0 22.2222 0ZM22.2222 16.6667H16.6667C16.6667 18.9722 14.7917 20.8333 12.5 20.8333C10.2083 20.8333 8.33333 18.9722 8.33333 16.6667H2.76389V2.77778H22.2222V16.6667ZM6.94444 11.1111H9.72222V15.2778H15.2778V11.1111H18.0556L12.5 5.55556L6.94444 11.1111Z" fill="#3371FF"/>
+                                    </svg>
+
+                                </div>
+                                <p class="w-[150px] font-bold text-[20px] leading-[30px] text-[#212B5F]">Outside-the- <br>
+                               box thinker</p>
+                            </div>
+
+                            <div class="flex gap-[15px] items-center ">
+                                <div class="h-[55px] w-[75px] bg-[#FFFFFF] flex justify-center items-center">
+                                    <svg width="30" height="19" viewBox="0 0 30 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20.4545 8.14286C22.7182 8.14286 24.5318 6.32429 24.5318 4.07143C24.5318 1.81857 22.7182 0 20.4545 0C18.1909 0 16.3636 1.81857 16.3636 4.07143C16.3636 6.32429 18.1909 8.14286 20.4545 8.14286ZM9.54545 8.14286C11.8091 8.14286 13.6227 6.32429 13.6227 4.07143C13.6227 1.81857 11.8091 0 9.54545 0C7.28182 0 5.45455 1.81857 5.45455 4.07143C5.45455 6.32429 7.28182 8.14286 9.54545 8.14286ZM9.54545 10.8571C6.36818 10.8571 0 12.445 0 15.6071V19H19.0909V15.6071C19.0909 12.445 12.7227 10.8571 9.54545 10.8571ZM20.4545 10.8571C20.0591 10.8571 19.6091 10.8843 19.1318 10.925C20.7136 12.065 21.8182 13.5986 21.8182 15.6071V19H30V15.6071C30 12.445 23.6318 10.8571 20.4545 10.8571Z" fill="#3371FF"/>
+                                    </svg>
+
+
+
+                                </div>
+                                <p class="w-[150px] font-bold text-[20px] leading-[30px] text-[#212B5F]">
+                                Team- <br>
+                                player</p>
+                            </div>
+                            <div class="flex gap-[15px] items-center ">
+                                <div class="h-[55px] w-[75px] bg-[#FFFFFF] flex justify-center items-center">
+                                        <svg width="18" height="26" viewBox="0 0 18 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.14286 24.7C5.14286 25.35 5.65714 26 6.42857 26H11.5714C12.3429 26 12.8571 25.35 12.8571 24.7V23.4H5.14286V24.7ZM9 0C3.98571 0 0 4.03 0 9.1C0 12.22 1.54286 14.95 3.85714 16.51V19.5C3.85714 20.15 4.37143 20.8 5.14286 20.8H12.8571C13.6286 20.8 14.1429 20.15 14.1429 19.5V16.51C16.4571 14.82 18 12.09 18 9.1C18 4.03 14.0143 0 9 0Z" fill="#3371FF"/>
+                                        </svg>
+                                </div>
+                                <p class="w-[150px] font-bold text-[20px] leading-[30px] text-[#212B5F]">
+                                Schnell<br>
+                               lernend</p>
+                            </div>
+                            <div class="flex gap-[15px] items-center ">
+                                <div class="h-[55px] w-[75px] bg-[#FFFFFF] flex justify-center items-center">
+                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.4875 0C5.5875 0 0 5.6 0 12.5C0 19.4 5.5875 25 12.4875 25C19.4 25 25 19.4 25 12.5C25 5.6 19.4 0 12.4875 0ZM12.5 22.5C6.975 22.5 2.5 18.025 2.5 12.5C2.5 6.975 6.975 2.5 12.5 2.5C18.025 2.5 22.5 6.975 22.5 12.5C22.5 18.025 18.025 22.5 12.5 22.5ZM16.875 11.25C17.9125 11.25 18.75 10.4125 18.75 9.375C18.75 8.3375 17.9125 7.5 16.875 7.5C15.8375 7.5 15 8.3375 15 9.375C15 10.4125 15.8375 11.25 16.875 11.25ZM8.125 11.25C9.1625 11.25 10 10.4125 10 9.375C10 8.3375 9.1625 7.5 8.125 7.5C7.0875 7.5 6.25 8.3375 6.25 9.375C6.25 10.4125 7.0875 11.25 8.125 11.25ZM12.5 19.375C15.4125 19.375 17.8875 17.55 18.8875 15H6.1125C7.1125 17.55 9.5875 19.375 12.5 19.375Z" fill="#3371FF"/>
+                                    </svg>
+                                </div>
+                                <p class="w-[150px] font-bold text-[20px] leading-[30px] text-[#212B5F]">
+                                Guter<br>
+                               Kommunikator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="mt-[51px] pb-[33px] text-[20px] font-bold leading-[25px]  text-center w-full text-[#212B5F]">
+                        Unsere offenen Positionen
+                    </h2>
+
+                    <ul class="w-full grid gap-[40px] grid-cols-6 max-[900px]:grid-cols-3">
+                       <li class=" rounded-[2px] h-[40px] flex justify-center items-center font-bold text-[15px] leading-[25px] bg-[#3371FF] text-[white]">
+                            Engineering
+                       </li> 
+                       <li class=" rounded-[2px] h-[40px] flex justify-center items-center font-bold text-[15px] leading-[25px] bg-[#FF5B00] text-[white]">
+                            Services
+                       </li> 
+                       <li class=" rounded-[2px] h-[40px] flex justify-center items-center font-bold text-[15px] leading-[25px] bg-[#23B33A] text-[white]">
+                            Sales
+                       </li> 
+                       <li class=" rounded-[2px] h-[40px] flex justify-center items-center font-bold text-[15px] leading-[25px] bg-[#EFAE3D] text-[white]">
+                            Marketing
+                       </li> 
+                       <li class=" rounded-[2px] h-[40px] flex justify-center items-center font-bold text-[15px] leading-[25px] bg-[#212B5F] text-[white]">
+                            Operations
+                       </li> 
+                       <li class=" rounded-[2px] h-[40px] flex justify-center items-center font-bold text-[15px] leading-[25px] bg-[#6CCBFF] text-[white]">
+                            HR
+                       </li> 
+                    </ul>
+
+                    <div class="flex gap-[40px] mt-[33px] mb-[60px] justify-center flex-wrap">
+                        <div class="popup__join_checkbox flex gap-[10px] items-center mt-[5px] mr-[5px]">
+                            <label class="checkbox flex items-center justify-center !h-[13px] ">
+                                <input class="checkbox-input  !w-[13px] !h-[13px] border-[2px] border-[#212B5F]  rounded-[2px]" type="checkbox" id="myCheckbox">
+                                <div class="checkbox-new  !w-[13px] !h-[13px] border-[2px] border-[#212B5F] rounded-[2px]">
+                                    <div class="checkbox-new_unchecked">
+                                    </div>
+                                    <div class="checkbox-new_checked ml-[1px] flex justify-center">
+                                        <svg width="10" height="10" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5 1.25L5.875 10.875L1.5 6.5" stroke="#212B5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+
+                                    </div>
+                                    
+                                </div>
+                
+                            </label>
+
+                            <p class="text-[16px] font-bold text-[#212B5F] ">Wien</p>
+                        </div>
+                                                <div class="popup__join_checkbox flex gap-[10px] items-center mt-[5px] mr-[5px]">
+                            <label class="checkbox flex items-center justify-center !h-[13px] ">
+                                <input class="checkbox-input  !w-[13px] !h-[13px] border-[2px] border-[#212B5F]  rounded-[2px]" type="checkbox" id="myCheckbox">
+                                <div class="checkbox-new  !w-[13px] !h-[13px] border-[2px] border-[#212B5F] rounded-[2px]">
+                                    <div class="checkbox-new_unchecked">
+                                    </div>
+                                    <div class="checkbox-new_checked ml-[1px] flex justify-center">
+                                        <svg width="10" height="10" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5 1.25L5.875 10.875L1.5 6.5" stroke="#212B5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+
+                                    </div>
+                                    
+                                </div>
+                
+                            </label>
+
+                            <p class="text-[16px] font-bold text-[#212B5F] ">Köln</p>
+                        </div>
+                                                <div class="popup__join_checkbox flex gap-[10px] items-center mt-[5px] mr-[5px]">
+                            <label class="checkbox flex items-center justify-center !h-[13px] ">
+                                <input class="checkbox-input  !w-[13px] !h-[13px] border-[2px] border-[#212B5F]  rounded-[2px]" type="checkbox" id="myCheckbox">
+                                <div class="checkbox-new  !w-[13px] !h-[13px] border-[2px] border-[#212B5F] rounded-[2px]">
+                                    <div class="checkbox-new_unchecked">
+                                    </div>
+                                    <div class="checkbox-new_checked ml-[1px] flex justify-center">
+                                        <svg width="10" height="10" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5 1.25L5.875 10.875L1.5 6.5" stroke="#212B5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+
+                                    </div>
+                                    
+                                </div>
+                
+                            </label>
+
+                            <p class="text-[16px] font-bold text-[#212B5F] ">London</p>
+                        </div>
+                        <div class="popup__join_checkbox flex gap-[10px] items-center mt-[5px] mr-[5px]">
+                            <label class="checkbox flex items-center justify-center !h-[13px] ">
+                                <input class="checkbox-input  !w-[13px] !h-[13px] border-[2px] border-[#212B5F]  rounded-[2px]" type="checkbox" id="myCheckbox">
+                                <div class="checkbox-new  !w-[13px] !h-[13px] border-[2px] border-[#212B5F] rounded-[2px]">
+                                    <div class="checkbox-new_unchecked">
+                                    </div>
+                                    <div class="checkbox-new_checked ml-[1px] flex justify-center">
+                                        <svg width="10" height="10" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5 1.25L5.875 10.875L1.5 6.5" stroke="#212B5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+
+                                    </div>
+                                    
+                                </div>
+                
+                            </label>
+
+                            <p class="text-[16px] font-bold text-[#212B5F] ">New York</p>
+                        </div>
+                        <div class="popup__join_checkbox flex gap-[10px] items-center mt-[5px] mr-[5px]">
+                            <label class="checkbox flex items-center justify-center !h-[13px] ">
+                                <input class="checkbox-input  !w-[13px] !h-[13px] border-[2px] border-[#212B5F]  rounded-[2px]" type="checkbox" id="myCheckbox">
+                                <div class="checkbox-new  !w-[13px] !h-[13px] border-[2px] border-[#212B5F] rounded-[2px]">
+                                    <div class="checkbox-new_unchecked">
+                                    </div>
+                                    <div class="checkbox-new_checked ml-[1px] flex justify-center">
+                                        <svg width="10" height="10" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M15.5 1.25L5.875 10.875L1.5 6.5" stroke="#212B5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+
+                                    </div>
+                                    
+                                </div>
+                
+                            </label>
+
+                            <p class="text-[16px] font-bold text-[#212B5F] ">Hongkong</p>
+                        </div>
+                    </div>
+
+                    <ul class="grid grid-cols-3 max-[900px]:grid-cols-2 max-[600px]:grid-cols-1  gap-[40px] justify-stretch">
+                        <li class="h-[250px] w-full flex flex-col pt-[21px] pl-[20px] bg-[#F0F2F7] border-b-[9px] border-b-[#3371FF]">
+                            <div class="grow">
+                                <h3 class="leading-[30px] h-[80px] font-bold text-[25px] text-[#3371FF]">Data  <br>
+                                    Scientist</h3>
+
+                               
+                            </div>
+                            <div class="shrink-0 flex-col flex gap-[25px] mb-[20px] text-[#3371FF] text-[16px] leading-[25px] font-bold">
+                                 <p class="font-normal text-[16px] leading-[25px] text-[#212B5F]">
+                                    Vollzeit <br>
+                                    Wien, Österreich
+                                </p>
+                                <div class="flex items-center gap-[10px]">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#3371FF"/>
+                                    </svg>
+                                    <span>mehr</span>
+                                </div>
+                            </div>
+                        </li>
+                                                <li class="h-[250px] flex flex-col pt-[21px] pl-[20px] bg-[#F0F2F7] border-b-[9px] border-b-[#3371FF]">
+                            <div class="grow">
+                                <h3 class="leading-[30px] h-[80px] font-bold text-[25px] text-[#3371FF]">Data  <br>
+                                    Scientist</h3>
+
+                               
+                            </div>
+                            <div class="shrink-0 flex-col flex gap-[25px] mb-[20px] text-[#3371FF] text-[16px] leading-[25px] font-bold">
+                                 <p class="font-normal text-[16px] leading-[25px] text-[#212B5F]">
+                                    Vollzeit <br>
+                                    New York, USA
+                                </p>
+                                <div class="flex items-center gap-[10px]">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#3371FF"/>
+                                    </svg>
+                                    <span>mehr</span>
+                                </div>
+                            </div>
+                        </li>
+                                                <li class="h-[250px] flex flex-col pt-[21px] pl-[20px] bg-[#F0F2F7] border-b-[9px] border-b-[#FF5B00]">
+                            <div class="grow">
+                                <h3 class="leading-[30px] h-[80px] font-bold text-[25px] text-[#FF5B00]">Senior  <br>
+                                    Product Consultant</h3>
+
+                               
+                            </div>
+                            <div class="shrink-0 flex-col flex gap-[25px] mb-[20px] text-[#FF5B00] text-[16px] leading-[25px] font-bold">
+                                 <p class="font-normal text-[16px] leading-[25px] text-[#212B5F]">
+                                    Vollzeit <br>
+                                    New York, USA
+                                </p>
+                                <div class="flex items-center gap-[10px]">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#FF5B00"/>
+                                    </svg>
+                                    <span>mehr</span>
+                                </div>
+                            </div>
+                        </li>
+                                                <li class="h-[250px] flex flex-col pt-[21px] pl-[20px] bg-[#F0F2F7] border-b-[9px] border-b-[#23B33A]">
+                            <div class="grow">
+                                <h3 class="leading-[30px] h-[80px] font-bold text-[25px] text-[#23B33A]">Senior Sales <br>
+                                    Representative</h3>
+
+                               
+                            </div>
+                            <div class="shrink-0 flex-col flex gap-[25px] mb-[20px] text-[#23B33A] text-[16px] leading-[25px] font-bold">
+                                 <p class="font-normal text-[16px] leading-[25px] text-[#212B5F]">
+                                    Vollzeit <br>
+                                    Köln, Deutschland
+                                </p>
+                                <div class="flex items-center gap-[10px]">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#23B33A"/>
+                                    </svg>
+                                    <span>mehr</span>
+                                </div>
+                            </div>
+                        </li>
+                                                <li class="h-[250px] flex flex-col pt-[21px] pl-[20px] bg-[#F0F2F7] border-b-[9px] border-b-[#23B33A]">
+                            <div class="grow">
+                                <h3 class="leading-[30px] h-[80px] font-bold text-[25px] text-[#23B33A]">Sales <br>
+                                    Representative</h3>
+
+                               
+                            </div>
+                            <div class="shrink-0 flex-col flex gap-[25px] mb-[20px] text-[#23B33A] text-[16px] leading-[25px] font-bold">
+                                 <p class="font-normal text-[16px] leading-[25px] text-[#212B5F]">
+                                    Vollzeit <br>
+                                    Hongkong, China
+                                </p>
+                                <div class="flex items-center gap-[10px]">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#23B33A"/>
+                                    </svg>
+                                    <span>mehr</span>
+                                </div>
+                            </div>
+                        </li>
+                                                <li class="h-[250px] flex flex-col pt-[21px] pl-[20px] bg-[#F0F2F7] border-b-[9px] border-b-[#212B5F]">
+                            <div class="grow">
+                                <h3 class="leading-[30px] h-[80px] font-bold text-[25px] text-[#212B5F]">Operations  <br>
+                                    Manager</h3>
+
+                               
+                            </div>
+                            <div class="shrink-0 flex-col flex gap-[25px] mb-[20px] text-[#212B5F] text-[16px] leading-[25px] font-bold">
+                                 <p class="font-normal text-[16px] leading-[25px] text-[#212B5F]">
+                                    Vollzeit <br>
+                                    Wien, USA
+                                </p>
+                                <div class="flex items-center gap-[10px]">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="#212B5F"/>
+                                    </svg>
+                                    <span>mehr</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mt-[25px] font-normal text-[16px] leading-[30px] text-center text-[#212B5F]">
+                    Nichts dabei, was deinen Skills entspricht? Schreibe uns: 
+                    <span class="font-bold text-[#3371FF]">
+                        welcome@brightscope.io
+                    </span>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script defer src="../js/header_menu.js"></script>
+</body>
+</html>
